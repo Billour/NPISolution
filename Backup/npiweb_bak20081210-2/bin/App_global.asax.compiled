@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="8" virtualPath="/NPIWeb.csproj/global.asax" hash="ffffffffef61ebdd" filehash="1944f722459f" flags="150000" assembly="NPIWeb.csproj_deploy" type="ASP.global_asax">
+  <filedeps>
+    <filedep name="/NPIWeb.csproj/global.asax" />
+  </filedeps>
+</preserve>

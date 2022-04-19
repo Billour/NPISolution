@@ -1,0 +1,1 @@
+2009-01-22 06:06:20,572 [1] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 

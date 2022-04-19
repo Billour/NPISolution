@@ -1,0 +1,29 @@
+2008-12-18 13:40:10,318 [5] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-18 13:40:25,287 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from srm_user where company_id='13006' and lower(domain_id)=lower('Sam_Chen') and work_status='Y' 
+2008-12-18 13:40:31,459 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_privilege t where 1=1  and t.user_id='AA0800226' and t.company_id='13006'  and t.is_enable='Y'  
+2008-12-18 13:52:20,456 [5] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-18 13:52:20,862 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from srm_user where company_id='13006' and lower(domain_id)=lower('Sam_Chen') and work_status='Y' 
+2008-12-18 13:52:23,221 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_privilege t where 1=1  and t.user_id='AA0800226' and t.company_id='13006'  and t.is_enable='Y'  
+2008-12-18 16:07:13,907 [5] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-18 16:14:13,235 [5] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-18 16:14:13,626 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from srm_user where company_id='13006' and lower(domain_id)=lower('Sam_Chen') and work_status='Y' 
+2008-12-18 16:14:23,282 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_privilege t where 1=1  and t.user_id='AA0800226' and t.company_id='13006'  and t.is_enable='Y'  
+2008-12-18 16:21:03,574 [9] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-18 16:21:04,886 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from srm_user where company_id='13006' and lower(domain_id)=lower('Sam_Chen') and work_status='Y' 
+2008-12-18 16:21:07,652 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_privilege t where 1=1  and t.user_id='AA0800226' and t.company_id='13006'  and t.is_enable='Y'  
+2008-12-18 16:23:49,592 [9] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-18 16:23:49,967 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from srm_user where company_id='13006' and lower(domain_id)=lower('Sam_Chen') and work_status='Y' 
+2008-12-18 16:23:52,326 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_privilege t where 1=1  and t.user_id='AA0800226' and t.company_id='13006'  and t.is_enable='Y'  
+2008-12-18 16:27:22,954 [9] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-18 16:27:24,579 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from srm_user where company_id='13006' and lower(domain_id)=lower('Sam_Chen') and work_status='Y' 
+2008-12-18 16:27:27,407 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_privilege t where 1=1  and t.user_id='AA0800226' and t.company_id='13006'  and t.is_enable='Y'  
+2008-12-18 16:30:31,534 [5] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-18 16:30:31,909 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from srm_user where company_id='13006' and lower(domain_id)=lower('Sam_Chen') and work_status='Y' 
+2008-12-18 16:30:35,190 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_privilege t where 1=1  and t.user_id='AA0800226' and t.company_id='13006'  and t.is_enable='Y'  
+2008-12-18 16:32:06,957 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-18 16:32:07,348 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from srm_user where company_id='13006' and lower(domain_id)=lower('Sam_Chen') and work_status='Y' 
+2008-12-18 16:32:09,723 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_privilege t where 1=1  and t.user_id='AA0800226' and t.company_id='13006'  and t.is_enable='Y'  
+2008-12-18 19:29:36,336 [5] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-18 19:31:59,697 [9] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-18 19:43:41,159 [5] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-18 19:53:41,409 [5] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 

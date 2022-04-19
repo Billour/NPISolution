@@ -1,0 +1,2633 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NPILibrary</name>
+    </assembly>
+    <members>
+        <member name="T:AsusLibrary.Logic.BaseLogic">
+            <summary>
+            Logic 的最底層
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Logic.BaseLogic.GetYesOrNoList">
+            <summary>
+            取得Yes Or No List
+            </summary>
+            <returns>是與否的矩陣</returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BOMLogic.QueryPMBom(System.String,System.String,System.String)">
+            <summary>
+            取回此PM的BOM資訊
+            </summary>
+            <param name="empId"></param>
+            <param name="bomId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BOMLogic.IsPMBomExist(System.String,System.String,System.String)">
+            <summary>
+            是否此BOM 己經存在
+            </summary>
+            <param name="empId"></param>
+            <param name="bomId"></param>
+            <param name="companyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BOMLogic.QueryPMBomList(System.String,System.String,System.String)">
+            <summary>
+            取得所有的BOM資料
+            </summary>
+            <param name="isEnable"></param>
+            <param name="isclose"></param>
+            <param name="companyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BOMLogic.QueryPMBomList(System.String,System.String,System.String,System.String)">
+            <summary>
+            取得pm所註冊之BOM
+            </summary>
+            <param name="empId"></param>
+            <param name="isEnable"></param>
+            <param name="isclose"></param>
+            <param name="companyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BOMLogic.QueryFromBookingBOM(System.String)">
+            <summary>
+            取得此Form的BOMList
+            </summary>
+            <param name="formId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BOMLogic.GetComponentPropertyList">
+            <summary>
+            取得元件屬性料號列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BOMLogic.GetAddSourceList">
+            <summary>
+            取得元件料號列表資料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BOMLogic.GetTipTopBomName(System.String)">
+            <summary>
+            取得此BOM是否已經正確
+            </summary>
+            <param name="bomId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BOMLogic.QueryBookingBomList(AsusLibrary.EnumWorkStatus,System.String)">
+            <summary>
+            找目前可以將Booking的BOM
+            10=Waiting 
+            20=OK
+            現在是By人
+            </summary>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BOMLogic.QueryWaitingBookingBomsUser">
+            <summary>
+            取得Booking狀態=等待的人員清單
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BOMLogic.InsertDulplicateBookingData(AsusLibrary.Entity.BOMBookingEntity)">
+            <summary>
+            Insert 產生多筆的Booking Data
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BOMLogic.InserBatchBomData(System.Collections.Generic.List{AsusLibrary.Entity.BOMBookingEntity})">
+            <summary>
+            Insert Batch Bom
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AsusLibrary.Entity.FormPNEntity">
+            <summary>
+            取代先前的ResponseEntity 
+            名稱取得不好，從新修正為Form與PN的關係
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.Entity.FormPNEntity.TABLE_NPI_FORM_PN">
+            <summary>
+            資料表 NPI_FORM_PN
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Entity.FormPNEntity.#ctor">
+            <summary>
+            最重要的 Model
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.FormId">
+            <summary>
+            Form代號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.PN">
+            <summary>
+            元件料號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.PNName">
+            <summary>
+            品名
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.PNDesc">
+            <summary>
+            規格
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.AssemblyNo">
+            <summary>
+            組件號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.IsSub">
+            <summary>
+            主要料或替代料(N=主料/S=替代料)
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.PN2">
+            <summary>
+            元件料號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.RiskBuy">
+            <summary>
+            RiskBuy
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.IsRiskBuy">
+            <summary>
+            Modify RiskBuy
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.LTWeeks">
+            <summary>
+            LT Time
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.PNProperty">
+            <summary>
+            料號屬性
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.AddSource">
+            <summary>
+            加入第二來源
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.AddSourceComment">
+            <summary>
+            加入第二來源備註
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.EOL">
+            <summary>
+            EOL備註
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.CreateUser">
+            <summary>
+            新增人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.CreateTime">
+            <summary>
+            新增時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.UpdateUser">
+            <summary>
+            更新人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNEntity.UpdateTime">
+            <summary>
+            更新時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.Entity.BaseBOM.TABLE_NPI_BOM">
+            <summary>
+            資料庫資料表NPI_BOM
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.Entity.BaseBOM.TABLE_NPI_BOOKING">
+            <summary>
+            資料庫資料表 NPI_BOOKING
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.EmpId">
+            <summary>
+            PM員工帳號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.EmpFullName">
+            <summary>
+            取回全名
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.CompanyId">
+            <summary>
+            公司代號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.BOMId">
+            <summary>
+            BOM 型號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.BOMName">
+            <summary>
+            BOM 姓名
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.BOMStatus">
+            <summary>
+            BOM 狀態
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.BOMDesc">
+            <summary>
+            BOM 說明
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.Revision">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.RDOwner">
+            <summary>
+            RD Owner
+            RDAccount+RDName + RDPhoneNo
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.RDAccount">
+            <summary>
+            RD 帳號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.RDName">
+            <summary>
+            RD 姓名
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.RDPhoneNo">
+            <summary>
+            分機
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.PVTTime">
+            <summary>
+            生產時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.PVTQty">
+            <summary>
+            生產數量
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.PVTLocation">
+            <summary>
+            生產地點
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.PVTLocationName">
+            <summary>
+            生產地點名稱
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.MPTime">
+            <summary>
+            大量生產時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.MPQ1Qty">
+            <summary>
+            Q1 數量
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.MPQ2Qty">
+            <summary>
+            Q2 數量
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.IsOpen">
+            <summary>
+            BOM 是否啟用
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.CreateUser">
+            <summary>
+            建立人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.CreateTime">
+            <summary>
+            建立時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.UpdateUser">
+            <summary>
+            更新人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseBOM.UpdateTime">
+            <summary>
+            更新時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseUserEntity.AccountNo">
+            <summary>
+            帳戶-工號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseUserEntity.AccountName">
+            <summary>
+            姓名 例如 Boris Chin(秦國雄) 英文名稱+(中文名稱)
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseUserEntity.IsEnable">
+            <summary>
+            是否啟用
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseUserEntity.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseUserEntity.CompanyId">
+            <summary>
+            公司代號
+            
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseUserEntity.CreateUser">
+            <summary>
+            建立人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseUserEntity.CreateTime">
+            <summary>
+            建立時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseUserEntity.UpdateUser">
+            <summary>
+            更新人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseUserEntity.UpdateTime">
+            <summary>
+            更新時間
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Doc.Meeting.Meeting20080805">
+            <summary>
+            會議記錄 2008/08/05
+            
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Doc.Meeting.Meeting20080805.Title">
+            <summary>
+            會議主題
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Doc.Meeting.Meeting20080805.Description">
+            <summary>
+            會議說明
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Doc.Meeting.Meeting20080805.MeetingStartDate">
+            <summary>
+            會議時間 2008/08/05 15:00
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Doc.Meeting.Meeting20080805.MeetingEndDate">
+            <summary>
+            會議結束時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Doc.Meeting.Meeting20080805.Place">
+            <summary>
+            會議地點 編號109
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Doc.Meeting.Meeting20080805.Participants">
+            <summary>
+            主要開發人員，目前先列三人，之後陸續新增
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Doc.Meeting.Meeting20080805.RequireMents">
+            <summary>
+            會議所提之需求，必須要將此內容轉換成系統需求
+            此部份為最簡略的內容
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Doc.Meeting.Meeting20080805.ToDoList">
+            <summary>
+            預計要做事項
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Doc.Meeting.Meeting20080805.NextMeeting">
+            <summary>
+            下次會議時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.SourcerEntity.Component">
+            <summary>
+            UI 畫面顯示
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.SourcerEntity.ComponentList">
+            <summary>
+            獨立資料面
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.BOMBookingEntity">
+            <summary>
+            Booking Entity 
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity.FormNo">
+            <summary>
+            取得展BOM代號，用來決定將來使用的BOM號碼
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity.WorkStatus">
+            <summary>
+            目前狀態
+            分為
+            10-等待展BOM
+            20-展BOM完畢
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity.BookDate">
+            <summary>
+            Booking 時間，
+            用於新增資料時候
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity.BookingCreateUser">
+            <summary>
+            Booking 建立人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity.BookingCreateTime">
+            <summary>
+            Booking 建立時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity.BookingUpdateUser">
+            <summary>
+            Booking 更新人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity.BookingUpdateTime">
+            <summary>
+            Booking 更新人員
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Logic.ComponentLogic.GetComponentGroupList">
+            <summary>
+            取回元件料號群組
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AsusLibrary.Entity.LoginUserEntity">
+            <summary>
+            Login User 資料
+            加入角色列表
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.LoginUserEntity.Roles">
+            <summary>
+            NPI 新增角色列表
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.FormResponseEntity">
+            <summary>
+            Form Entity主體
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormResponseEntity.FormId">
+            <summary>
+            表單代號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormResponseEntity.PNList">
+            <summary>
+            料號列表
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormResponseEntity.BOMList">
+            <summary>
+            BOM列表
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormResponseEntity.BOMPNQtyList">
+            <summary>
+            BOM PN Qty 列表關係
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.PNPriceEntity">
+            <summary>
+            PN 料號價格Entity
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.PN">
+            <summary>
+            元件料號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.PNDesc">
+            <summary>
+            PN 說明
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.PNSpec">
+            <summary>
+            PN規格
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.BuyingMode">
+            <summary>
+            每一個PN都有一個BuyingMode
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.YearQ">
+            <summary>
+            年度
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.IsConfirm">
+            <summary>
+            是否確認
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.IsSend">
+            <summary>
+            是否已經送至eQuatation
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.DollarType">
+            <summary>
+            幣別
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.DollarTypeName">
+            <summary>
+            幣別名稱
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.Site">
+            <summary>
+            Site 別，由BOM決定
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.TipTopPrice">
+            <summary>
+            由Tip Top 找得的資料檔
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.QuatationPrice">
+            <summary>
+            由Quatation 取得的價錢檔案
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.EffectDate">
+            <summary>
+            生效日
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.DisableDate">
+            <summary>
+            失效日
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.CreateUser">
+            <summary>
+            建立人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.CreateTime">
+            <summary>
+            建立時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.ConfirmUser">
+            <summary>
+            確認金額人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.ConfirmTime">
+            <summary>
+            確認金額時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.SendUser">
+            <summary>
+            送至eQuatattion人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPriceBaseEntity.SendTime">
+            <summary>
+            寄送時間
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.BaseMenu">
+            <summary>
+            Menu 底層
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseMenu.MenuID">
+            <summary>
+            Menu ID 以數字表示，由數字小開始排序
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseMenu.MenuName">
+            <summary>
+            Menu 名稱
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseMenu.NaviUrl">
+            <summary>
+             URL Link
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.AsusBomEntity">
+            <summary>
+            此BOM是針對ABOM ERP DL Table所設置
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.AsusBomEntity.WorkNo">
+            <summary>
+            Work No
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.AsusBomEntity.BomId">
+            <summary>
+            BomId
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.AsusBomEntity.PN">
+            <summary>
+            元件料號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.AsusBomEntity.PNName">
+            <summary>
+            品名
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.AsusBomEntity.PNDesc">
+            <summary>
+            規格
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.AsusBomEntity.Qty">
+            <summary>
+            組合用量
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.AsusBomEntity.AssemblyNo">
+            <summary>
+            組件號 
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Doc.TeamDeveloper.WenBin">
+            <summary>
+            Wen Bin Tsai
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Config.DocApp">
+            <summary>
+            Doc 設定參數
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.Config.DocApp.Version1">
+            <summary>
+            版本1 分別至V1.0
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.Config.DocApp.Ref_Request">
+            <summary>
+            給設定版本文件內容使用-來自客戶的要求
+            Request by User 
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.PNPrice2Entity">
+            <summary>
+            新的Price Entity 加上UserId
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNPrice2Entity.SourcerId">
+            <summary>
+            Sourcer ID
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormBomEntity.EmpId">
+            <summary>
+            PM員工帳號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormBomEntity.CompanyId">
+            <summary>
+            公司代號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormBomEntity.BOMId">
+            <summary>
+            BOM 型號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormBomEntity.FormNo">
+            <summary>
+            取得展BOM代號，用來決定將來使用的BOM號碼
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormBomEntity.WorkStatus">
+            <summary>
+            目前狀態
+            分為
+            10-等待展BOM
+            20-展BOM完畢
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormBomEntity.BookingUpdateUser">
+            <summary>
+            Booking 更新人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormBomEntity.BookingUpdateTime">
+            <summary>
+            Booking 更新人員
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Doc.MeetingPlace.Place109">
+            <summary>
+            109 會議室
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Doc.MeetingPlace.Place109.ID">
+            <summary>
+            會議室代號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Doc.MeetingPlace.Place109.Name">
+            <summary>
+            會議室名稱
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.UserEntity">
+            <summary>
+            使用者列表
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.PNTipTopPriceEntity">
+            <summary>
+            Tip Top 的議價檔資料
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNTipTopPriceEntity.TipTopSite">
+            <summary>
+            TipTop Site
+            與NPI 及euotation不一樣
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNTipTopPriceEntity.DollarType">
+            <summary>
+            幣別
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNTipTopPriceEntity.PNPrice">
+            <summary>
+            價格
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNTipTopPriceEntity.EffectedDate">
+            <summary>
+            生效日
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNTipTopPriceEntity.DisAbleDate">
+            <summary>
+            失效日
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.DB.SourcerPNSchema.PNSourcer">
+            <summary>
+            產生新的Table 
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DB.SourcerPNSchema.PNSourcer.UserId">
+            <summary>
+            CMS UserId
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DB.SourcerPNSchema.PNSourcer.ComapnyId">
+            <summary>
+            公司代號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DB.SourcerPNSchema.PNSourcer.CreateUser">
+            <summary>
+            新增人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DB.SourcerPNSchema.PNSourcer.CreateTime">
+            <summary>
+            新增時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DB.SourcerPNSchema.PNSourcer.UpdateUser">
+            <summary>
+            修改人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DB.SourcerPNSchema.PNSourcer.UpdateTime">
+            <summary>
+            修改時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.Config.DataBaseDB.UserDB">
+            <summary>
+            使用者權限設定資料庫
+            UserDB
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.Config.DataBaseDB.NPIDB">
+            <summary>
+            NPI 系統資料庫
+            NPIDB
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.Config.DataBaseDB.TipTopDB">
+            <summary>
+            Tip Top 系統資料
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.Config.DataBaseDB.QuatatinDB">
+            <summary>
+            SCM EQuatatinDB
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.ComponentRefEntity.EmpId">
+            <summary>
+            o員工帳號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.ComponentRefEntity.ComponentId">
+            <summary>
+            元件料號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.ComponentRefEntity.ComponentName">
+            <summary>
+            元件料號名稱
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.ComponentRefEntity.CompanyId">
+            <summary>
+            公司名稱
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.ResponseEntity">
+            <summary>
+            展BOM 資料
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.BaseCompnentEntity">
+            <summary>
+            預計不用
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseCompnentEntity.No">
+            <summary>
+            元件料號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BaseCompnentEntity.Name">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.ResponseEntity.LongTermWeeks">
+            <summary>
+            是否可連結Tip Top
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.ResponseEntity.ComponentProperty">
+            <summary>
+            料號屬性
+            1. 無意見
+            2.Custom parts
+            3. Unique parts
+            4. Single source
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMFormEntity.PMName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.WebPage.BaseMaster.GetMenuList">
+            <summary>
+            取得所有的Menu列表
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.WebPage.BaseMaster.GetRoleMenuList">
+            <summary>
+            取得Menu的資料與權限的關係
+            所有的名單
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AsusLibrary.WebPage.BaseMaster.LoginUserInfo">
+            <summary>
+            登入系統人員資料
+            只能取得，不能設定
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.SourcerPNMapEntity">
+            <summary>
+            此Entity 是針對
+            Sourcer PN 的Map 對應檔
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.SourcerPNMapEntity.UserId">
+            <summary>
+            員工工號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.SourcerPNMapEntity.CompanyId">
+            <summary>
+            公司代號
+            目前只支援13006
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.SourcerPNMapEntity.PN">
+            <summary>
+            料號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.SourcerPNMapEntity.IsAlert">
+            <summary>
+            是否要通知
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.SourcerPNMapEntity.CreateUser">
+            <summary>
+            新增人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.SourcerPNMapEntity.CreateTime">
+            <summary>
+            建立時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.SourcerPNMapEntity.UpdateUser">
+            <summary>
+            更新人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.SourcerPNMapEntity.UpdateTime">
+            <summary>
+            更新時間
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.PNeQuotattionPriceEntity">
+            <summary>
+            eQuotation Price
+            根據Table SCM_EQUOTE_PN_PRICE
+            所製作
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNeQuotattionPriceEntity.PN">
+            <summary>
+            PN
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNeQuotattionPriceEntity.YearQ">
+            <summary>
+            年度
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNeQuotattionPriceEntity.Site">
+            <summary>
+            EMS Site
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNeQuotattionPriceEntity.SiteVendor">
+            <summary>
+            EMS Vendor Site
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNeQuotattionPriceEntity.Price">
+            <summary>
+            價格
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.FormEntity">
+            <summary>
+            產生Form 
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.Entity.FormEntity.TABLE_NPI_FORM_MAIN">
+            <summary>
+            資料表
+            NPI_FORM_MAIN
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.Entity.FormEntity._PNPriceList">
+            <summary>
+            加入新的功能，計算計價
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Entity.FormEntity.#ctor">
+            <summary>
+            Form Main Entity
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormEntity.FormId">
+            <summary>
+            Form代號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormEntity.FormDate">
+            <summary>
+            Form 展開的時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormEntity.CreateUser">
+            <summary>
+            建立人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormEntity.CreateTime">
+            <summary>
+            建立時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormEntity.PMFormList">
+            <summary>
+            這一次 PM和Form的關係
+            為多筆關係
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormEntity.PNList">
+            <summary>
+            Form 與 PN
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormEntity.BOMPNList">
+            <summary>
+            BOM 與PN之關係
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormEntity.BomList">
+            <summary>
+            取得需要回覆的BOM
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormEntity.PNPriceList">
+            <summary>
+            PN Price List
+            這一個物件是用來議價檔Table NPI_PNPrice
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity2.EmpId">
+            <summary>
+            PM員工帳號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity2.CompanyId">
+            <summary>
+            公司代號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity2.BOMId">
+            <summary>
+            BOM 型號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity2.FormNo">
+            <summary>
+            取得展BOM代號，用來決定將來使用的BOM號碼
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity2.WorkStatus">
+            <summary>
+            目前狀態
+            分為
+            10-等待展BOM
+            20-展BOM完畢
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity2.BookDate">
+            <summary>
+            Booking 時間，
+            用於新增資料時候
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity2.BookingCreateUser">
+            <summary>
+            Booking 建立人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity2.BookingCreateTime">
+            <summary>
+            Booking 建立時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity2.BookingUpdateUser">
+            <summary>
+            Booking 更新人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.BOMBookingEntity2.BookingUpdateTime">
+            <summary>
+            Booking 更新人員
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Doc.TeamDeveloper.Macross">
+            <summary>
+            Macross 的資料
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.WebPage.UserControl.BaseControl">
+            <summary>
+            User Control 的第一個頁面
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.PNEQuotationEntity">
+            <summary>
+            PN在EQuatation的資料
+            Table SCM_EQuotation_NPI_Price
+            提供
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNEQuotationEntity.PN">
+            <summary>
+            PN元件料號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNEQuotationEntity.YearQ">
+            <summary>
+            年度資料
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNEQuotationEntity.SiteVendor">
+            <summary>
+            Site Vendor 資料
+            現在由轉換回來由EMS--> Vendor
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNEQuotationEntity.BuyingMode">
+            <summary>
+            Buying Mode
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNEQuotationEntity.PNDesc">
+            <summary>
+            PN說明
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNEQuotationEntity.PNSpec">
+            <summary>
+            PN Spec
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNEQuotationEntity.DaoolarType">
+            <summary>
+            幣別
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.FormPMUserEntity">
+            <summary>
+            Form與PM的關係
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.Entity.FormPMUserEntity.TABLE_NPI_FORM_SUB">
+            <summary>
+            NPI資料表 NPI_FORM_SUB 
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPMUserEntity.FormId">
+            <summary>
+            Form Id
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPMUserEntity.PMUserId">
+            <summary>
+            PM User Id 工號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPMUserEntity.PMCompanyId">
+            <summary>
+            員工的公司
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.EmployeeEntity">
+            <summary>
+            員工資料檔
+            
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.EmployeeEntity.EmpAccountId">
+            <summary>
+            員工工號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.EmployeeEntity.EmpLoginId">
+            <summary>
+            員工Domain Login ID
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.EmployeeEntity.EmpDomainId">
+            <summary>
+            員工登入Domian 
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.EmployeeEntity.EmpEnglishName">
+            <summary>
+            員工英文名稱
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.EmployeeEntity.EmpChineseName">
+            <summary>
+            員工中文名稱
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.EmployeeEntity.EmpEmail">
+            <summary>
+            電子郵件
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.EmployeeEntity.PhoneNo">
+            <summary>
+            電話
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.EmployeeEntity.CompanyId">
+            <summary>
+            公司代號
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Logic.BaseUserLogic">
+            <summary>
+            專門取得所有的使用者資訊
+            分別為SRM_User
+            NPI_Privivilege
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Logic.BaseUserLogic.GetEmp(System.String,System.String)">
+            <summary>
+            取得員工資料經由Login資訊而來
+            </summary>
+            <param name="domain">Domain</param>
+            <param name="loginId">Domain Login Id</param>
+            <param name="companyId">Comapny Id like 'ASUSTECH'</param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BaseUserLogic.GetEmp(System.String,System.String,System.String)">
+            <summary>
+            取得員工資訊
+            </summary>
+            <param name="loginId"></param>
+            <param name="companyId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BaseUserLogic.GetUserInfo(System.String,System.String)">
+            <summary>
+            取回員工資料
+            </summary>
+            <param name="userId"></param>
+            <param name="companyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BaseUserLogic.GetRoleUser``1(System.String,AsusLibrary.EnumRole,System.String)">
+            <summary>
+            取得此人的Role的列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="userId"></param>
+            <param name="role"></param>
+            <param name="companyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BaseUserLogic.GetRoleList``1(AsusLibrary.EnumRole,System.String,System.String)">
+            <summary>
+            取回所有的角色列表
+            這裡是以Role為主，找回相關的人員
+            </summary>
+            <param name="userId"></param>
+            <param name="isEnable"></param>
+            <param name="companyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.BaseUserLogic.QueryThisUserRoleList(System.String,System.String,System.String)">
+            <summary>
+            取得此人的角色列表
+            </summary>
+            <param name="userId"></param>
+            <param name="isEnable"></param>
+            <param name="companyId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AsusLibrary.Doc.VersionHistory.Version1">
+            <summary>
+            Version 1.0 版
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Doc.VersionHistory.Version1.Version">
+            <summary>
+            版本代號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Doc.VersionHistory.Version1.VersionDate">
+            <summary>
+            版本日期
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Logic.GroupLogic">
+            <summary>
+            針對群組設定
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Logic.GroupLogic.GetGroupUsers(System.String)">
+            <summary>
+            取得群組的人員名單
+            </summary>
+            <param name="groupId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AsusLibrary.Logic.FormLogic">
+            <summary>
+            Form Logic
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Logic.FormLogic.QueryFormList(System.String,System.String,System.String)">
+            <summary>
+            需要用使用者ID
+            </summary>
+            <param name="status"></param>
+            <param name="pmUserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.FormLogic.QueryFormList(System.String,System.String)">
+            <summary>
+            取得所有的PM 列表
+            </summary>
+            <param name="status"></param>
+            <param name="pmCompanyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.FormLogic.QueryForm(System.String)">
+            <summary>
+            取回一筆Form資料
+            </summary>
+            <param name="formId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.FormLogic.CreateForm(AsusLibrary.Entity.FormEntity)">
+            <summary>
+            建立一個Form
+            </summary>
+            <param name="form"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.FormLogic.QueryFormPNList(System.String,System.String,System.String[])">
+            <summary>
+            取回Form PN List
+            </summary>
+            <param name="formId"></param>
+            <param name="pnGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.FormLogic.QueryFormPNList(System.String)">
+            <summary>
+            取得所有的PNList
+            </summary>
+            <param name="formId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.FormLogic.UpdateResponseForm(System.Collections.Generic.SortedList{System.String,AsusLibrary.Entity.FormPNEntity})">
+            <summary>
+            更新PN資料
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.FormLogic.SaveFormTemp(System.String,System.String,System.String)">
+            <summary>
+            更新至Temp檔
+            </summary>
+            <param name="formId"></param>
+            <param name="userId"></param>
+            <param name="companyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.FormLogic.QueryFormTemp(System.String,System.String)">
+            <summary>
+            取得此FormId資料
+            </summary>
+            <param name="userId"></param>
+            <param name="companyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.FormLogic.QueryNotCloseFormList">
+            <summary>
+            取得目前尚未結案的資料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AsusLibrary.Entity.PNSendEntity">
+            <summary>
+            確認資料更新
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Entity.PNSendEntity.#ctor(AsusLibrary.Entity.PNPriceEntity)">
+            <summary>
+            必須有下列欄位資料必須要轉換
+            PN
+            YearQ
+            IsSend
+            BuyingMode
+            SendUser
+            SendTime
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNSendEntity.PN">
+            <summary>
+            元件料號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNSendEntity.YearQ">
+            <summary>
+            年度
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNSendEntity.IsSend">
+            <summary>
+            是否已經送至eQuatation
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNSendEntity.Site">
+            <summary>
+            Site別
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNSendEntity.SendUser">
+            <summary>
+            送至eQuatattion人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PNSendEntity.SendTime">
+            <summary>
+            寄送時間
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Entity.MenuEntity.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Menu Entity
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <param name="url"></param>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group.Group_Id">
+            <summary>
+            群組代號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group.Group_Name">
+            <summary>
+            系統名稱
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group.Group_Desc">
+            <summary>
+            系統說明
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group.WorkStstus">
+            <summary>
+            目前狀態
+            Y=Enable
+            N=Disable
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group.CreateUser">
+            <summary>
+            新增人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group.CreateTime">
+            <summary>
+            新增時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group.UpdateUser">
+            <summary>
+            修改人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group.UpdateTime">
+            <summary>
+            修改時間
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.DBSchema.NPIVersion3.NPI_Group_Mapping">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group_Mapping.Group_Id">
+            <summary>
+            群組代號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group_Mapping.USER_ID">
+            <summary>
+            員工帳號
+            員工工號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group_Mapping.WorkStstus">
+            <summary>
+            目前狀態
+            Y=Enable
+            N=Disable
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group_Mapping.CreateUser">
+            <summary>
+            新增人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group_Mapping.CreateTime">
+            <summary>
+            新增時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group_Mapping.UpdateUser">
+            <summary>
+            修改人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion3.NPI_Group_Mapping.UpdateTime">
+            <summary>
+            修改時間
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.WebPage.BasePage">
+            <summary>
+            此專案的第一個頁面
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.WebPage.BasePage.IsAuth(AsusLibrary.EnumRole[])">
+            <summary>
+            取回此人
+            </summary>
+            <param name="programKey"></param>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="P:AsusLibrary.WebPage.BasePage.LoginUserInfo">
+            <summary>
+            登入系統人員資料
+            只能取得，不能設定
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Logic.ExcelLogic">
+            <summary>
+            取得Excel 資料的
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Logic.ExcelLogic.#ctor(System.String,System.String)">
+            <summary>
+            Initial File
+            </summary>
+            <param name="sTemplate"></param>
+            <param name="saveFile"></param>
+        </member>
+        <member name="M:AsusLibrary.Logic.ExcelLogic.GenerateBomFile(AsusLibrary.Entity.FormResponseEntity)">
+            <summary>
+            上傳BOM資料
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.ExcelLogic.GenNotPNFile(System.Collections.Generic.List{AsusLibrary.Entity.SourcerPNMapEntity})">
+            <summary>
+            取回尚未PN列表資料
+            目的是在找尋PN與Sourcer的資料 Map
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:AsusLibrary.Logic.ExcelLogic.GenerateTemplateBomUploadFile">
+            <summary>
+            產生下載BOM範本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.ExcelLogic.RunBomListFile(System.Collections.Generic.List{AsusLibrary.Entity.BOMBookingEntity})">
+            <summary>
+            取得所有的BOM列表
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:AsusLibrary.Logic.ExcelLogic.RunBomDownloadTemplateFile">
+            <summary>
+            取得Template DownLoad File
+            預設給50筆資料
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Logic.ExcelLogic.GetResponseData">
+            <summary>
+            取得 PN Excel的資訊
+            </summary>
+            <param name="openFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.ExcelLogic.GetBOMResponseDataList">
+            <summary>
+            取得BOM資料的處理清單
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.ExcelLogic.RunData(AsusLibrary.Entity.FormResponseEntity)">
+            <summary>
+            所有的Excel下載資料處理在於此
+            BOM表頭
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:AsusLibrary.Logic.ExcelLogic.GetData">
+            <summary>
+            取得所有的資料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.ExcelLogic.GetBOMExcelDataList">
+            <summary>
+            取得此Excel 檔案的BOM表資料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AsusLibrary.DBSchema.NPIVersion2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group.Group_Id">
+            <summary>
+            群組代號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group.Group_Name">
+            <summary>
+            系統名稱
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group.Group_Desc">
+            <summary>
+            系統說明
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group.WorkStstus">
+            <summary>
+            目前狀態
+            Y=Enable
+            N=Disable
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group.CreateUser">
+            <summary>
+            新增人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group.CreateTime">
+            <summary>
+            新增時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group.UpdateUser">
+            <summary>
+            修改人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group.UpdateTime">
+            <summary>
+            修改時間
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.DBSchema.NPIVersion2.NPI_Group_Mapping">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group_Mapping.Group_Id">
+            <summary>
+            群組代號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group_Mapping.USER_ID">
+            <summary>
+            員工帳號
+            員工工號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group_Mapping.WorkStstus">
+            <summary>
+            目前狀態
+            Y=Enable
+            N=Disable
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group_Mapping.CreateUser">
+            <summary>
+            新增人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group_Mapping.CreateTime">
+            <summary>
+            新增時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group_Mapping.UpdateUser">
+            <summary>
+            修改人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion2.NPI_Group_Mapping.UpdateTime">
+            <summary>
+            修改時間
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Logic.UserLogic.QueryPMList(System.String,System.String)">
+            <summary>
+            取得PM角色的人
+            </summary>
+            <param name="isEnable"></param>
+            <param name="companyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.UserLogic.QueryPMInfo(System.String,System.String)">
+            <summary>
+            取得PM角色的人員
+            </summary>
+            <param name="userId"></param>
+            <param name="companyId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AsusLibrary.Entity.FormPNBomEntity">
+            <summary>
+            為BOM與PN的關係
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.Entity.FormPNBomEntity.TABLE_NPI_BOM_PN">
+            <summary>
+            Table:NPI_BOM_PN
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNBomEntity.FormId">
+            <summary>
+            Form Id
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNBomEntity.WorkNo">
+            <summary>
+            Work No
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNBomEntity.BomId">
+            <summary>
+            BomId
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNBomEntity.PN">
+            <summary>
+            PN
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNBomEntity.Qty">
+            <summary>
+            組合用量
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNBomEntity.CreateUser">
+            <summary>
+            新增人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNBomEntity.CreateTime">
+            <summary>
+            新增時間
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNBomEntity.UpdateUser">
+            <summary>
+            更新人員
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.FormPNBomEntity.UpdateTime">
+            <summary>
+            更新時間
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM">
+            <summary>
+            Table NPI_BOM
+            
+            本Table 用來放RD PM 所放的BOM基本資料
+            本Table 會與 Booking Table 一起使用
+            
+            Grant 
+            grant select, insert, update, delete on CAERDSA.NPI_BOM to SHINEWAVE;
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.USER_ID">
+            <summary>
+            員工帳號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.BOM_ID">
+            <summary>
+            BOM 型號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.BOM_NAME">
+            <summary>
+            BOM名稱
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.BOM_STATUS">
+            <summary>
+            BOM 狀態
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.BOM_DESC">
+            <summary>
+            BOM 說明
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.BOM_REVISION">
+            <summary>
+            BOM 版本
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.RD_EMP_ID">
+            <summary>
+            RD 員工帳號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.RD_EMP_NAME">
+            <summary>
+            RD 員工姓名
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.RD_EMP_PHONENO">
+            <summary>
+            RD 員工分機
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.PVT_QTY">
+            <summary>
+            PVT 數量
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.PVT_TIME">
+            <summary>
+            PVT 時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.PVT_LOCATION">
+            <summary>
+            PVT 生產地
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.MP_TIME">
+            <summary>
+             MP 大量生產時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.MP_Q1_QTY">
+            <summary>
+            MP Q1 數量
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.MP_Q2_QTY">
+            <summary>
+            MP Q2 數量
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.CREATE_USER">
+            <summary>
+            建立人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.CREATE_DATE">
+            <summary>
+            建立時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.UPDATE_USER">
+            <summary>
+            更新人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.UPDATE_DATE">
+            <summary>
+            更新時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.IS_ENABLE">
+            <summary>
+            是否使用
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM.COMPANY_ID">
+            <summary>
+            公司代號
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM_PN">
+            <summary>
+            BOM PN 的關係，本Table 是放BOM 與 PN的關係，由展BOM 程式而來
+            
+            
+            grant select, insert, update, delete on CAERDSA.NPI_BOM_PN to SHINEWAVE;
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM_PN.FORM_ID">
+            <summary>
+            Form代號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM_PN.WORK_NO">
+            <summary>
+            產生代號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM_PN.ASUS_BOM">
+            <summary>
+            BOM
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM_PN.ASUS_PN">
+            <summary>
+            元件料號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM_PN.ASMBLY_QTY">
+            <summary>
+            組合用料
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM_PN.CREATE_USER">
+            <summary>
+            建立人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM_PN.CREATE_DATE">
+            <summary>
+            建立時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM_PN.UPDATE_USER">
+            <summary>
+            更新人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOM_PN.UPDATE_DATE">
+            <summary>
+            更新時間
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.DBSchema.NPIVersion1.NPI_BOOKING">
+            <summary>
+            BOM BOOKING 資料表
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOOKING.USER_ID">
+            <summary>
+            PM員工帳號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOOKING.BOM_ID">
+            <summary>
+            展BOM 的單號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOOKING.FORM_ID">
+            <summary>
+            Form代號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOOKING.WORK_STATUS">
+            <summary>
+            目前狀態
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOOKING.BOOKING_DATE">
+            <summary>
+            BOOKING 時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOOKING.CREATE_USER">
+            <summary>
+            建立人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOOKING.CREATE_DATE">
+            <summary>
+            建立時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOOKING.UPDATE_USER">
+            <summary>
+            更新人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOOKING.UPDATE_DATE">
+            <summary>
+            更新時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_BOOKING.COMPANY_ID">
+            <summary>
+            PM所在公司
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.DBSchema.NPIVersion1.NPI_DOLLAR_TYPE">
+            <summary>
+            幣別資料
+            grant select, insert, update, delete on CAERDSA.NPI_DOLLAR_TYPE to SHINEWAVE;
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_DOLLAR_TYPE.DOLLAR_TYPEID">
+            <summary>
+            幣別代號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_DOLLAR_TYPE.DOLLAR_TYPENAME">
+            <summary>
+            幣別名稱
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_DOLLAR_TYPE.DESCRIPTION">
+            <summary>
+            說明
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_DOLLAR_TYPE.UPDATE_USER">
+            <summary>
+            更新人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_DOLLAR_TYPE.UPDATE_DATE">
+            <summary>
+            更新時間
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.DBSchema.NPIVersion1.NPI_EMS">
+            <summary>
+            EMS 維護程式
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_EMS.EMS_CODE">
+            <summary>
+            EMS CODE
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_EMS.EMS_NAME">
+            <summary>
+            EMS NAME
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_EMS.EMS_COMPANY">
+            <summary>
+            EMS_COMPANY
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_EMS.UPDATE_USER">
+            <summary>
+            更新人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_EMS.UPDATE_TIME">
+            <summary>
+            更新時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_EMS.TIPTOP_SITE">
+            <summary>
+            TIPTOP_SITE
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_MAIN">
+            <summary>
+            NPI Main Form
+            
+            grant select, insert, update, delete on CAERDSA.NPI_FORM_MAIN to SHINEWAVE;
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_MAIN.FORM_ID">
+            <summary>
+            Form代號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_MAIN.CREATE_USER">
+            <summary>
+            建立人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_MAIN.CREATE_DATE">
+            <summary>
+            建立時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_MAIN.FORM_STATUS">
+            <summary>
+            是否使用
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN">
+            <summary>
+            NPI Form PN
+            grant select, insert, update, delete on CAERDSA.NPI_FORM_PN to SHINEWAVE;
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.FORM_ID">
+            <summary>
+            Form代號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.ASUS_PN">
+            <summary>
+            元件料號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.PART_DESC1">
+            <summary>
+            品名
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.PART_DESC2">
+            <summary>
+            規格
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.LONGTERM_WEEK">
+            <summary>
+            LONGTERM_WEEK
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.PN_PROPERTY">
+            <summary>
+            料號屬性
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.ADD2_SOURCE">
+            <summary>
+            加入第二來源
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.ADD2_SOURCE_COMMENT">
+            <summary>
+            加入第二來源備註
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.EOL_COMMENT">
+            <summary>
+            EOL備註
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.CREATE_USER">
+            <summary>
+            建立人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.CREATE_DATE">
+            <summary>
+            建立時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.UPDATE_USER">
+            <summary>
+            更新人員
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.UPDATE_DATE">
+            <summary>
+            更新時間
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.ALERT">
+            <summary>
+            是否提醒
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.ASSEMBLY_NO">
+            <summary>
+            料號群組
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.ASSEMBLY_TYPE">
+            <summary>
+            主/替代料(N=主料 S=替代料)
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_PN.RISKBUY">
+            <summary>
+            RISKBUY
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_SUB">
+            <summary>
+            NPI PM 表單資料表
+            grant select, insert, update, delete on CAERDSA.NPI_FORM_SUB to SHINEWAVE;
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_SUB.FORM_ID">
+            <summary>
+            Form代號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_SUB.PM_USER_ID">
+            <summary>
+            負責PM員工工號
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.DBSchema.NPIVersion1.NPI_FORM_SUB.PM_COMPANY_ID">
+            <summary>
+            負責PM員工公司
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.DBSchema.NPIVersion1.NPI_PNPRICE">
+            <summary>
+            NPI Price
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Logic.AsusBomLogic.GetERPBomList(System.String)">
+            <summary>
+            取回一個WorkNo的資料
+            篩選條件
+            1. PN的前兩碼必須小於16 ，只取前兩碼小於16的PN
+            有例外，所以將SQL資料
+            </summary>
+            <param name="workNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.AsusBomLogic.GetEMSDataTable">
+            <summary>
+            取得EMS Site 資料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.AsusBomLogic.GetEmsSite(System.String)">
+            <summary>
+            取回EMS Site資料
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AsusLibrary.EnumRole">
+            <summary>
+            角色列表
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.EnumWorkStatus">
+            <summary>
+            BOM  展開狀態
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.EnumFormstatus">
+            <summary>
+            Form 狀態
+            這一個參數由Management來控制狀態
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.EnumFormstatus.Y">
+            <summary>
+            已結案
+            </summary>
+        </member>
+        <member name="F:AsusLibrary.EnumFormstatus.N">
+            <summary>
+            未結案
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.PVTBOMEntity">
+            <summary>
+            與PVT 的BOM 
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PVTBOMEntity.BOMId">
+            <summary>
+            BOM Id
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.PVTBOMEntity.Location">
+            <summary>
+            Location
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Entity.PreFixRuleEntity">
+            <summary>
+            加入前置字元
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.ComponentGroupEntity.ID">
+            <summary>
+            元件料件代號
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Entity.ComponentGroupEntity.Name">
+            <summary>
+            元件料號名稱
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetSourcerUser(System.String,System.String)">
+            <summary>
+            取得Sourcer資訊
+            </summary>
+            <param name="empId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetMailSourcerList">
+            <summary>
+            取得需要寄信之Sourcer人員
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetMailPMList">
+            <summary>
+            取得欲寄給PM的信件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetNotConfirmPricePNList">
+            <summary>
+            取得尚未確認的金額，以群組的方式包裝起來
+            還加入不推薦用料-選擇
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetSourcerNotConfirmManagerList">
+            <summary>
+            取得目市尚未回覆的Sourcer主管名單
+            先找出5天以內的資料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetSourceListByManager(System.String,System.String)">
+            <summary>
+            利用主管的帳號去取得Sourcer的資料
+            再用此資料去比對採購的資料
+            </summary>
+            <param name="managerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetWaitingPNPriceListByUserId">
+            <summary>
+            取得尚未議價的PN Price Data 
+            取的所有的資料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetWaitingPNPriceListByUserId(System.String)">
+            <summary>
+            取得目前尚未議價的資料
+            </summary>
+            <param name="accountId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetAllSourcer">
+            <summary>
+            取得昕有的Sourcer
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.IsValidSourcerPNGroup(System.String,System.String)">
+            <summary>
+            檢查此資料是否正確
+            </summary>
+            <param name="userid"></param>
+            <param name="pnGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetSourcerComponentList(System.String,System.String)">
+            <summary>
+            取回此人可以回覆的元件料號
+            由01-20
+            </summary>
+            <param name="empId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetUserIdByGroup(System.String)">
+            <summary>
+            根據群組取回裡面所有的人
+            </summary>
+            <param name="groupId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetSourcerIdPNMapByTipTop(System.String)">
+            <summary>
+            取回Sourcer的工號 根據TipTop上面的PN與Sourcer的對應檔
+            用來做一個
+            </summary>
+            <param name="pn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.CreateNewSourcer(AsusLibrary.Entity.SourcerEntity)">
+            <summary>
+            建立一筆Sourcer資料
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.UpdateSourcer(AsusLibrary.Entity.SourcerEntity)">
+            <summary>
+            更新Sourcer資訊
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetPNPriceList(System.String)">
+            <summary>
+            取回查詢資料
+            取回目前已經確認的資料
+            </summary>
+            <param name="pn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetWaitingPNPriceList(System.String)">
+            <summary>
+            尚未確認的PNPriceList的資料
+            </summary>
+            <param name="pn"></param>
+            <param name="isConfirm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetWaitingPNPriceList(System.String,System.String)">
+            <summary>
+            取回特定的PN且尚未Confirm的資料
+            </summary>
+            <param name="isConfirm"></param>
+            <param name="pn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetBuyingModeIsNullPNPriceList">
+            <summary>
+            取得所有的PNPriceData
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetWaitingSendPNPriceList">
+            <summary>
+            取得已經是金額確認的資料，
+            但是尚未送出至EQuotation的資料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetPNPriceList(System.String,System.String)">
+            <summary>
+            取得元件料號
+            </summary>
+            <param name="pn"></param>
+            <param name="isConfirm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetPNQuarterPriceList(System.String)">
+            <summary>
+            找得目前在資料表中此季的資料，以供比對
+            Table NPI_PNPrice
+            </summary>
+            <param name="yearQ">2008Q4</param>
+            <param name="isConfirm">Y/N</param>
+            <returns>取回此季的元件料號列表</returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetBuyingMode(System.String,System.String,System.String)">
+            <summary>
+            取回此Site的Buying Mode
+            site：EMS Site
+            pn:元件料號
+            </summary>
+            <param name="site">PGSZB1</param>
+            <param name="pn">04G070000900TW</param>
+            <returns>B/C/A/T</returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetBuyingMode(System.String)">
+            <summary>
+            取得所有可能的BuyingMode
+            </summary>
+            <param name="pn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GeteQuotationPriceDicList(System.Collections.Generic.List{AsusLibrary.Entity.PNPriceEntity})">
+            <summary>
+            取得在eQuotation的資料可以使用
+            狀況：這會在尚未有TipTop的資料時先去eQuotation
+            </summary>
+            <param name="pnList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetTipTopPriceListByPN(System.Collections.Generic.List{AsusLibrary.Entity.PNPriceEntity})">
+            <summary>
+            取得所有的TipTip的資料列表
+            </summary>
+            <param name="pnList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.UpdatePNPrice(System.Collections.Generic.List{AsusLibrary.Entity.PNPriceEntity})">
+            <summary>
+            更新CommandListData
+            </summary>
+            <param name="pnList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetPNTipTopPriceData(System.String,System.String,System.String)">
+            <summary>
+            取得一筆TipTopPrice資料
+            </summary>
+            <param name="site"></param>
+            <param name="pn"></param>
+            <param name="yearQ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetPNTipTopPriceData(System.String)">
+            <summary>
+            取得利用元件料號找議價資料
+            </summary>
+            <param name="pn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.ConvertToSite(System.String)">
+            <summary>
+            由Site別轉換成TipTop Site別
+            </summary>
+            <param name="site"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetVendorCode(System.String)">
+            <summary>
+            取回Site Vendor Code
+            有一例外：PeGaTron
+            其餘的部份都要與原來的比對
+            </summary>
+            <param name="site"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.InserteQuatationData(System.Collections.Generic.SortedList{System.String,AsusLibrary.Entity.PNEQuotationEntity},System.Collections.Generic.List{AsusLibrary.Entity.PNSendEntity})">
+            <summary>
+            新增資料至eQuotation
+            </summary>
+            <param name="eList"></param>
+            <param name="sList">本身確認知道</param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetTipTopSecondSourceNotUsePN">
+            <summary>
+            取得所有的不推薦的元件料號資料
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetWaitingPNNotExistSourcerMap">
+            <summary>
+            取得現在尚未建立Sourcer與PN之間之關係
+            這是為了尚未有議價檔-但是尚未無法有Sourcer資料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.InsertSourcePNMap(System.Collections.Generic.List{AsusLibrary.Entity.SourcerPNMapEntity},System.Collections.Generic.List{AsusLibrary.Entity.SourcerPNMapEntity})">
+            <summary>
+            新增資料進NPI_SOURCERPN_MAP
+            包括
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Logic.SourcerLogic.GetWaitingAlertSourcePrice">
+            <summary>
+            取回等待通知Sourcer 議價檔的資料
+            2009/02/25 新版
+            有加入使用者的名單
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

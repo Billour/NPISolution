@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63C77AB1-FE64-4B39-975C-B0B200EE02C6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NPIDocument</RootNamespace>
+    <AssemblyName>NPIDocument</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Wiki\ERModel\NPI-ER.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Deploy\2009-03-20\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Deploy\2009-03-20\系統維運相關異動需求表單_部署NPIWeb_20090320.docx" />
+    <None Include="Deploy\2009-03-31\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Deploy\2009-03-31\系統維運相關異動需求表單_部署NPIWeb_20090331.docx" />
+    <None Include="Deploy\20090206\Deploy NPI Batch Job-20090206.doc" />
+    <None Include="Deploy\20090206\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Deploy\20090206\系統維運相關異動需求表單_部署NPI-Batch_20090206.docx" />
+    <None Include="Deploy\20090206\系統維運相關異動需求表單_部署NPIWeb_20090206.docx" />
+    <None Include="Deploy\20090217\20090217-add-npi-booking.sql" />
+    <None Include="Deploy\20090217\系統維運相關異動需求表單_NPI修改Table%28NPI_Booking%29 .docx" />
+    <None Include="Deploy\20090218\系統維運相關異動需求表單_申請正式機測試帳號tp-sso-03.docx" />
+    <None Include="Deploy\20090219\Deploy NPI Batch Job-20081219.doc" />
+    <None Include="Deploy\20090219\系統維運相關異動需求表單_部署NPI-Batch_20081219.docx" />
+    <None Include="Deploy\20090220\系統維運相關異動需求表單_申請正式機測試帳號tp-sso-03.docx" />
+    <None Include="Deploy\20090225\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Deploy\20090225\product-20090225-NPI-1.sql" />
+    <None Include="Deploy\20090225\系統維運相關異動需求表單_NPI建立Table%28NPI_SourcerPN_Map%29 .docx" />
+    <None Include="Deploy\20090225\系統維運相關異動需求表單_部署NPIWeb_20090225.docx" />
+    <None Include="Deploy\20090226\系統維運相關異動需求表單_申請正式機測試帳號tp-sso-03.docx" />
+    <None Include="Deploy\20090227\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Deploy\20090227\系統維運相關異動需求表單_部署NPIWeb_20090227.docx" />
+    <None Include="Deploy\20090302\Deploy NPI Batch Job-20090302.doc" />
+    <None Include="Deploy\20090302\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Deploy\20090302\系統維運相關異動需求表單_部署NPI-Batch_20090302.docx" />
+    <None Include="Deploy\20090302\系統維運相關異動需求表單_部署NPIWeb_20090302.docx" />
+    <None Include="Deploy\20090303\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Deploy\20090303\系統維運相關異動需求表單_部署NPIWeb_20090303.docx" />
+    <None Include="Deploy\20090304\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Deploy\20090304\系統維運相關異動需求表單_部署NPIWeb_20090304.docx" />
+    <None Include="Deploy\20090305\系統維運相關異動需求表單_申請正式機測試帳號tp-sso-03.docx" />
+    <None Include="Deploy\20090310\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Deploy\20090310\系統維運相關異動需求表單_部署NPIWeb_20090310.docx" />
+    <None Include="Deploy\20090311\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Deploy\20090311\系統維運相關異動需求表單_部署NPIWeb_20090311.docx" />
+    <None Include="Deploy\20090318\系統維運相關異動需求表單_申請正式機測試帳號tp-sso-03.docx" />
+    <None Include="Deploy\20090323\系統維運相關異動需求表單_申請NPI Log檔案.docx" />
+    <None Include="Deploy\20090325\Deploy NPI Batch Job-20081218.doc" />
+    <None Include="Deploy\20090325\系統維運相關異動需求表單_部署NPI-Batch_20090325.docx" />
+    <None Include="Deploy\20090326\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Deploy\20090326\系統維運相關異動需求表單_申請正式機測試帳號tp-sso-03.docx" />
+    <None Include="Deploy\20090326\系統維運相關異動需求表單_部署NPIWeb_20090326.docx" />
+    <None Include="Deploy\20090409\系統維運相關異動需求表單_申請VisualSourceSafe目錄權限_20090409.docx" />
+    <None Include="Deploy\20090414\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Deploy\20090414\系統維運相關異動需求表單_部署NPIWeb_20090414.docx" />
+    <None Include="Deploy\20090416\系統維運相關異動需求表單_申請正式機測試帳號tp-sso-03.docx" />
+    <None Include="Deploy\20090508\Deploy NPI Batch Job-20081218.doc" />
+    <None Include="Deploy\20090508\Deploy NPI Batch Job-20090508.doc" />
+    <None Include="Deploy\20090508\系統維運相關異動需求表單_部署NPI-Batch_20090508.docx" />
+    <None Include="Deploy\20090511\Deploy NPI Batch Job-20090511.doc" />
+    <None Include="Deploy\20090511\系統維運相關異動需求表單_部署NPI-Batch_20090511.docx" />
+    <None Include="Deploy\20090512\scm asus com tw.xls" />
+    <None Include="Deploy\20090513\20090513-NPI-2.sql" />
+    <None Include="Deploy\20090513\系統維運相關異動需求表單_NPI新增Table_20090513.docx" />
+    <None Include="Deploy\20090518\Deploy NPI Batch Job-20090511.doc" />
+    <None Include="Deploy\20090518\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Deploy\20090518\DeployNPIBatch.bak" />
+    <None Include="Deploy\20090518\DeployNPIWeb.bak" />
+    <None Include="Deploy\20090518\NPI_Deploy_Sample_Doc.rar" />
+    <None Include="Deploy\20090518\系統維運相關異動需求表單_部署NPI-Batch_20090518.docx" />
+    <None Include="Deploy\20090605\Create-AssemblyNo-20090605.sql" />
+    <None Include="Deploy\20090605\Deploy NPI Batch Job-20090511.doc" />
+    <None Include="Deploy\20090605\DeployNPIBatch.bak" />
+    <None Include="Deploy\20090605\系統維運相關異動需求表單_NPI修改Table_20090605.docx" />
+    <None Include="Deploy\20090605\系統維運相關異動需求表單_部署NPI-Batch_20090605.docx" />
+    <None Include="Deploy\20090606\Deploy NPI Batch Job-20090511.doc" />
+    <None Include="Deploy\20090606\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Deploy\20090606\DeployNPIBatch.bak" />
+    <None Include="Deploy\20090606\DeployNPIBatch.bak2" />
+    <None Include="Deploy\20090606\DeployNPIWeb.bak" />
+    <None Include="Deploy\20090606\DeployToTestBatch.bak2" />
+    <None Include="Deploy\20090606\系統維運相關異動需求表單_部署NPI-20090606.docx" />
+    <None Include="Deploy\20090610\Deploy NPI Batch Job-20090511.doc" />
+    <None Include="Deploy\20090610\DeployNPIBatch.bak" />
+    <None Include="Deploy\20090610\系統維運相關異動需求表單_部署NPI-20090610.docx" />
+    <None Include="Deploy\20090615\20090610-NPI.sql" />
+    <None Include="Deploy\20090615\系統維運相關異動需求表單_NPI新增Table_20090615.docx" />
+    <None Include="Deploy\20090616\Deploy NPI Batch Job-20090511.doc" />
+    <None Include="Deploy\20090616\DeployNPIBatch.bak" />
+    <None Include="Deploy\20090616\系統維運相關異動需求表單_部署NPI-20090616.docx" />
+    <None Include="Deploy\20090618\DeployNPIBatch.bak" />
+    <None Include="Deploy\20090618\DeployNPIWeb.bak" />
+    <None Include="Deploy\20090618\系統維運相關異動需求表單_部署NPI-20090606.docx" />
+    <None Include="Deploy\20090624\DeployNPIWeb.bak" />
+    <None Include="Deploy\20090624\系統維運相關異動需求表單_部署NPI-20090624.docx" />
+    <None Include="Deploy\20090709\DeployNPIBatch.bak" />
+    <None Include="Deploy\20090709\DeployNPIWeb.bak" />
+    <None Include="Deploy\20090709\系統維運相關異動需求表單_部署NPI.docx" />
+    <None Include="Deploy\20090710\DeployNPIBatch.bak" />
+    <None Include="Deploy\20090710\系統維運相關異動需求表單_部署NPI.docx" />
+    <None Include="Deploy\20090715\DeployNPIBatch.bak" />
+    <None Include="Deploy\20090715\系統維運相關異動需求表單_部署NPI.docx" />
+    <None Include="Deploy\20090722\系統維運相關異動需求表單_重跑NPI_Job.docx" />
+    <None Include="Deploy\20090723\20090723-Jo_Kuo-1.xls" />
+    <None Include="Deploy\20090723\20090723-Jo_Kuo-2.xls" />
+    <None Include="Deploy\20090806\DeployNPIBatch.bak" />
+    <None Include="Deploy\20090806\系統維運相關異動需求表單_部署NPI.docx" />
+    <None Include="Deploy\20090904\DeployNPIWeb.bak" />
+    <None Include="Deploy\20090904\系統維運相關異動需求表單_部署NPI.docx" />
+    <None Include="Deploy\20090915\DeployNPIWeb.bak" />
+    <None Include="Deploy\20090915\系統維運相關異動需求表單_部署NPI.docx" />
+    <None Include="Deploy\20090922\DeployNPIWeb.bak" />
+    <None Include="Deploy\20090922\系統維運相關異動需求表單_部署NPI.docx" />
+    <None Include="Deploy\20090930\DeployNPIBatch.bak" />
+    <None Include="Deploy\20090930\系統維運相關異動需求表單_部署NPI.docx" />
+    <None Include="Wiki\Deploy\20090525\Deploy NPI Web Site-20081208.doc" />
+    <None Include="Wiki\Deploy\20090525\DeployNPIWeb.bak" />
+    <None Include="Wiki\Deploy\20090525\系統維運相關異動需求表單_部署NPI-20090525.docx" />
+    <None Include="Wiki\Doc\NPI-交接文件.doc" />
+    <None Include="Wiki\Doc\第二次交接文件_0925.doc" />
+    <None Include="Wiki\ERModel\NPI-ER.vsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Deploy\20091020\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1329</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

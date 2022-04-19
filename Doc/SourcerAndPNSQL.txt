@@ -1,0 +1,6 @@
+ strSQL = "select ima01, ima02, ima021, ima43, ";
+                    strSQL += "(select trim(ind303) from ind3_file where ind301=ima43) as SOURCER_ID, ";
+                    strSQL += "(select trim(ind302) from ind3_file where ind301=ima43) as SOURCER_NAME ";
+                    strSQL += "from ima_file where ima01='" + rowPN["ASUS_PN"].ToString() + "'";
+  string strSOURCER_NAME = dr_odbc["SOURCER_NAME"].ToString();
+                        string strSOURCER_ID = dr_odbc["SOURCER_ID"].ToString();

@@ -1,0 +1,437 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84DDD07C-B9E7-4693-9E80-E430ABE46809}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AsusWeb</RootNamespace>
+    <AssemblyName>NPIWeb</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\NPIWeb.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10301.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL" />
+    <Reference Include="antlr.runtime, Version=2.7.6.2, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL" />
+    <Reference Include="BankPro.COM.Crypto, Version=1.0.3000.18147, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Common.Logging, Version=1.1.0.2, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL" />
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL" />
+    <Reference Include="NHibernate, Version=1.2.0.2003, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL" />
+    <Reference Include="OpenFlashChart, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Quartz, Version=0.9.1.2, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Spring.Aop, Version=1.1.0.2, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL" />
+    <Reference Include="Spring.Core, Version=1.1.0.2, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL" />
+    <Reference Include="Spring.Data, Version=1.1.0.2, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL" />
+    <Reference Include="Spring.Data.NHibernate, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Spring.Services, Version=1.1.0.2, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL" />
+    <Reference Include="Spring.Web, Version=1.1.0.2, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlertSourcerMail.aspx.cs">
+      <DependentUpon>AlertSourcerMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlertSourcerMail.aspx.designer.cs">
+      <DependentUpon>AlertSourcerMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BomBooking.aspx.cs">
+      <DependentUpon>BomBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BomBooking.aspx.designer.cs">
+      <DependentUpon>BomBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BomProc.aspx.cs">
+      <DependentUpon>BomProc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BomProc.aspx.designer.cs">
+      <DependentUpon>BomProc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BomResponse.aspx.cs">
+      <DependentUpon>BomResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BomResponse.aspx.designer.cs">
+      <DependentUpon>BomResponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Config.aspx.cs">
+      <DependentUpon>Config.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Config.aspx.designer.cs">
+      <DependentUpon>Config.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\TableLayout.ascx.cs">
+      <DependentUpon>TableLayout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layout\TableLayout.ascx.designer.cs">
+      <DependentUpon>TableLayout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\UserLayout.ascx.cs">
+      <DependentUpon>UserLayout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layout\UserLayout.ascx.designer.cs">
+      <DependentUpon>UserLayout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NPI.Master.cs">
+      <DependentUpon>NPI.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NPI.Master.designer.cs">
+      <DependentUpon>NPI.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NPIClosePage.aspx.cs">
+      <DependentUpon>NPIClosePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NPIClosePage.aspx.designer.cs">
+      <DependentUpon>NPIClosePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnLineHelp.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>OnLineHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OnLineHelp.aspx.designer.cs">
+      <DependentUpon>OnLineHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Handler\SystemLoggingAdvice.cs" />
+    <Compile Include="Page\Handler\ThrowHanler.cs" />
+    <Compile Include="Page\LoginInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Query.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query.aspx.designer.cs">
+      <DependentUpon>Query.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryFormBom.aspx.cs">
+      <DependentUpon>QueryFormBom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryFormBom.aspx.designer.cs">
+      <DependentUpon>QueryFormBom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryPN.aspx.cs">
+      <DependentUpon>QueryPN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryPN.aspx.designer.cs">
+      <DependentUpon>QueryPN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendOverDaysMail.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>SendOverDaysMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendOverDaysMail.aspx.designer.cs">
+      <DependentUpon>SendOverDaysMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SourcerGroup.aspx.cs">
+      <DependentUpon>SourcerGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SourcerGroup.aspx.designer.cs">
+      <DependentUpon>SourcerGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\BOMListUserControl.ascx.cs">
+      <DependentUpon>BOMListUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\BOMListUserControl.ascx.designer.cs">
+      <DependentUpon>BOMListUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\QueryPNPriceListUserControl.ascx.cs">
+      <DependentUpon>QueryPNPriceListUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\QueryPNPriceListUserControl.ascx.designer.cs">
+      <DependentUpon>QueryPNPriceListUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SendMailPNListUserControl.ascx.cs">
+      <DependentUpon>SendMailPNListUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SendMailPNListUserControl.ascx.designer.cs">
+      <DependentUpon>SendMailPNListUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCBOM.ascx.cs">
+      <DependentUpon>UCBOM.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCBOM.ascx.designer.cs">
+      <DependentUpon>UCBOM.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCBOMList.ascx.cs">
+      <DependentUpon>UCBOMList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCBOMList.ascx.designer.cs">
+      <DependentUpon>UCBOMList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCResponse.ascx.cs">
+      <DependentUpon>UCResponse.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCResponse.ascx.designer.cs">
+      <DependentUpon>UCResponse.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCResponseList.ascx.cs">
+      <DependentUpon>UCResponseList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCResponseList.ascx.designer.cs">
+      <DependentUpon>UCResponseList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCRuleList.ascx.cs">
+      <DependentUpon>UCRuleList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCRuleList.ascx.designer.cs">
+      <DependentUpon>UCRuleList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCSourcerEdit.ascx.cs">
+      <DependentUpon>UCSourcerEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCSourcerEdit.ascx.designer.cs">
+      <DependentUpon>UCSourcerEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCSourcerList.ascx.cs">
+      <DependentUpon>UCSourcerList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCSourcerList.ascx.designer.cs">
+      <DependentUpon>UCSourcerList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCUserEdit.ascx.cs">
+      <DependentUpon>UCUserEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCUserEdit.ascx.designer.cs">
+      <DependentUpon>UCUserEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UCUserList.ascx.cs">
+      <DependentUpon>UCUserList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UCUserList.ascx.designer.cs">
+      <DependentUpon>UCUserList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UploadExcelUserControl.ascx.cs">
+      <DependentUpon>UploadExcelUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UploadExcelUserControl.ascx.designer.cs">
+      <DependentUpon>UploadExcelUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\WaitingConfirmSourcerListUserControl.ascx.cs">
+      <DependentUpon>WaitingConfirmSourcerListUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\WaitingConfirmSourcerListUserControl.ascx.designer.cs">
+      <DependentUpon>WaitingConfirmSourcerListUserControl.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Asus.Core\Asus.Core.csproj">
+      <Project>{C9BA385B-BF7A-4ED3-8448-2EA61BF6809A}</Project>
+      <Name>Asus.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NPILibrary\NPILibrary.csproj">
+      <Project>{F6D07C88-DFC6-4039-8DC4-23E5B28CF9DD}</Project>
+      <Name>NPILibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Office.Core\Office.Core.csproj">
+      <Project>{F16C51D7-2A5F-436E-BB26-E73F4B234E9B}</Project>
+      <Name>Office.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dlls\AjaxControlToolkit.dll" />
+    <Content Include="dlls\antlr.runtime.dll" />
+    <Content Include="dlls\BankPro.COM.Crypto.dll" />
+    <Content Include="dlls\Common.Logging.dll" />
+    <Content Include="dlls\Iesi.Collections.dll" />
+    <Content Include="dlls\log4net.dll" />
+    <Content Include="dlls\NHibernate.dll" />
+    <Content Include="dlls\OpenFlashChart.dll" />
+    <Content Include="dlls\Quartz.dll" />
+    <Content Include="dlls\Spring.Aop.dll" />
+    <Content Include="dlls\Spring.Core.dll" />
+    <Content Include="dlls\Spring.Data.dll" />
+    <Content Include="dlls\Spring.Data.NHibernate.dll" />
+    <Content Include="dlls\Spring.Services.dll" />
+    <Content Include="dlls\Spring.Web.dll" />
+    <Content Include="NPI.Master" />
+    <EmbeddedResource Include="objects.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\NPITheme\NPITheme.css" />
+    <Content Include="App_Themes\NPITheme\NPITheme.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\NPITheme\Images\bar.JPG" />
+    <Content Include="App_Themes\NPITheme\Images\bullet.JPG" />
+    <Content Include="App_Themes\NPITheme\Images\logo.JPG" />
+    <Content Include="BomBooking.aspx" />
+    <Content Include="BomProc.aspx" />
+    <Content Include="BomResponse.aspx" />
+    <Content Include="Config.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\menuicon.JPG" />
+    <Content Include="Layout\TableLayout.ascx" />
+    <Content Include="Layout\UserLayout.ascx" />
+    <Content Include="Query.aspx" />
+    <Content Include="SourcerGroup.aspx" />
+    <Content Include="UserControl\UCBOM.ascx" />
+    <Content Include="UserControl\UCBOMCreate.ascx" />
+    <Content Include="UserControl\UCBOMList.ascx" />
+    <Content Include="UserControl\UCResponse.ascx" />
+    <Content Include="UserControl\UCResponseList.ascx" />
+    <Content Include="UserControl\UCResponseQuery.ascx" />
+    <Content Include="UserControl\UCRuleList.ascx" />
+    <Content Include="UserControl\UCSourcerCreate.ascx" />
+    <Content Include="UserControl\UCSourcerEdit.ascx" />
+    <Content Include="UserControl\UCSourcerList.ascx" />
+    <Content Include="UserControl\UCUserCreate.ascx" />
+    <Content Include="UserControl\UCUserEdit.ascx" />
+    <Content Include="UserControl\UCUserList.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AlertSourcerMail.aspx" />
+    <Content Include="App_Themes\NPITheme\Images\calendar.gif" />
+    <Content Include="Excel\BOMTemplate.xls">
+    </Content>
+    <Content Include="Index.aspx" />
+    <Content Include="NPIClosePage.aspx" />
+    <Content Include="OnLineHelp.aspx" />
+    <Content Include="QueryFormBom.aspx" />
+    <Content Include="QueryPN.aspx" />
+    <Content Include="SendOverDaysMail.aspx" />
+    <Content Include="UserControl\BOMListUserControl.ascx" />
+    <Content Include="UserControl\QueryPNPriceListUserControl.ascx" />
+    <Content Include="UserControl\SendMailPNListUserControl.ascx" />
+    <Content Include="UserControl\UploadExcelUserControl.ascx" />
+    <Content Include="UserControl\WaitingConfirmSourcerListUserControl.ascx" />
+    <Content Include="Excel\BOMUploadTemplate.xls" />
+    <Content Include="Excel\MBRD5_MPS_20080521.xls" />
+    <Content Include="Excel\NPI 如何上傳BOM 資料.doc" />
+    <Content Include="Excel\NPI 如何上傳PN 資料.doc" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Excel\NPI SOP.xls" />
+    <Content Include="Wiki\npiwiki.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_GlobalResources\" />
+    <Folder Include="TempDoc\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v8.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>2524</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

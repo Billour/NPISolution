@@ -1,0 +1,34 @@
+2008-12-26 17:43:30,107 [8] INFO  [ASP.usercontrol_ucbom_ascx] [DownLoadExcel] [ASUS\Wen-Bin_Tsaiser] - 下載Excel 
+2008-12-26 17:43:30,123 [8] INFO  [ASP.usercontrol_ucbom_ascx] [DownLoadExcel] [ASUS\Wen-Bin_Tsaiser] - 設定下載檔案 
+2008-12-26 17:43:38,076 [8] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------Error 產生--------------- 
+2008-12-26 17:43:38,092 [8] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------錯誤訊息如下----------------- 
+2008-12-26 17:43:38,108 [8] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   於 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   於 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   於 Spring.Objects.ObjectUtils.InvokeMethod(MethodInfo method, Object instance, Object[] arguments)
+   於 Spring.Aop.Framework.ReflectiveMethodInvocation.InvokeJoinpoint()
+   於 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   於 Spring.Aop.Framework.Adapter.ThrowsAdviceInterceptor.Invoke(IMethodInvocation invocation) 
+2008-12-26 17:43:38,108 [8] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - -----------Error 結束------------------ 
+2008-12-26 17:43:38,123 [8] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - User Host Information 
+2008-12-26 17:43:38,123 [8] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - 127.0.0.1127.0.0.1Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; MS-RTC LM 8) 
+2008-12-26 17:43:49,467 [8] INFO  [ASP.usercontrol_ucbom_ascx] [DownLoadExcel] [ASUS\Wen-Bin_Tsaiser] - 下載Excel 
+2008-12-26 17:43:49,467 [8] INFO  [ASP.usercontrol_ucbom_ascx] [DownLoadExcel] [ASUS\Wen-Bin_Tsaiser] - 設定下載檔案 
+2008-12-26 17:43:50,389 [8] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------Error 產生--------------- 
+2008-12-26 17:43:50,405 [8] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------錯誤訊息如下----------------- 
+2008-12-26 17:43:50,420 [8] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   於 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   於 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   於 Spring.Objects.ObjectUtils.InvokeMethod(MethodInfo method, Object instance, Object[] arguments)
+   於 Spring.Aop.Framework.ReflectiveMethodInvocation.InvokeJoinpoint()
+   於 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   於 Spring.Aop.Framework.Adapter.ThrowsAdviceInterceptor.Invoke(IMethodInvocation invocation) 
+2008-12-26 17:43:50,436 [8] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - -----------Error 結束------------------ 
+2008-12-26 17:43:50,436 [8] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - User Host Information 
+2008-12-26 17:43:50,451 [8] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - 127.0.0.1127.0.0.1Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; MS-RTC LM 8) 

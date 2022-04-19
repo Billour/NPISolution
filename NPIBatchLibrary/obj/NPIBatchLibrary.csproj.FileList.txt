@@ -1,0 +1,17 @@
+bin\Debug\NPIBatchLibrary.dll
+bin\Debug\NPIBatchLibrary.pdb
+bin\Debug\Asus.Core.dll
+bin\Debug\NPILibrary.dll
+bin\Debug\log4net.dll
+bin\Debug\NPILibrary.pdb
+bin\Debug\Asus.Core.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\NPIBatchLibrary.dll
+obj\Debug\NPIBatchLibrary.pdb
+bin\Debug\BaseClass.dll
+bin\Debug\Office.Core.dll
+bin\Debug\Interop.Excel.dll
+bin\Debug\Office.Core.pdb
+bin\Debug\Office.Core.xml
+bin\Debug\NPILibrary.xml
+bin\Debug\Asus.Core.xml

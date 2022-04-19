@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Office.Core</name>
+    </assembly>
+    <members>
+        <member name="M:Asus.Office.ExcelCore.ExcelCore.#ctor(System.String,System.String)">
+            <summary>
+            輸入templateFile Path Ful Name Like c:\\temp\ee.xls 
+            
+            </summary>
+            <param name="tempalteFile">c:\\temp\ee.xls</param>
+            <param name="saveFile">c:\\temp\ee.xls</param>
+        </member>
+        <member name="M:Asus.Office.ExcelCore.ExcelCore.Open">
+            <summary>
+            開Excel檔
+            </summary>
+        </member>
+    </members>
+</doc>

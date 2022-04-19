@@ -1,0 +1,5 @@
+mkdir C:\IssueFlow\target\website
+
+MsBuild IssueFlowSolution.sln
+
+pause

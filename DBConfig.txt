@@ -1,0 +1,81 @@
+Production Config
+
+App.Config
+
+<appSettings>
+
+    <add key="ECOM_Ora" value="Data Source=ETEAMQC1;User Id=Scm;Password=scmd"/>
+
+    <add key="ECOM_Ole" value="Provider=OraOLEDB.Oracle;Data Source=ETEAMQC1;User ID=Scm;Password=scmd"/>
+
+    <add key="ECOM_IDbConnection" value="Ora"/>
+
+
+    <add key="ERP_DB" value="TIPTOP"/>
+
+    <add key="ERP_IDbConnection" value="ODBC"/>
+
+    <!-- TIPTOP -->
+    
+    <add key="ERP_ODBC" value="DSN=db3;UID=pepo1;PWD=kosu!957;DATABASE=ds1;"/>
+
+    <add key="BOMId" value="70-MIB575-A11"/>
+
+  </appSettings>
+  
+  <Production>
+      <Base>
+        <add key="Company" value="ASUSTECH"/>
+      </Base>
+      <DBCoonection>
+        <DBConnString>
+          <add key="UserDB" value="Provider=OraOLEDB.Oracle;Data Source=ETEAMQC1;User ID=Scm;Password=scmd"/>
+          <add key="NPIDB" value="Provider=OraOLEDB.Oracle;Data Source=TP-LOTDB-01.CORPNET.ASUS;User ID=shinewave;Password=shinewave"/>
+          <add key="TipTopDB" value="DSN=db3;UID=pepo1;PWD=kosu!957;DATABASE=ds1;"/>
+        </DBConnString>
+        <DBType>
+          <add key="UserDB_Type" value="OleDb"/>
+          <add key="UserDB_Owner" value="Scm"/>
+
+          <add key="NPIDB_Type" value="OleDb"/>
+          <add key="NPIDB_Owner" value="shinewave"/>
+
+          <add key="TipTopDB_Type" value="ODBC"/>
+          <add key="TipTopDB_Owner" value="pepo1"/>
+        </DBType>
+      </DBCoonection>
+    </Production>
+    
+    
+    Web.Config
+    <Production>
+      <Base>
+        <!--公司代號，請保留預設值-->
+        <add key="Company" value="13006"/>
+        <!--是否在DeBug階段 預設值為否 N 請保留預設值 不用修改-->
+        <add key="IsDebug" value="N"/>
+        <!--DeBug階段的測試帳號 請保留為空白值-->
+        <add key="DeBugUserLoginId" value=""/>
+
+        <!--UPload Excel File Dir 此目錄請指定至一個暫存目錄可以為Asp.Net 存取的目錄-->
+        <add key="ExcelFileUpload" value="C:\\NPI\\Doc\\"/>
+      </Base>
+      <DBCoonection>
+        <DBConnString>
+          <!--UserDB 修改SCM 的正式機的資料庫連線 請修改 OleDB -->
+          <add key="UserDB" value="Provider=OraOLEDB.Oracle;Data Source=ETEAMQC1;User ID=Scm;Password=scmd"/>
+          <!--NPIDB 修改NPI 的正式機的資料庫連線 請修改 OleDB-->
+          <add key="NPIDB" value="Provider=OraOLEDB.Oracle;Data Source=TP-LOTDB-01.CORPNET.ASUS;User ID=shinewave;Password=shinewave"/>
+          <!--TipTopDB 修改TipTop 的正式機的資料庫連線 請修改 ODBC-->
+          <add key="TipTopDB" value="DSN=db3;UID=pepo1;PWD=kosu!957;DATABASE=ds1;"/>
+        </DBConnString>
+        <DBType>
+          <!--請保留預設值 -->
+          <add key="UserDB_Type" value="OleDb"/>
+          <add key="NPIDB_Type" value="OleDb"/>
+          <add key="TipTopDB_Type" value="ODBC"/>
+        </DBType>
+      </DBCoonection>
+    </Production>
+
+

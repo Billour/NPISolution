@@ -1,0 +1,78 @@
+2008-12-18 13:40:51,726 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 13:40:51,913 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 13:40:52,054 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='AA0800226' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 13:40:53,476 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 13:40:53,491 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 13:41:38,477 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 13:41:38,524 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 13:41:40,836 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 13:41:40,867 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 13:46:38,436 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 13:46:38,467 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 13:46:44,170 [5] INFO  [Asus.Data.OleDataAccess] [DoCommand] [ASUS\Wen-Bin_Tsaiser] - ConnName=NPIDBProvider=OraOLEDB.Oracle;Data Source=TP-WMDB-T01;User ID=shinewave;Password=shinewave,SQL=Insert Into NPI_BOM(USER_ID,COMPANY_ID,BOM_ID,BOM_NAME,BOM_STATUS,BOM_DESC,BOM_REVISION,RD_EMP_ID,RD_EMP_NAME,RD_EMP_PHONENO,PVT_TIME,PVT_QTY,PVT_LOCATION,MP_TIME,MP_Q1_QTY,MP_Q2_QTY,IS_ENABLE,CREATE_USER,CREATE_DATE,UPDATE_USER,UPDATE_DATE)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) 
+2008-12-18 13:46:44,217 [5] INFO  [Asus.Data.OleDataAccess] [DoCommand] [ASUS\Wen-Bin_Tsaiser] - ConnName=NPIDBProvider=OraOLEDB.Oracle;Data Source=TP-WMDB-T01;User ID=shinewave;Password=shinewave,SQL=Insert Into NPI_BOOKING(WORK_STATUS,BOOKING_DATE,CREATE_USER,CREATE_DATE,UPDATE_USER,UPDATE_DATE,USER_ID,COMPANY_ID,BOM_ID)values(?,?,?,?,?,?,?,?,?) 
+2008-12-18 13:46:44,233 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='AA0800226' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 16:15:14,019 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:15:14,144 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:15:14,284 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='AA0800226' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 16:15:16,144 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:15:16,191 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:15:16,253 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t, npi_booking c,npi_ems s where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='AA0800226' and t.bom_id='70-MIB575-A11' and t.company_id='13006' 
+2008-12-18 16:15:20,847 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:15:20,878 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:16:15,864 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:16:15,895 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:21:25,183 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:21:25,308 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:21:25,433 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='AA0800226' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 16:21:27,308 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:21:27,340 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:21:27,402 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t, npi_booking c,npi_ems s where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='AA0800226' and t.bom_id='70-MIB575-A11' and t.company_id='13006' 
+2008-12-18 16:21:52,340 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:21:52,387 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:23:57,435 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:23:57,592 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:23:57,842 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='AA0800226' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 16:23:59,889 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:23:59,920 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:24:04,764 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:24:04,795 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:24:27,436 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:24:27,483 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:24:52,045 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:24:52,077 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:24:52,108 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='AA0800226' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 16:24:53,811 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:24:53,842 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:24:53,874 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t, npi_booking c,npi_ems s where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='AA0800226' and t.bom_id='70-MIB575-A11' and t.company_id='13006' 
+2008-12-18 16:25:00,561 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:25:00,624 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:25:21,327 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:25:21,358 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:27:49,970 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:27:50,095 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:27:50,235 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='AA0800226' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 16:27:51,907 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:27:51,938 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:27:52,001 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t, npi_booking c,npi_ems s where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='AA0800226' and t.bom_id='70-MIB575-A11' and t.company_id='13006' 
+2008-12-18 16:27:55,798 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:27:55,845 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:30:39,222 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:30:39,331 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:30:39,472 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='AA0800226' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 16:30:41,175 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:30:41,222 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:30:41,284 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t, npi_booking c,npi_ems s where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='AA0800226' and t.bom_id='70-MIB575-A11' and t.company_id='13006' 
+2008-12-18 16:30:44,675 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:30:44,706 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:30:53,831 [5] INFO  [Asus.Data.OleDataAccess] [DoCommand] [ASUS\Wen-Bin_Tsaiser] - ConnName=NPIDBProvider=OraOLEDB.Oracle;Data Source=TP-WMDB-T01;User ID=shinewave;Password=shinewave,SQL=Update NPI_BOM Set  BOM_NAME=?, BOM_STATUS=?, BOM_DESC=?, BOM_REVISION=?, PVT_TIME=?, PVT_QTY=?, PVT_LOCATION=?, MP_TIME=?, MP_Q1_QTY=?, MP_Q2_QTY=?, IS_ENABLE=?, UPDATE_USER=?, UPDATE_DATE=? where user_id='AA0800226' and bom_id='70-MIB575-A11' and company_id='13006' 
+2008-12-18 16:30:53,878 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='AA0800226' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 

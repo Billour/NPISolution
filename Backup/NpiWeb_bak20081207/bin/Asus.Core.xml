@@ -1,0 +1,4306 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Asus.Core</name>
+    </assembly>
+    <members>
+        <member name="M:Asus.WebUI.BaseUI.OnInit(System.EventArgs)">
+            <summary>
+            將Log 的機制放在Oninit裡面
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Asus.WebUI.BaseUI.WriteInfoLog(System.String)">
+            <summary>
+            寫入log的狀態及內容
+            </summary>
+            <param name="infoMessage"></param>
+        </member>
+        <member name="M:Asus.WebUI.BaseUI.WriteErrorLog(System.String)">
+            <summary>
+            寫入log的狀態及內容
+            </summary>
+            <param name="errMessage"></param>
+        </member>
+        <member name="F:Asus.WebUI.BaseUIObject.DataHaveAdd">
+            <summary>
+            資料已新增
+            </summary>
+        </member>
+        <member name="F:Asus.WebUI.BaseUIObject.DataHaveUpdate">
+            <summary>
+            資料已更新
+            </summary>
+        </member>
+        <member name="F:Asus.WebUI.BaseUIObject.DataHaveDelete">
+            <summary>
+            資料已刪除
+            </summary>
+        </member>
+        <member name="P:Asus.WebUI.BaseUIObject.PageState">
+            <summary>
+            網頁目前狀態，這是給網頁使用
+            #1:建立(2006/1/7):蔡文斌
+               新增此ViewState
+            </summary>
+        </member>
+        <member name="P:Asus.WebUI.BaseUIObject.LastSortExpression">
+            <summary>
+            最後一次排序位置
+            </summary>
+        </member>
+        <member name="P:Asus.WebUI.BaseUIObject.LastSortDirection">
+            <summary>
+            最後一次做排序的方向
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.ExcelHelper.GetExcelFileData(System.String,System.String)">
+            <summary>
+            取得excel檔案的資料
+            </summary>
+            <param name="excelFileFullName">實際路徑(c:\temp\a.xls)</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="T:Asus.Theme.AbstractTableTheme">
+            <summary>
+            抽象層Table Theme
+            這裡的Table是用來實作將來包覆在UI Control裡面
+            只使用Table Property
+            </summary>
+        </member>
+        <member name="P:Asus.Theme.AbstractTableTheme.Layout">
+            <summary>
+            Layout種類
+            </summary>
+        </member>
+        <member name="P:Asus.Theme.AbstractTableTheme.BobyRepeatStyle">
+            <summary>
+            資料是否重覆
+            </summary>
+        </member>
+        <member name="T:Asus.Logic.DBUtilLogic">
+            <summary>
+            Class最主要是處理跟DB資料有關的的方法
+            包括 Insert Update Delete
+            </summary>
+        </member>
+        <member name="T:Asus.Logic.UtilProcessLogic">
+            <summary>
+            整合的第二層
+            </summary>
+        </member>
+        <member name="T:Asus.Logic.BaseLogic">
+            <summary>
+            最底層的Logic專門宣告一些參數設定
+            像Log4Net
+            </summary>
+        </member>
+        <member name="F:Asus.Logic.BaseLogic.log">
+            <summary>
+            Log4Net 給系統使用
+            </summary>
+        </member>
+        <member name="M:Asus.Logic.BaseLogic.WriteInfoLog(System.String)">
+            <summary>
+            寫Log資料
+            </summary>
+            <param name="infoMessage">預計寫入Log資料</param>
+        </member>
+        <member name="M:Asus.Logic.BaseLogic.WriteErrorLog(System.String)">
+            <summary>
+            寫錯誤Log
+            </summary>
+            <param name="errMessage">預計寫入錯誤資料</param>
+        </member>
+        <member name="M:Asus.Logic.UtilProcessLogic.RetrievePropertyInfo(System.Type)">
+            <summary>
+            取得所有的PropertyInfo
+            </summary>
+            <param name="objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.UtilProcessLogic.RetriveConstructorInfo(System.Type)">
+            <summary>
+            取得所有的Constructor的資料欄位
+            </summary>
+            <param name="objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.UtilProcessLogic.GetColumnMemberMap(System.Type)">
+            <summary>
+            取得所有的DataColumn資料
+            給我一個Type，我給你一堆參數
+            取得的資料是指DataColumn的資料
+            </summary>
+            <param name="objType">typeof(Instant)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.UtilProcessLogic.GetColumnMemberMap(System.Type,System.String)">
+            <summary>
+            加入排序資料的DataColumn的資料
+            </summary>
+            <param name="objType"></param>
+            <param name="sortExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.UtilProcessLogic.GetColumnMemberMap``1(System.Type,System.String)">
+            <summary>
+            支援DataColumn的資料
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="objType"></param>
+            <param name="sortExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.UtilProcessLogic.GetColumnUIControlMap(System.Type,System.String)">
+            <summary>
+            取得目前頁面狀態時的Property狀態
+            2007/11/21 新增 取得VisibleMap SortedList
+            UI的資料Column
+            </summary>
+            <param name="objType">Object Type</param>
+            <param name="pageMode">Page Status {Create,Modify,Brower}</param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.UtilProcessLogic.GetLayoutMapData``1">
+            <summary>
+            取得Layout的詳細資料
+            這裡是處理的主資料
+            有兩種不同的狀況，就是Table 以及 FormView
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.ProcessDataObject(System.Type,System.Data.DataTable)">
+            <summary>
+            此程式最主要的目的是要來處理元件以及dataTable
+            要注意事項的有，就是所有的property上面的attribute 要與 dataTable 的欄位相對應
+            </summary>
+            <param name="targetType">Entity Class</param>
+            <param name="dataTable">所找出來的資料，會是DataTable 其顯示欄位為</param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.MapDatarow(System.Object,System.Data.DataRow,System.Collections.Generic.SortedList{System.String,Asus.Bussiness.Map.MapItem})">
+            <summary>
+            物件與資料表的映射
+            </summary>
+            <param name="obj"></param>
+            <param name="dr"></param>
+            <param name="schemaMap"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Asus.Logic.DBUtilLogic.GetDBSelectSqlString``1(System.String)" -->
+        <member name="M:Asus.Logic.DBUtilLogic.GetDBSelectSqlString``1(System.String,System.Boolean)">
+            <summary>
+            支援泛型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="from"></param>
+            <param name="isSelectProperty"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.GetDBSelectSqlString``1(System.String,System.Boolean,System.String)">
+            <summary>
+            支援泛型以及資料庫連線
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="from"></param>
+            <param name="isSelectProperty"></param>
+            <param name="connectionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.GetSqlSelectStringFromClass``1">
+            <summary>
+            取得Select Sql String 各種狀況
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.GetSqlSelectStringFromClass(System.Type)">
+            <summary>
+            不支援泛型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.GetTListFromDataTable``1(System.Data.DataTable)">
+            <summary>
+            取得此List資料由DataTable轉換
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.GetDBSelectSqlString(System.Type,System.String,System.Boolean)">
+            <summary>
+            不支援泛型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="from"></param>
+            <param name="isSelectProperty"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.GetTableColumnsAttributeList``1(System.String)">
+            <summary>
+            取得TableAttribute的資料,支援泛型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.GetTableColumnsAttributeList(System.Type,System.String)">
+            <summary>
+            不支援泛型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="pageMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.GetDBCommandList(System.Object,System.Type,System.String,System.String)">
+            <summary>
+            不支援泛型
+            須支援多DB
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="pageCommandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.GetQuerySqlString``1(Asus.Bussiness.Attribute.TablesAttribute,``0,System.Collections.Generic.List{System.Reflection.PropertyInfo},System.String)">
+            <summary>
+            支援泛型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="tableAttribute"></param>
+            <param name="obj"></param>
+            <param name="propertyList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.GetQuerySqlString(Asus.Bussiness.Attribute.TablesAttribute,System.Object,System.Type,System.Collections.Generic.List{System.Reflection.PropertyInfo},System.String)">
+            <summary>
+            比較老的方法，不支援泛型
+            </summary>
+            <param name="tableAttribute"></param>
+            <param name="obj"></param>
+            <param name="objType"></param>
+            <param name="propertyList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.GetParameterList``1(Asus.Bussiness.Attribute.TablesAttribute,``0,System.Collections.Generic.List{System.Reflection.PropertyInfo})">
+            <summary>
+            支援泛型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="tableAttribute"></param>
+            <param name="obj"></param>
+            <param name="propertyList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.GetParameterList(Asus.Bussiness.Attribute.TablesAttribute,System.Object,System.Type,System.Collections.Generic.List{System.Reflection.PropertyInfo})">
+            <summary>
+            不支援泛型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="tableAttribute"></param>
+            <param name="obj"></param>
+            <param name="propertyList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.QueryParameterString(Asus.Bussiness.Attribute.TablesAttribute,System.Collections.Generic.List{System.Reflection.PropertyInfo},System.String)">
+            <summary>
+            取得 InsertDBCommand 以及UpdateDBCommand
+            </summary>
+            <param name="tableAttribute"></param>
+            <param name="propertyList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.GetWhereSqlString``1(Asus.Bussiness.Attribute.TablesAttribute,``0)">
+            <summary>
+            支援泛型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="tableAttribute"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.GetWhereSqlString(Asus.Bussiness.Attribute.TablesAttribute,System.Object,System.Type)">
+            <summary>
+            採用古老的方式運算Where 運算式，利用Type 來運算，不支援泛型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="tableAttribute"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.ExecuteDBCommandFromAttribute``1(``0,System.String,System.String)">
+            <summary>
+            支援泛型(可以自行選擇資料庫連線)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="pageCommandType"></param>
+            <param name="db"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DBUtilLogic.ExecuteDBCommandFromAttribute(System.Object,System.Type,System.String,System.String)">
+            <summary>
+            加入資料庫(可以自行選擇資料庫)
+            </summary>
+            <param name="obj"></param>
+            <param name="objType"></param>
+            <param name="pageCommandType"></param>
+            <param name="db"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Data.Configuration.#cctor">
+            <summary>
+            Configuration建構子。建立DataFarm的實體。
+            </summary>
+        </member>
+        <member name="P:Asus.Data.Configuration.DataFarm">
+            <summary>
+            DataFarm物件
+            </summary>
+        </member>
+        <member name="P:Asus.Data.Configuration.FlowFarm">
+            <summary>
+            FlowFarm
+            </summary>
+        </member>
+        <member name="T:Asus.Data.Command">
+            <summary>
+            DataBase Command 算是Interface 的架構寫法
+            也算是一種Map用來傳達資料格式
+            </summary>
+        </member>
+        <member name="M:Asus.Data.Command.#ctor">
+            <summary>
+            Constructor
+            沒有參數
+            <code>
+                Command c=new Command();
+                
+            </code>
+            <example>
+              public Command()
+              {
+                    m_CommandType = CommandType.Text;
+                    m_Parameters = new ParameterCollection();
+              }
+            </example>
+            </summary>
+            
+        </member>
+        <member name="M:Asus.Data.Command.#ctor(System.String)">
+            <summary>
+            Command Constructor
+            參數一個
+            <example>
+                string sql="insert into ...."
+                Command c=new Command(sql);
+            </example>
+            </summary>
+            <param name="commandText">SQL String</param>
+        </member>
+        <member name="M:Asus.Data.Command.#ctor(System.String,System.Data.CommandType)">
+            <summary>
+            
+            </summary>
+            <param name="commandText">SQL String</param>
+            <param name="commandType">Text = 1,StoredProcedure = 4,TableDirect = 512</param>
+        </member>
+        <member name="T:Asus.Bussiness.Map.LayoutMap">
+            <summary>
+            顯示Layout設定的資料值
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.LayoutMap.StyleLayout">
+            <summary>
+             Layout 的物件，目前先實作Table
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.LayoutMap.Repeat">
+            <summary>
+            資料是否重覆/Repeat
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.LayoutMap.UnitList">
+            <summary>
+            取得所有的UnitMapList
+            針對Table 以及Form 有點不同
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.LayoutMap.TableContainer">
+            <summary>
+            For Table使用
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.LayoutMap.TableHeaderContainer">
+            <summary>
+            Table Header使用
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.LayoutMap.TableRowContainerList">
+            <summary>
+            Table Row使用
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.LayoutMap.TableFooterContainer">
+            <summary>
+            Table Footer使用
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.EntityProtoTypeMap.EntityList">
+            <summary>
+            取得Table Element
+            </summary>
+        </member>
+        <member name="F:Asus.Bussiness.Map.DBCommandType.InsertMode">
+            <summary>
+            Insert Mode
+            </summary>
+        </member>
+        <member name="F:Asus.Bussiness.Map.DBCommandType.UpdateMode">
+            <summary>
+            Update Mode
+            </summary>
+        </member>
+        <member name="F:Asus.Bussiness.Map.DBCommandType.DeleteMode">
+            <summary>
+            DeleteMode
+            </summary>
+        </member>
+        <member name="F:Asus.Bussiness.Map.DBCommandType.SaveMode">
+            <summary>
+            Save Mode 當你不確定是那一種模式是
+            當資料不存在時，就用新增
+            資料存在時，就用更新
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Map.ColumnRemarkMap">
+            <summary>
+            Mapping Remark Attribute
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.ColumnRemarkMap.PageMode">
+            <summary>
+            目前頁面狀態
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.ColumnRemarkMap.Remark">
+            <summary>
+            說明
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.ColumnRemarkMap.AlignMent">
+            <summary>
+            靠的方向
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.BaseDataColumnAttribute.ColumnName">
+            <summary>
+            　欄位名稱，對應的是資料庫的資料表欄位
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.BaseDataColumnAttribute.ColumnChineseName">
+            <summary>
+            資料庫欄位的中文名稱，顯示於網頁之中
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Map.DbConnStringMap">
+            <summary>
+            資料庫連線Map資訊
+            </summary>
+        </member>
+        <member name="M:Asus.Bussiness.Map.DbConnStringMap.#ctor(System.String,System.String,System.String)">
+            <summary>
+            寫入三個參數取得
+            </summary>
+            <param name="name"></param>
+            <param name="connString"></param>
+            <param name="type"></param>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DbConnStringMap.ConnectionName">
+            <summary>
+            資料庫連線名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DbConnStringMap.ConnectionString">
+            <summary>
+            資料庫連線字串
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DbConnStringMap.DataBaseType">
+            <summary>
+            資料庫類型
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DbConnStringMap.Owner">
+            <summary>
+            Owner
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DbConnStringMap.DocMap">
+            <summary>
+            取得Doc Map Description
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.WikiFormat">
+            <summary>
+            Wiki Format By HTML
+            
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.WikiFormat.Format(System.String)">
+            <summary>
+            Format Text
+            </summary>
+            <param name="raw"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Wiki.WikiFormat.PrepareSnippet(System.String[],System.String)">
+            <summary>
+            Prepares the content of a snippet, properly managing parameters.
+            </summary>
+            <param name="parameters">The snippet parameters.</param>
+            <param name="snippet">The snippet original text.</param>
+            <returns>The prepared snippet text.</returns>
+        </member>
+        <member name="M:Asus.Wiki.WikiFormat.EscapeWikiMarkup(System.String)">
+            <summary>
+            Escapes all the characters used by the WikiMarkup.
+            </summary>
+            <param name="content">The Content.</param>
+            <returns>The escaped Content.</returns>
+        </member>
+        <member name="M:Asus.Wiki.WikiFormat.StripWikiMarkup(System.String)">
+            <summary>
+            Removes all the characters used by the WikiMarkup.
+            </summary>
+            <param name="content">The Content.</param>
+            <returns>The stripped Content.</returns>
+        </member>
+        <member name="M:Asus.Wiki.WikiFormat.StripHtml(System.String)">
+            <summary>
+            Removes all HTML markup from a string.
+            </summary>
+            <param name="content">The string.</param>
+            <returns>The result.</returns>
+        </member>
+        <member name="M:Asus.Wiki.WikiFormat.BuildLink(System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            Builds a Link.
+            </summary>
+            <param name="a">The (raw) HREF.</param>
+            <param name="n">The name/title.</param>
+            <param name="isImage">True if the link contains an Image as "visible content".</param>
+            <param name="imageTitle">The title of the image.</param>
+            <param name="lp">The Linked Pages list.</param>
+            <returns>The formatted Link.</returns>
+        </member>
+        <member name="M:Asus.Wiki.WikiFormat.BuildHAnchor(System.String)">
+            <summary>
+            Builds a valid anchor name from a string.
+            </summary>
+            <param name="h">The string, usually a header (Hx).</param>
+            <returns>The anchor ID.</returns>
+        </member>
+        <member name="M:Asus.Wiki.WikiFormat.BuildHAnchor(System.String,System.String)">
+            <summary>
+            Builds a valid and unique anchor name from a string.
+            </summary>
+            <param name="h">The string, usually a header (Hx).</param>
+            <param name="uid">The unique ID.</param>
+            <returns>The anchor ID.</returns>
+        </member>
+        <member name="M:Asus.Wiki.WikiFormat.EscapeUrl(System.String)">
+            <summary>
+            Escapes ampersands in a URL.
+            </summary>
+            <param name="url">The URL.</param>
+            <returns>The escaped URL.</returns>
+        </member>
+        <member name="M:Asus.Wiki.WikiFormat.BuildTable(System.String)">
+            <summary>
+            Builds a HTML table from WikiMarkup.
+            </summary>
+            <param name="table">The WikiMarkup.</param>
+            <returns>The HTML.</returns>
+        </member>
+        <member name="T:Asus.Wiki.HPosition">
+            <summary>
+            Represents a Header.
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.HPosition.#ctor(System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <b>HPosition</b> class.
+            </summary>
+            <param name="index">The Index.</param>
+            <param name="text">The Text.</param>
+            <param name="level">The Header level.</param>
+            <param name="id">The Unique ID of the Header (0-based counter).</param>
+        </member>
+        <member name="P:Asus.Wiki.HPosition.Index">
+            <summary>
+            Gets or sets the Index.
+            </summary>
+        </member>
+        <member name="P:Asus.Wiki.HPosition.Text">
+            <summary>
+            Gets or sets the Text.
+            </summary>
+        </member>
+        <member name="P:Asus.Wiki.HPosition.Level">
+            <summary>
+            Gets or sets the Level.
+            </summary>
+        </member>
+        <member name="P:Asus.Wiki.HPosition.ID">
+            <summary>
+            Gets or sets the ID (0-based counter).
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.HPositionComparer.Compare(Asus.Wiki.HPosition,Asus.Wiki.HPosition)">
+            <summary>
+            Performs the comparison.
+            </summary>
+            <param name="x">The first object.</param>
+            <param name="y">The second object.</param>
+            <returns>The comparison result.</returns>
+        </member>
+        <member name="T:Asus.Wiki.MediaWiki.LinkFormat">
+            <summary>
+            本元件廢除不用 2008/10/01
+            設定Link所有的規則
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.IRegex">
+            <summary>
+            本元件廢除不用2008/10/01
+            這是指驗證的Interface 規定所有的方法都要能必透過此介面來實作，裡面規定了一些必須要實作之項目
+            
+            </summary>
+        </member>
+        <member name="P:Asus.Wiki.IRegex.RegexString">
+            <summary>
+            Regular Expression的判斷式
+            這是Property要設定你的判斷式。
+            </summary>
+        </member>
+        <member name="P:Asus.Wiki.IRegex.Groups">
+            <summary>
+            GroupCollection For Regular Expression
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.LinkFormat.GetHtmlControl">
+            <summary>
+            產生需要被置換的HTML Generic Control
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Wiki.MediaWiki.LinkFormat.RegexString">
+            <summary>
+            需要被驗證的字串Regular Expressions Pattern
+            </summary>
+        </member>
+        <member name="T:Asus.WebUI.UserControl.LayoutControl">
+            <summary>
+            Create Layer
+            </summary>
+        </member>
+        <member name="P:Asus.WebUI.UserControl.BaseControl.LastSortExpression">
+            <summary>
+            最後一次排序位置
+            </summary>
+        </member>
+        <member name="P:Asus.WebUI.UserControl.BaseControl.LastSortDirection">
+            <summary>
+            最後一次做排序的方向
+            </summary>
+        </member>
+        <member name="P:Asus.WebUI.UserControl.BaseControl.ColumnType">
+            <summary>
+            欄位型態
+            有一欄以及二欄
+            For 顯示詳細資料
+            </summary>
+        </member>
+        <member name="P:Asus.WebUI.UserControl.BaseControl.ColumnTemplate">
+            <summary>
+            設定模式 -標準/自行定義
+            </summary>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlObject.ShowAlertMessage(System.String)">
+            <summary>
+            顯示有問題的訊息
+            </summary>
+            <param name="alertMessage"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.LayoutControl.CreateLayer(System.String,System.String,System.Web.UI.WebControls.PlaceHolder,Asus.EnumLayout)">
+            <summary>
+            Create Outer Layer
+            </summary>
+            <param name="id">Unique id What ever you want like A or AA but must be unique</param>
+            <param name="usercontrolPath">like /Path/AA.ascx Include Path</param>
+            <param name="target">Target PlaceHolder like placeHolder.controls.add(obj)</param>
+            <param name="layout">Include Layer/Layout</param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.LayoutControl.CreateLayout``1(System.String,System.String,System.Web.UI.WebControls.PlaceHolder,Asus.EnumState)">
+            <summary>
+            Create Layout And Entity Include FormView
+            </summary>
+            <typeparam name="EntityT"></typeparam>
+            <param name="uniqueId"></param>
+            <param name="usercontrolPath"></param>
+            <param name="objholder"></param>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.LayoutControl.CreateTable``1(System.String,System.String,System.Web.UI.WebControls.PlaceHolder,Asus.EnumState,Asus.EnumTableColumn,System.String,System.String,System.String)">
+            <summary>
+            Create Table 資料
+            </summary>
+            <typeparam name="EntityT">Entity Type</typeparam>
+            <param name="uniqueId">前置字元</param>
+            <param name="usercontrolPath">Layout 的路徑</param>
+            <param name="targetHolder">將Table放置於那裡</param>
+            <param name="pageState">那一種狀態(新增/修改/查詢)</param>
+            <param name="enumcolumn">一欄/二欄/三欄</param>
+            <param name="caption">Caption文字</param>
+            <param name="header">Header文字</param>
+            <param name="footer">Footer文字</param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.LayoutControl.CreateLayout(System.String,System.String,System.Web.UI.WebControls.PlaceHolder)">
+            <summary>
+            Create Layout 
+            </summary>
+            <param name="uniqueId">Unique id What ever you want like A or AA but must be unique</param>
+            <param name="usercontrolPath">like /Path/AA.ascx Include Path</param>
+            <param name="targetHolder">Target PlaceHolder like placeHolder.controls.add(obj)</param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.GenerateGridViewColumn(System.Web.UI.WebControls.GridView,System.Type)">
+            <summary>
+            取得及產生GridView
+            </summary>
+            <param name="objView">GridView</param>
+            <param name="objType">Type obj</param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.GenerateGridViewColumn(System.Web.UI.WebControls.GridView,System.Type,System.Boolean)">
+            <summary>
+            產生GridView
+            </summary>
+            <param name="objView"></param>
+            <param name="objType"></param>
+            <param name="isClear"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.GenerateGridViewColumn``1(System.Web.UI.WebControls.GridView,System.Type)">
+            <summary>
+            產生特別的GridView資料
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="objView"></param>
+            <param name="objType"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.GenerateGridViewColumn``1(System.Web.UI.WebControls.GridView,System.Type,System.Boolean)">
+            <summary>
+            產生GridView
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="objView"></param>
+            <param name="objType"></param>
+            <param name="isClear"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.CreateStyleLayoutUIField``1(System.String,System.Web.UI.WebControls.PlaceHolder,Asus.EnumState)">
+            <summary>
+            產生預設的Theme Layout
+            </summary>
+            <typeparam name="EntityT"></typeparam>
+            <param name="objholder"></param>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.CreateStyleLayoutUIField``2(System.String,System.Web.UI.WebControls.PlaceHolder,Asus.EnumState)">
+            <summary>
+            產生Layout Fields Data
+            </summary>
+            <typeparam name="LayoutT">Layout Entity </typeparam>
+            <typeparam name="EntityT">Entity Type</typeparam>
+            <param name="objholder">to be Holder object</param>
+            <param name="pageState">Create Modify Query</param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.CreateStyleLayoutUIField``1(System.String,Asus.EnumState)">
+            <summary>
+            如果已知Layout Entity 而加入實質的Entity
+            </summary>
+            <typeparam name="EntityT"></typeparam>
+            <param name="preFix"></param>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.ExportUIToLayoutTable``1(System.Web.UI.WebControls.Table,Asus.EnumState)">
+            <summary>
+            將UI物件放置於Table的物件裡面
+            </summary>
+            <typeparam name="EntityT"></typeparam>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.ExportUIToLayoutTable``1(System.Web.UI.WebControls.Panel,Asus.EnumState)">
+            <summary>
+            將UI物件放置於Table的物件裡面
+            (尚無Layout)
+            </summary>
+            <typeparam name="EntityT"></typeparam>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.ExportUIToLayoutTable``1(System.String,Asus.EnumState)">
+            <summary>
+            將UI物件放置於Table的物件裡面
+            (已知Layout)
+            </summary>
+            <typeparam name="EntityT"></typeparam>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.GetFormThemeStyleLayout(System.String,Asus.Bussiness.Map.LayoutMap)">
+            <summary>
+            取得一個Panel物件，專門給FormView使用
+            </summary>
+            <param name="preFixId"></param>
+            <param name="map"></param>
+            <param name="pageState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.FilterUnitMap(Asus.Bussiness.Map.LayoutMap,System.Int32)">
+            <summary>
+            取得篩選出單位Map
+            </summary>
+            <param name="map"></param>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.CreateLayoutUIObject``1(Asus.Bussiness.Map.LayoutUnitMap)">
+            <summary>
+            取回此物件
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="main"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.CreateUIField(System.Web.UI.WebControls.PlaceHolder,System.Type,Asus.EnumState)">
+            <summary>
+            利用物件屬性來建立網頁相對應的欄位
+            這是UI Control Create 
+            Add Table Template Apply Theme
+            
+            </summary>
+            <param name="objholder"></param>
+            <param name="objType"></param>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.CreatePrototypeUIField(System.Web.UI.WebControls.PlaceHolder,System.Type,Asus.EnumState)">
+            <summary>
+            利用物件屬性來建立網頁相對應的欄位
+            </summary>
+            <param name="objholder"></param>
+            <param name="objType"></param>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.FilterPageModeCustomMap(System.Collections.Generic.SortedList{System.String,Asus.Bussiness.Map.UIMap},System.Int32)">
+            <summary>
+            篩選出符合目前的狀態的資料(舊版)-VisibleMap 已內建於UI Map
+            新版
+            可以直接由UI Map裡面得知Visible UI的狀況，不用再到外面找資料,還必須重算一次，效益可及。
+            </summary>
+            <param name="map"></param>
+            <param name="pageMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.FilterPageModeCustomMap(System.Collections.Generic.SortedList{System.String,Asus.Bussiness.Map.UIMap},System.Collections.Generic.SortedList{System.String,Asus.Bussiness.Map.VisibleMap},System.Int32)">
+            <summary>
+            篩選出符合目前的狀態的資料(舊版)-VisibleMap 另外算
+            </summary>
+            <param name="map"></param>
+            <param name="vMap"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.CreateCustomUIField(System.Type,Asus.EnumState)">
+            <summary>
+            此Method 是專門來產生一些特製的UI
+            原則如下：
+            頁面自製：只保留欄位部份
+            欄位部份請使用PlaceHolder做為放置的位置，資料會預先將欄位放入：前置欄位為th
+            此方法是直接實作 EnumTemplate.Template的方法
+            </summary>
+            <param name="objType"></param>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.CreatePrototypeUIField(System.Web.UI.WebControls.PlaceHolder,System.Type,Asus.EnumState,Asus.EnumColumnType,System.Boolean,Asus.EnumTemplate)">
+            <summary>
+            產生Column 欄位數-動態產生
+            此UI最主要的目的是在產生一些Demo 所產生的UI欄位
+            第二版：將中間層的Table 拿掉,直接顯示CSS
+            </summary>
+            <param name="objholder"></param>
+            <param name="objType"></param>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.BindSubUIMap(System.Collections.Generic.SortedList{System.String,Asus.Bussiness.Map.UIMap},System.Int32)">
+            <summary>
+            產生Button UI Field For ProtoType
+            </summary>
+            <param name="objholder"></param>
+            <param name="objType"></param>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.ExportUIMap(Asus.Bussiness.Map.UIMap)">
+            <summary>
+            輸出UI Fields
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.IsCheckControlVisible(Asus.EnumUIControl,System.Int32,System.Collections.Generic.SortedList{System.String,Asus.Bussiness.Map.VisibleMap})">
+            <summary>
+            確認一下是否符合 UI Control Visible
+            </summary>
+            <param name="control"></param>
+            <param name="pageMode"></param>
+            <param name="visibleControlList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.ExportCellUIMap(Asus.Bussiness.Map.UIMap,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            轉出一個Control的Table 類別
+            加入兩種Item ListBox 以及LinkButton
+            </summary>
+            <param name="t"></param>
+            <param name="isShowTitle"></param>
+            <param name="isCheckControlPageState"></param>
+            <param name="pageMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.ExportUIMap(Asus.Bussiness.Map.UIMap,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            取回一個元素的Table資料
+            </summary>
+            <param name="t"></param>
+            <param name="isShowTitle"></param>
+            <param name="isCheckControlPageState"></param>
+            <param name="pageMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.ExportUIMap(Asus.Bussiness.Map.UIMap,System.Boolean)">
+            <summary>
+            轉成Button 格式
+            </summary>
+            <param name="t"></param>
+            <param name="pageMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.BindVisibleSubFields(System.Type,Asus.EnumState)">
+            <summary>
+            Bind SubClass List
+            </summary>
+            <param name="objType"></param>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.BindVisibleSubFields(System.String,System.Type,Asus.EnumState)">
+            <summary>
+            加入前置字元
+            </summary>
+            <param name="preFixString"></param>
+            <param name="objType"></param>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.ShowUserControlCtrlSetting(System.Type,Asus.EnumState)">
+            <summary>
+            利用網頁的狀態來顯示欄位
+            </summary>
+            <param name="objType"></param>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.SetValidListToBeShow(System.Collections.Generic.List{Asus.Bussiness.Map.UIValidatorMap})">
+            <summary>
+            將錯誤訊息資料顯示在 UI上
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.SetValidToBeShow(System.Int32,System.String,Asus.EnumUIControl,System.String)">
+            <summary>
+            一筆一筆資料顯示
+            </summary>
+            <param name="order"></param>
+            <param name="id"></param>
+            <param name="control"></param>
+            <param name="errDesc"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.GetControlValueToClass(System.Type,Asus.EnumState)">
+            <summary>
+            取得目前UserControl的資料轉到物件ClassObject裡面，將來只要指定就做完
+            </summary>
+            <remarks>
+                <pre>
+                    1.2007/6/19 端午節 修改如下
+                      1.1新增對UserControl的支援，原來的物件放在同一個物件展開示的想法被打破，原因如下：
+                         每一個物件(Entity)對應於一個UserControl，如果今天一個UserControl裡面還有一個UserControl的話
+                         對物件而言，只要去呼叫底下的物件的OnSave的Method及可應該就要做到該有的功能，
+                         這樣的做法可以確保每一個物件都是獨立的做法，這一種觀念比較相通。
+                      1.2 但相對而言，整個Entity會變的比較複雜，會有物件的觀念。
+                </pre>
+            </remarks>
+            <param name="targetType"></param>
+            <param name="pageState"></param>
+            <returns>取得目前 Control的值到物件來</returns>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.GetControlValueToClass(System.String,System.Type,Asus.EnumState,System.String)">
+            <summary>
+            取得UI的資料取得
+            </summary>
+            <param name="prefix">前置字元</param>
+            <param name="targetType"></param>
+            <param name="pageState"></param>
+            <param name="loginUserEmpId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.SetClassValueToControl(System.Object,Asus.EnumState)">
+            <summary>
+            取得目前的物件然後將其資料到UserControl
+            </summary>
+            <param name="obj"></param>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.SetClassValueToControl(System.String,System.Object,Asus.EnumState)">
+            <summary>
+            取得資料往UI放
+            </summary>
+            <param name="prefix"></param>
+            <param name="obj"></param>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.SetClassValueToControl(System.Type,System.Object,Asus.EnumState)">
+            <summary>
+            不支援泛型
+            </summary>
+            <param name="objType"></param>
+            <param name="obj"></param>
+            <param name="pageState"></param>
+        </member>
+        <member name="M:Asus.WebUI.UserControl.BaseControlPage.SetClassValueToControl(System.String,System.Type,System.Object,Asus.EnumState,System.Boolean)">
+            <summary>
+            將資料送給Control Value
+            </summary>
+            <param name="objType"></param>
+            <param name="obj"></param>
+            <param name="pageState"></param>
+            <param name="isinit"></param>
+        </member>
+        <member name="T:Asus.Logic.DomainLogic">
+            <summary>
+            UI的呈現資料層，已經最上層
+            </summary>
+        </member>
+        <member name="M:Asus.Logic.DomainLogic.Insert``1(``0,System.String)">
+            <summary>
+            支援泛型
+            Insert 資料(可選擇資料庫)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="db"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DomainLogic.InsertDataToDB(System.Object,System.Type,System.String)">
+            <summary>
+            不支援泛型
+            (可選擇資料庫)
+            </summary>
+            <param name="obj"></param>
+            <param name="objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DomainLogic.UpdateDataToDB(System.Object,System.Type,System.String)">
+            <summary>
+            更新資料
+            可選擇資料庫
+            </summary>
+            <param name="obj"></param>
+            <param name="objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DomainLogic.Insert(System.Object,System.Type,System.String)">
+            <summary>
+            可選擇資料庫
+            </summary>
+            <param name="obj"></param>
+            <param name="objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DomainLogic.UpdateDB``1(``0,System.String)">
+            <summary>
+            支援泛型
+            可選擇資料庫
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DomainLogic.UpdateDB(System.Object,System.Type,System.String)">
+            <summary>
+            不支援泛型，可選擇資料庫
+            </summary>
+            <param name="obj"></param>
+            <param name="objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DomainLogic.DeleteDB``1(``0,System.String)">
+            <summary>
+            支援泛型(可選擇資料庫)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DomainLogic.DeleteDB(System.Object,System.Type,System.String)">
+            <summary>
+            不支援泛型(可選擇資斗料庫)
+            </summary>
+            <param name="obj"></param>
+            <param name="objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DomainLogic.GetPageModeByNumber(System.String)">
+            <summary>
+            取得EnumPage State 與UI Column 數字的關係
+            </summary>
+            <param name="pageMode">新增/修改/查詢</param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DomainLogic.QueryDataDetailInfo``1(System.String,System.Object[])">
+            <summary>
+            取回一筆資料，用預設的資料庫連線
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DomainLogic.QueryList``1(System.String,System.Object[])">
+            <summary>
+            取得泛用資料型別，預設資料庫
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DomainLogic.QueryList``1(System.String,System.Object[],System.String)">
+            <summary>
+            取得泛用型八料表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="args"></param>
+            <param name="dbConnectionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.DomainLogic.QueryDataDetailInfo``1(System.String,System.Object[],System.String)">
+            <summary>
+            取回一筆資料，支援泛型
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="args"></param>
+            <param name="dbConnectionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.CaptureDocUtil.GetCaptureList(System.Type)">
+            <summary>
+            取回目前所要Capture的圖片有那一些資料
+            捉回來的資料是那一些檔案
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.CaptureDocUtil.GetAllCaptureDocList(System.Type)">
+            <summary>
+            此Method 是用來擷取所有的系統分析上面所有的物件，
+            最主要的目的是用來編寫文件，將來會大大減少後續的文件寫作時間
+            也就是說，只要你UI的資料是正確的話，其文件即可以產生，完全自動
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.CaptureDocUtil.GetCaptureList(System.String,System.String)">
+            <summary>
+            擷取圖片由Web.Dll取得
+            </summary>
+            <param name="groupId"></param>
+            <param name="webDllPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.CaptureDocUtil.GetCaptureImagesList(System.Type)">
+            <summary>
+            取回目前所需擷取的圖片清單
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.CaptureDocUtil.GetAllAnalysisUIObjectList(System.Type)">
+            <summary>
+            取得需要擷取文件所需之所有資料
+            包括所有的事件按鈕及UI元素
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.CaptureDocUtil.GetCaptureImagesList(System.String,System.String)">
+            <summary>
+            取回目前所需擷取的圖片清單(直接從Web.Dll)
+            這一部份有一點限制就是必須要指名那一個Web Dll Path
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Asus.Template.GridViewTemplate">
+            <summary>
+            有關GridView 的範本 無微所做的 Template 
+            </summary>
+        </member>
+        <member name="M:Asus.Template.GridViewTemplate.#ctor(System.Web.UI.WebControls.DataControlRowType,System.String,System.String,Asus.Bussiness.Map.GridViewTemplateSubListMap)">
+            <summary>
+            For DropDownList
+            </summary>
+            <param name="rowType"></param>
+            <param name="viewRoleType"></param>
+            <param name="columnId"></param>
+            <param name="subList"></param>
+        </member>
+        <member name="M:Asus.Template.GridViewTemplate.#ctor(System.Web.UI.WebControls.DataControlRowType,System.String,System.String)">
+            <summary>
+            For TextBox
+            </summary>
+            <param name="rowType"></param>
+            <param name="viewRoleType"></param>
+            <param name="columnId"></param>
+        </member>
+        <member name="M:Asus.Template.GridViewTemplate.ddl_DataBinding(System.Object,System.EventArgs)">
+            <summary>
+            Drop Down List Item 資料
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Asus.Layout.LayerLogic">
+            <summary>
+            Process All Layout
+            </summary>
+        </member>
+        <member name="P:Asus.Helper.NumberHelper.Key">
+            <summary>
+            Key 值
+            </summary>
+        </member>
+        <member name="P:Asus.Helper.NumberHelper.IsIdentityContinuous">
+            <summary>
+            是否需要連號
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Map.DocTemplateMap">
+            <summary>
+            DB文件列表
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTemplateMap.DocCompany">
+            <summary>
+            文件公司
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTemplateMap.DocDirectory">
+            <summary>
+            文件目錄
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTemplateMap.DocFileName">
+            <summary>
+            文件檔案檔名
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTemplateMap.DocDescription">
+            <summary>
+            文件說明
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTemplateMap.DocName">
+            <summary>
+            文件名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTemplateMap.DocVersion">
+            <summary>
+            文件版本
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTemplateMap.SystemName">
+            <summary>
+            系統名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTemplateMap.DBTemplatePath">
+            <summary>
+            DB 文件Template 路徑
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTemplateMap.DBFileOutput">
+            <summary>
+            檔案出處
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Attribute.WikiEngineAttribute">
+            <summary>
+            這是讓Class的上面知道是屬於那一種Wiki
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.WikiEngineAttribute.WikiGroup">
+            <summary>
+            這是屬於那一種Group
+            </summary>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.ValidAttribute.#ctor(System.Int32,Asus.EnumUIControl,System.Int32,System.String)">
+            <summary>
+            資料不允許空白(四個參數)
+            </summary>
+            <param name="order">排序值(目前尚不實作)</param>
+            <param name="control">驗證的UI欄位</param>
+            <param name="pageMode">目前的頁面狀態</param>
+            <param name="err">如果有錯誤的時候的錯誤訊息</param>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.ValidAttribute.#ctor(System.Int32,Asus.EnumUIControl,System.Int32,Asus.EnumValidRule,System.Int32,System.String)">
+            <summary>
+            文字長度資料在一定的範圍之內(六個)
+            </summary>
+            <param name="order">排序值(尚不實作)</param>
+            <param name="control">驗證的UI欄位</param>
+            <param name="pageMode">頁面狀態</param>
+            <param name="rule">規則，是大於或者是小於</param>
+            <param name="length">長度</param>
+            <param name="err">錯誤訊息</param>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.ValidAttribute.#ctor(System.Int32,Asus.EnumUIControl,System.Int32,Asus.EnumValidRule,System.String,System.String)">
+            <summary>
+            計算IndexOf(六個)
+            </summary>
+            <param name="order">排序值(尚不實作</param>
+            <param name="control">驗證的UI欄位</param>
+            <param name="pageMode">頁面狀態</param>
+            <param name="rule">IndexOf/Not IndexOf</param>
+            <param name="indexOf">比較的字串</param>
+            <param name="err">錯誤訊息</param>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.ValidAttribute.#ctor(System.Int32,Asus.EnumUIControl,System.Int32,Asus.EnumValidRule,Asus.EnumRuleDataType,System.Object,System.Object[],System.String)">
+            <summary>
+            數字驗證(八個參數)
+            </summary>
+            <param name="order">排序值</param>
+            <param name="control">UI控制項</param>
+            <param name="pageMode">頁面模式</param>
+            <param name="rule">驗證規則</param>
+            <param name="toBeValidType">要被驗證的資料來源(Cobstant、Property、Method)取得</param>
+            <param name="toBeNumber"></param>
+            <param name="validParameters"></param>
+            <param name="err"></param>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.ValidAttribute.#ctor(System.Int32,Asus.EnumUIControl,System.Int32,Asus.EnumValidator,Asus.EnumValidFormat,Asus.EnumValidRule,Asus.EnumRuleDataType,System.Object,System.Object[],System.String)">
+            <summary>
+            
+            </summary>
+            <param name="order"></param>
+            <param name="control"></param>
+            <param name="pageMode"></param>
+            <param name="validator"></param>
+            <param name="format"></param>
+            <param name="rule"></param>
+            <param name="dataType"></param>
+            <param name="validName"></param>
+            <param name="validParameters"></param>
+            <param name="err"></param>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.ValidAttribute.Order">
+            <summary>
+            排序：目前尚不實現
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Attribute.LayoutPropertyAttribute">
+            <summary>
+            設定Style Type 的Property
+            </summary>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.LayoutPropertyAttribute.#ctor(System.String,System.Object,System.Type,System.String)">
+            <summary>
+            給我Key 及Value的時候
+            </summary>
+            <param name="propertyKey"></param>
+            <param name="propertyValue"></param>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.LayoutPropertyAttribute.PropertyKey">
+            <summary>
+            Key
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.LayoutPropertyAttribute.PropertyValue">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Attribute.ImportTypeAttribute">
+            <summary>
+            匯入類型設定
+            </summary>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.ImportTypeAttribute.#ctor(System.String,System.String,System.Type,Asus.EnumImportType)">
+            <summary>
+            匯入類別設定
+            </summary>
+            <param name="name">匯入活動說明</param>
+            <param name="connString">Config 的字串</param>
+            <param name="entity">處理Entity</param>
+            <param name="import">匯入類型</param>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.ControlPropertyAttribute.#ctor(Asus.EnumUIControl,System.String,System.Object,System.Type,System.String)">
+            <summary>
+            如果Property的值的設定須要有method的支援，請用此部份
+            </summary>
+            <param name="control"></param>
+            <param name="propertyKey"></param>
+            <param name="propertyValue"></param>
+            <param name="mobj"></param>
+            <param name="method"></param>
+        </member>
+        <member name="T:Asus.Analysis.EnumStakeholder">
+            <summary>
+            stakeholders Type
+            
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.EnumReqType">
+            <summary>
+            FURPS model developed by Robert Grady
+            </summary>
+        </member>
+        <member name="F:Asus.Analysis.EnumReqType.Functionality">
+            <summary>
+            功能性需求
+            </summary>
+        </member>
+        <member name="F:Asus.Analysis.EnumReqType.Usability">
+            <summary>
+            使用性需求
+            </summary>
+        </member>
+        <member name="F:Asus.Analysis.EnumReqType.Reliability">
+            <summary>
+            實用型需求
+            </summary>
+        </member>
+        <member name="F:Asus.Analysis.EnumReqType.Performance">
+            <summary>
+            效能性需求
+            </summary>
+        </member>
+        <member name="F:Asus.Analysis.EnumReqType.Supportability">
+            <summary>
+            支援性需求
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.EnumActorType">
+            <summary>
+            Actor類型
+            Use Case 使用
+            </summary>
+        </member>
+        <member name="F:Asus.Analysis.EnumActorType.User">
+            <summary>
+            使用者
+            </summary>
+        </member>
+        <member name="F:Asus.Analysis.EnumActorType.UserSystem">
+            <summary>
+            使用者系統
+            </summary>
+        </member>
+        <member name="F:Asus.Analysis.EnumActorType.ExternalSystem">
+            <summary>
+            外部系統
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.EnumActivityNode">
+            <summary>
+            Activity Map Node
+            活動圖的所有因子
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Attribute.HistoryLogAttribute">
+            <summary>
+            記錄版本歷程的記錄，將以Class為主做為記錄
+            初期出現以下訊息，
+            1.新增記錄
+            2.開始時間
+            3.結束時間
+            4.記錄修改內容
+            </summary>
+        </member>
+        <member name="M:Asus.Analysis.Attribute.HistoryLogAttribute.#ctor(System.String,System.String,System.String,System.Type,System.String)">
+            <summary>
+            Constructor
+            時間格式 必須符合時間格式即可
+            </summary>
+            <param name="refclass">相關類別</param>
+            <param name="start">開始修改時間 例 2008/08/05 12:23:12</param>
+            <param name="end">結束修改時間 例 2008/08/05 12:23:12</param>
+            <param name="user">使用者名稱</param>
+            <param name="comment">註解，像修改內容說明</param>
+        </member>
+        <member name="P:Asus.Analysis.Attribute.HistoryLogAttribute.HistoryRefClass">
+            <summary>
+            相關類別
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Attribute.HistoryLogAttribute.HistoryBeginDate">
+            <summary>
+            記錄開始時間
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Attribute.HistoryLogAttribute.HistoryEndDate">
+            <summary>
+            記錄結束時間
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Attribute.HistoryLogAttribute.HistoryUser">
+            <summary>
+            記錄人員
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Attribute.HistoryLogAttribute.HistoryLogCommnet">
+            <summary>
+            記錄註解內容
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.MediaWiki.WordFormat">
+            <summary>
+            本元件廢除不用 2008/10/01
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.WordFormat.GetHtmlControl">
+            <summary>
+            產生需要被置換的HTML Generic Control
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Wiki.MediaWiki.WordFormat.RegexString">
+            <summary>
+            需要被驗證的字串Regular Expressions Pattern
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.MediaWiki.BlockFormat">
+            <summary>
+            本元件廢除不用 2008/10/01
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.BlockFormat.GetHtmlControl">
+            <summary>
+            產生需要被置換的HTML Generic Control
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Wiki.MediaWiki.BlockFormat.RegexString">
+            <summary>
+            需要被驗證的字串Regular Expressions Pattern
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.EnumWiki">
+            <summary>
+            本元件已經不用 2008/10/01 廢除
+            這是讓你知道要使用那一種引擎
+            目前只有Media Wiki可供
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Utility.HtmlParser.HtmlEncoder">
+            <summary>
+            HTML 4 Entity coding routines
+            </summary>
+        </member>
+        <member name="T:Asus.Theme.AbstractFormTheme">
+            <summary>
+            本Class是用來使用產生Theme Layout
+            由於Layut是所有Entity的標準，故此Class是基底
+            也就是如下
+            <Layout>
+                <Entity>
+                </Entity>
+            </Layout>
+            一般的狀況，分成兩種Layout 一種為頁面的Layout，和Entity的無關，以及與Entity有關的Layout
+            此Class是採用Layout與Entity分離效果，這樣此元件才會重覆使用，另外就是此Class就要做到所的Layout八可以使用
+            </summary>
+        </member>
+        <member name="P:Asus.Theme.AbstractFormTheme.PreFix">
+            <summary>
+            前置字元
+            </summary>
+        </member>
+        <member name="T:Asus.Flow.Map.FlowRoleMap">
+            <summary>
+            Map Flow Proc Role
+            </summary>
+        </member>
+        <member name="P:Asus.Flow.Map.FlowRoleMap.RoleId">
+            <summary>
+            角色代號
+            </summary>
+        </member>
+        <member name="P:Asus.Flow.Map.FlowRoleMap.RoleName">
+            <summary>
+            角色名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Flow.Map.FlowRoleMap.Rule">
+            <summary>
+            規則
+            </summary>
+        </member>
+        <member name="P:Asus.Flow.Map.FlowRoleMap.RoleProcList">
+            <summary>
+            此角色可以回覆的狀態
+            </summary>
+        </member>
+        <member name="P:Asus.Flow.Map.FlowRoleMap.NextFlow">
+            <summary>
+            下一關的狀態
+            </summary>
+        </member>
+        <member name="T:Asus.Flow.Attribute.FlowRoleAttribute">
+            <summary>
+            Flow 角色資料
+            </summary>
+        </member>
+        <member name="M:Asus.Flow.Attribute.FlowRoleAttribute.#ctor(Asus.EnumFlowGroupRule)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="rule"></param>
+        </member>
+        <member name="P:Asus.Flow.Attribute.FlowRoleAttribute.Rule">
+            <summary>
+            規則
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.EntityTable.No">
+            <summary>
+            編號
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.EntityTable.EntityId">
+            <summary>
+            Entity Id
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.EntityTable.Name">
+            <summary>
+            中文名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.EntityTable.Control">
+            <summary>
+            Control UI
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.EntityTable.ReMark">
+            <summary>
+            ToolTip內容
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Attribute.RemarkAttribute">
+            <summary>
+            Column ReMark Attribute
+            此Class目的是在放Column後面的說明文字
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.RemarkAttribute.PageMode">
+            <summary>
+            目前欄位的頁面狀態
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.RemarkAttribute.Remark">
+            <summary>
+            目前欄位的頁面說明
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.RemarkAttribute.AlignMent">
+            <summary>
+            此說明的靠的方向
+            靠左的話-就是放前面
+            靠右的話-就是放後面
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.ParameterAttribute.Name">
+            <summary>
+            此參數資料名稱(算是補充說明)
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.ParameterAttribute.ParameterType">
+            <summary>
+            此參數對應至那個設定(對應至Entity)
+            </summary>
+        </member>
+        <member name="F:Asus.Bussiness.Attribute.BaseColumnAttribute._Identity">
+            <summary>
+            以下皆為連號取得
+            </summary>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.BaseColumnAttribute.#ctor(System.String,System.String,Asus.Data.DataType,Asus.EnumColumnIdentity,System.String,System.Type)">
+            <summary>
+            這是專門給產生Identity的欄位使用
+            </summary>
+            <param name="tableName"></param>
+            <param name="columnName"></param>
+            <param name="dataType"></param>
+            <param name="identity"></param>
+            <param name="identityKey"></param>
+            <param name="identitType"></param>
+        </member>
+        <member name="T:Asus.Analysis.Interface.IRequirement">
+            <summary>
+            需求介面
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IRequirement.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IRequirement.Name">
+            <summary>
+            名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IRequirement.Context">
+            <summary>
+            需求內容
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IRequirement.Package">
+            <summary>
+            屬於那一個群組
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IRequirement.ReqType">
+            <summary>
+            需求類型
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IRequirement.StackHolders">
+            <summary>
+            屬於那一類人的需求
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IRequirement.Parent">
+            <summary>
+            上層的ID(有些需求是有上下層之關係)
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IRequirement.RationalRemark">
+            <summary>
+            相關說明
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Interface.IContext">
+            <summary>
+            專案開會內容介面
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IContext.ID">
+            <summary>
+            會議內容區塊代號
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IContext.Name">
+            <summary>
+            內容名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IContext.Description">
+            <summary>
+            內容說明
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IContext.Speakers">
+            <summary>
+            發言人(允許多人)
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IContext.Why">
+            <summary>
+            為何
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IContext.What">
+            <summary>
+            做什麼
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IContext.How">
+            <summary>
+            如何做
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IContext.Where">
+            <summary>
+            在那裡做
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IContext.Question">
+            <summary>
+            引發的問題
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Attribute.InformFlowAttribute">
+            <summary>
+            資訊流，有一點像業務流程
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Attribute.FunctionTreeAttribute">
+            <summary>
+            SD 
+               Activity Diagram System Tree Attribute
+               這是系統設計的第一層，必須要設定所有的Function Tree Attribute
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.MediaWiki.Table.CaptionFormat">
+            <summary>
+            本元件廢除不用2008/10/01
+            
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.Table.CaptionFormat.GetHtmlControl">
+            <summary>
+            產生需要被置換的HTML Generic Control
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.Table.CaptionFormat.Match(System.Text.RegularExpressions.MatchCollection,System.String)">
+            <summary>
+            Match 資料
+            </summary>
+            <param name="m"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Wiki.MediaWiki.Table.CaptionFormat.RegexString">
+            <summary>
+            需要被驗證的字串Regular Expressions Pattern
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Utility.BaseUtil">
+            <summary>
+            Util的最底層，所有的Util物件皆源於此
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.ParameterMapUtil.GetEnumList">
+            <summary>
+            取得全部的清單
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.ParameterMapUtil.GetParameterList">
+            <summary>
+            取得所有參數設定的值，這會用於下拉式選單中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AsusLibrary.Utility.ParameterMapUtil.Item(System.Enum)">
+            <summary>
+            取得一項資格的項目
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Asus.Analysis.Interface.IBlock">
+            <summary>
+            系統分析之區塊分析
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IBlock.ID">
+            <summary>
+            系統代號
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IBlock.Name">
+            <summary>
+            系統區塊名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IBlock.Parent">
+            <summary>
+            區塊上層
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IBlock.BelongTo">
+            <summary>
+            屬於那一個Package
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IBlock.RationalRemark">
+            <summary>
+            額外補充
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Attribute.KeyEntityAttribute">
+            <summary>
+            Key Type
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Attribute.RefHistoryAttribute">
+            <summary>
+            實作History Log資訊
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Attribute.OrgAttribute">
+            <summary>
+            這個算是組織架構
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.MediaWiki.Table.HeadFormat">
+            <summary>
+            本元件廢除不用 2008/10/01
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.Table.HeadFormat.GetHtmlControl">
+            <summary>
+            產生需要被置換的HTML Generic Control
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.Table.HeadFormat.Match(System.Text.RegularExpressions.MatchCollection,System.String)">
+            <summary>
+            Match 資料
+            </summary>
+            <param name="m"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Wiki.MediaWiki.Table.HeadFormat.RegexString">
+            <summary>
+            需要被驗證的字串Regular Expressions Pattern
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.MediaWiki.LineFormat">
+            <summary>
+            本元件廢除不用 2008/10/01
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.LineFormat.GetHtmlControl">
+            <summary>
+            產生需要被置換的HTML Generic Control
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Wiki.MediaWiki.LineFormat.RegexString">
+            <summary>
+            需要被驗證的字串Regular Expressions Pattern
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.MediaWiki.IndentFormat">
+            <summary>
+            本元件廢除不用 2008/10/01
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.IndentFormat.GetHtmlControl">
+            <summary>
+            產生需要被置換的HTML Generic Control
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Wiki.MediaWiki.IndentFormat.RegexString">
+            <summary>
+            需要被驗證的字串Regular Expressions Pattern
+            </summary>
+        </member>
+        <member name="T:SampleAppendersApp.Appender.PatternFileAppender">
+            <summary>
+            Appender that writes to a file named using a pattern
+            </summary>
+            <remarks>
+            The file to write to is selected for each event using a
+            PatternLayout specified in the File property. This allows
+            each LoggingEvent to be written to a file based on properties
+            of the event.
+            The output file is opened to write each LoggingEvent as it arrives
+            and closed afterwards.
+            </remarks>
+        </member>
+        <member name="P:Asus.Sercurity.LoginUser.UserId">
+            <summary>
+            使用者帳號
+            AccountNo
+            </summary>
+        </member>
+        <member name="P:Asus.Sercurity.LoginUser.LoginId">
+            <summary>
+            使用者登入帳號
+            </summary>
+        </member>
+        <member name="P:Asus.Sercurity.LoginUser.UserChineseName">
+            <summary>
+            使用者中文姓名稱
+            
+            </summary>
+        </member>
+        <member name="P:Asus.Sercurity.LoginUser.UserEnglishName">
+            <summary>
+            使用者英文名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Sercurity.LoginUser.UserDomain">
+            <summary>
+            登入Domain
+            </summary>
+        </member>
+        <member name="P:Asus.Sercurity.LoginUser.UserEmail">
+            <summary>
+            使用者Email
+            </summary>
+        </member>
+        <member name="P:Asus.Sercurity.LoginUser.CompanyId">
+            <summary>
+            公司代號
+            </summary>
+        </member>
+        <member name="T:Asus.Data.DataFarm">
+            <summary>
+            DataFarm class provides a set of database operations for data operations. A DataFarm
+            can contain a set of connections which is maintained automatically by DataFarm itself.
+            </summary>
+        </member>
+        <member name="M:Asus.Data.DataFarm.GetConnection(System.String)">
+            <summary>
+            取回 Connection資訊
+            </summary>
+            <param name="ConnectionName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Bussiness.Map.ValidErrorMap.Order">
+            <summary>
+            排序：目前尚不實現
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Map.UITargetMap">
+            <summary>
+            取得資料
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.UITargetMap.UiControl">
+            <summary>
+            EnumUIControl
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.UITargetMap.Target">
+            <summary>
+            UITargetAttribute
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTable.Pos">
+            <summary>
+            位置
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTable.Model">
+            <summary>
+            目前PageMode 有L=List,A=新增,U=更新 Q=瀏覽
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTable.ModelName">
+            <summary>
+            Model 簡寫
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTable.Type">
+            <summary>
+            這是資料庫的欄位資料型態
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTable.Len">
+            <summary>
+            資料長度
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTable.Control">
+            <summary>
+            在UI的物件Type
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTable.Field">
+            <summary>
+            在UI上的欄位ID
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTable.FieldName">
+            <summary>
+            在欄位的欄位名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTable.Table">
+            <summary>
+            資料庫的名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTable.Column">
+            <summary>
+            資料庫的欄位
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTable.Description">
+            <summary>
+            欄位說明
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTable.ReMark">
+            <summary>
+            欄位備註
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.DocTable.Validation">
+            <summary>
+            欄位驗證規則//此部份尚待實作
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Attribute.TemplatePropertyAttribute">
+            <summary>
+            針對Repeater DataList GrdView所設計的Template Property 
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Attribute.StakeholderAttribute">
+            <summary>
+            這是會議的時候會討論出來的人員
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Attribute.RefVersionAttribute">
+            <summary>
+            給Version MainClass使用
+            使用上相當簡單
+            <code>
+               [RefVersion("V1.0")] 
+               public const string MainClass="Class ";
+            </code>
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Attribute.RefVersionAttribute.RefVersion">
+            <summary>
+            相關版本
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Utility.Validator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.Validator.IsValidPersonalID(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="gender"></param>
+            <param name="persionID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Asus.UI.OpenCalendar">
+            <summary>
+            複合式月曆
+            </summary>
+        </member>
+        <member name="P:Asus.UI.OpenCalendar.Text">
+            <summary>
+            Text
+            </summary>
+        </member>
+        <member name="T:Asus.Logic.BaseProcessLogic">
+            <summary>
+            這裡的是處理所有的方法，已經是最上第二層
+            </summary>
+        </member>
+        <member name="M:Asus.Logic.BaseProcessLogic.GetGridViewPropertyMap``2">
+            <summary>
+            取得GridView的所有的property 
+            </summary>
+            <typeparam name="BrowerT"></typeparam>
+            <typeparam name="EntityT"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.BaseProcessLogic.GetGridViewPropertyMap``1(System.Type)">
+            <summary>
+            取得GridView的所有的property 
+            </summary>
+            <typeparam name="BrowerT"></typeparam>
+            <param name="objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.BaseProcessLogic.GetVisibleUIControlMap(System.Type)">
+            <summary>
+            取得UI Column 的資料
+            </summary>
+            <param name="objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Logic.BaseProcessLogic.GetValidatorUIControlMap(System.Type,Asus.EnumPageMode)">
+            <summary>
+            取得各個欄位的驗證欄位對照
+            </summary>
+            <param name="objType"></param>
+            <param name="pageMode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Asus.Helper.FlagsHelper">
+            <summary>
+            此Class專門做是否正確的事項
+            </summary>
+        </member>
+        <member name="M:Asus.Helper.FlagsHelper.IsAccordTrue(System.Int32,System.Int32)">
+            <summary>
+            比較是否相同
+            </summary>
+            <param name="intValue">是一個數字的總合</param>
+            <param name="intCompare">2的倍數</param>
+            <returns>true/false</returns>
+        </member>
+        <member name="T:Asus.Entity.ReflectionLogic">
+            <summary>
+            Process Reflection Method
+            </summary>
+        </member>
+        <member name="M:Asus.Entity.ReflectionLogic.GetPropertyList(System.Type)">
+            <summary>
+            Get PropertyList
+            </summary>
+            <param name="objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Entity.ReflectionLogic.GetPropertyList``1">
+            <summary>
+            Get EntityT PropertyList
+            </summary>
+            <typeparam name="EntityT"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Asus.DB.AbstractDbTrans">
+            <summary>
+            DB的核心
+            </summary>
+        </member>
+        <member name="F:Asus.DB.AbstractDbTrans.log">
+            <summary>
+            啟動log4net
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Attribute.TeamMemberAttribute">
+            <summary>
+            放置開發人員地點
+            包括窗口也算，就是整個開發組織相關人員
+            包括PM以及SA或開發人員等等...
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.MediaWiki.HeaderFormat">
+            <summary>
+            本元件廢除不用 2008/10/01
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.HeaderFormat.GetHtmlControl">
+            <summary>
+            產生需要被置換的HTML Generic Control
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Wiki.MediaWiki.HeaderFormat.RegexString">
+            <summary>
+            需要被驗證的字串Regular Expressions Pattern
+            </summary>
+        </member>
+        <member name="T:Asus.WebUI.BaseSEOAbstractPage">
+            <summary>
+            有需要使用時才繼承此機制
+            
+            </summary>
+        </member>
+        <member name="T:Asus.WebUI.BaseUIPage">
+            <summary>
+            UI Base Page
+            </summary>
+        </member>
+        <member name="M:Asus.WebUI.BaseUIPage.GetPageStateMode(Asus.EnumState)">
+            <summary>
+            設定網頁的狀態
+            </summary>
+            <param name="pageState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.WebUI.BaseUIPage.GetPageStateModeNumber(Asus.EnumState)">
+            <summary>
+            取得序號的程式
+            </summary>
+            <param name="pageState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.WebUI.BaseUIPage.SetPageTheme(System.String)">
+            <summary>
+            手動 Dynamic Set Theme 
+            </summary>
+            <param name="themeName"></param>
+        </member>
+        <member name="M:Asus.WebUI.BaseUIPage.SetMasterPage(System.String)">
+            <summary>
+            Dynamic Set Master Page
+            </summary>
+            <param name="masterName"></param>
+        </member>
+        <member name="M:Asus.WebUI.BaseUIPage.ShowAjaxAlertMessage(System.Web.UI.Control,System.String)">
+            <summary>
+            顯示Ajax Alert Message
+            </summary>
+            <param name="control"></param>
+            <param name="alertMessage"></param>
+        </member>
+        <member name="T:Asus.Theme.DefaultTableTheme">
+            <summary>
+            預設的Style Layout
+            欄位Repeat 一欄
+            沒有Table Header/Table Footer
+            沒有CSS/Theme
+            只有一個標題及欄位資料
+            One Column 
+            ----------------------
+            |          |          |
+            |   Title  |   Body   |
+            |          |          |
+            -----------------------
+            </summary>
+        </member>
+        <member name="P:Asus.Theme.DefaultTableTheme.Layout">
+            <summary>
+            Layout Table
+            </summary>
+        </member>
+        <member name="P:Asus.Theme.DefaultTableTheme.BobyRepeatStyle">
+            <summary>
+            Repeat 一欄重覆
+            </summary>
+        </member>
+        <member name="P:Asus.Theme.DefaultTableTheme.TableStyle">
+            <summary>
+            Table Container
+            </summary>
+        </member>
+        <member name="P:Asus.Theme.DefaultTableTheme.TableHeader">
+            <summary>
+            Header Row Container
+            </summary>
+        </member>
+        <member name="P:Asus.Theme.DefaultTableTheme.TableRow">
+            <summary>
+            Table Row Container
+            </summary>
+        </member>
+        <member name="P:Asus.Theme.DefaultTableTheme.TableTitle">
+            <summary>
+            Table Title 
+            </summary>
+        </member>
+        <member name="P:Asus.Theme.DefaultTableTheme.TableBody">
+            <summary>
+            Table Body
+            </summary>
+        </member>
+        <member name="M:Asus.Helper.ValidHelper.SetPropertyValueToRuleList``1(``0,System.Collections.Generic.List{Asus.Bussiness.Map.ValidMap})">
+            <summary>
+            取回所有的Property的值到ValidMap
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="ruleList"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Asus.Analysis.Interface.IPlace">
+            <summary>
+            地點介面
+            如果開發小組是有多個地方的話，設置於此
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IPlace.ID">
+            <summary>
+            地點代號
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IPlace.Name">
+            <summary>
+            地點名稱
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Interface.IOrg">
+            <summary>
+            組織架構資料
+            目的是規劃由上到下的組織架構
+            這個組織不是部門，而是PM SA 
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IOrg.ID">
+            <summary>
+            組織ID 取一個簡單易懂的代號
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IOrg.Name">
+            <summary>
+            組織名稱
+            容易簡單易懂的名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IOrg.Description">
+            <summary>
+            組織說明
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IOrg.Parent">
+            <summary>
+            上層組織
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Attribute.GlossaryAttribute">
+            <summary>
+            Create Glossary
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.MediaWiki.Table.TableFormat">
+            <summary>
+            本元件廢除不用 2008/10/01
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.Table.TableFormat.GetHtmlControl">
+            <summary>
+            產生需要被置換的HTML Generic Control
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.Table.TableFormat.Match(System.Text.RegularExpressions.MatchCollection,System.String)">
+            <summary>
+            Match 資料
+            </summary>
+            <param name="m"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Wiki.MediaWiki.Table.TableFormat.RegexString">
+            <summary>
+            需要被驗證的字串Regular Expressions Pattern
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Utility.HtmlParser.HtmlNode">
+            <summary>
+            The HtmlNode is the base for all objects that may appear in HTML. Currently, 
+            this implemention only supports HtmlText and HtmlElement node types.
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNode.#ctor">
+            <summary>
+            This constructor is used by the subclasses.
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNode.ToString">
+            <summary>
+            This will render the node as it would appear in HTML.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNode.IsDescendentOf(AsusLibrary.Utility.HtmlParser.HtmlNode)">
+            <summary>
+            This will return true if the node passed is a descendent of this node.
+            </summary>
+            <param name="node">The node that might be the parent or grandparent (etc.)</param>
+            <returns>True if this node is a descendent of the one passed in.</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNode.IsAncestorOf(AsusLibrary.Utility.HtmlParser.HtmlNode)">
+            <summary>
+            This will return true if the node passed is one of the children or grandchildren of this node.
+            </summary>
+            <param name="node">The node that might be a child.</param>
+            <returns>True if this node is an ancestor of the one specified.</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNode.GetCommonAncestor(AsusLibrary.Utility.HtmlParser.HtmlNode)">
+            <summary>
+            This will return the ancstor that is common to this node and the one specified.
+            </summary>
+            <param name="node">The possible node that is relative</param>
+            <returns>The common ancestor, or null if there is none</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNode.Remove">
+            <summary>
+            This will remove this node and all child nodes from the tree. If this
+            is a root node, this operation will do nothing.
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNode.SetParent(AsusLibrary.Utility.HtmlParser.HtmlElement)">
+            <summary>
+            Internal method to maintain the identity of the parent node.
+            </summary>
+            <param name="parentNode">The parent node of this one</param>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlNode.Parent">
+            <summary>
+            This will return the parent of this node, or null if there is none.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlNode.Next">
+            <summary>
+            This will return the next sibling node. If this is the last one, it will return null.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlNode.Previous">
+            <summary>
+            This will return the previous sibling node. If this is the first one, it will return null.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlNode.FirstChild">
+            <summary>
+            This will return the first child node. If there are no children, this
+            will return null.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlNode.LastChild">
+            <summary>
+            This will return the last child node. If there are no children, this
+            will return null.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlNode.Index">
+            <summary>
+            This will return the index position within the parent's nodes that this one resides.
+            If this is not in a collection, this will return -1.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlNode.IsRoot">
+            <summary>
+            This will return true if this is a root node (has no parent).
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlNode.IsChild">
+            <summary>
+            This will return true if this is a child node (has a parent).
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlNode.HTML">
+            <summary>
+            This will return the full HTML to represent this node (and all child nodes).
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlNode.XHTML">
+            <summary>
+            This will return the full XHTML to represent this node (and all child nodes)
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Utility.HtmlParser.HtmlNodeCollection">
+            <summary>
+            This object represents a collection of HtmlNodes, which can be either HtmlText
+            or HtmlElement objects. The order in which the nodes occur directly corresponds
+            to the order in which they appear in the original HTML document.
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNodeCollection.#ctor(AsusLibrary.Utility.HtmlParser.HtmlElement)">
+            <summary>
+            A collection is usually associated with a parent node (an HtmlElement, actually)
+            but you can pass null to implement an abstracted collection.
+            </summary>
+            <param name="parent">The parent element, or null if it is not appropriate</param>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNodeCollection.Add(AsusLibrary.Utility.HtmlParser.HtmlNode)">
+            <summary>
+            This will add a node to the collection.
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNodeCollection.IndexOf(AsusLibrary.Utility.HtmlParser.HtmlNode)">
+            <summary>
+            This is used to identify the index of this node as it appears in the collection.
+            </summary>
+            <param name="node">The node to test</param>
+            <returns>The index of the node, or -1 if it is not in this collection</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNodeCollection.Insert(System.Int32,AsusLibrary.Utility.HtmlParser.HtmlNode)">
+            <summary>
+            This will insert a node at the given position
+            </summary>
+            <param name="index">The position at which to insert the node.</param>
+            <param name="node">The node to insert.</param>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNodeCollection.FindByName(System.String)">
+            <summary>
+            This will search though this collection of nodes for all elements with the
+            specified name. If you want to search the subnodes recursively, you should
+            pass True as the parameter in searchChildren. This search is guaranteed to
+            return nodes in the order in which they are found in the document.
+            </summary>
+            <param name="name">The name of the element to find</param>
+            <returns>A collection of all the nodes that macth.</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNodeCollection.FindByName(System.String,System.Boolean)">
+            <summary>
+            This will search though this collection of nodes for all elements with the
+            specified name. If you want to search the subnodes recursively, you should
+            pass True as the parameter in searchChildren. This search is guaranteed to
+            return nodes in the order in which they are found in the document.
+            </summary>
+            <param name="name">The name of the element to find</param>
+            <param name="searchChildren">True if you want to search sub-nodes, False to
+            only search this collection.</param>
+            <returns>A collection of all the nodes that macth.</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNodeCollection.FindByAttributeName(System.String)">
+            <summary>
+            This will search though this collection of nodes for all elements with the an
+            attribute with the given name. 
+            </summary>
+            <param name="name">The name of the attribute to find</param>
+            <returns>A collection of all the nodes that macth.</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlNodeCollection.FindByAttributeName(System.String,System.Boolean)">
+            <summary>
+            This will search though this collection of nodes for all elements with the an
+            attribute with the given name. 
+            </summary>
+            <param name="name">The name of the attribute to find</param>
+            <param name="searchChildren">True if you want to search sub-nodes, False to
+            only search this collection.</param>
+            <returns>A collection of all the nodes that macth.</returns>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlNodeCollection.Item(System.Int32)">
+            <summary>
+            This property allows you to change the node at a particular position in the
+            collection.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlNodeCollection.Item(System.String)">
+            <summary>
+            This allows you to directly access the first element in this colleciton with the given name.
+            If the node does not exist, this will return null.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.EnumMapUtil.Item(System.Enum)">
+            <summary>
+            取得此中文名稱
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Asus.Bussiness.Map.UIMap._VisibleMapList">
+            <summary>
+            2007.11.21 新增Visible Map 加到 UI Map裡面
+            </summary>
+        </member>
+        <member name="F:Asus.Bussiness.Map.UIMap._CustomCellList">
+            <summary>
+            新增Cell 的設定/For UI 呈現
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.UIMap.VisibleMapList">
+            <summary>
+            UI Map裡面取得所有的欄位詳細資料清單
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.UIMap.PropertyList">
+            <summary>
+            取得所有的特質清單
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.UIMap.ColumnRemarkList">
+            <summary>
+            取得此欄位的說明或注解
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.UIMap.CustomCellList">
+            <summary>
+            取得所有的Custom List
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.UIMap.UITableCells">
+            <summary>
+            取得Table Cells
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.UIMap.EventList">
+            <summary>
+            取得所有的事件
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Map.GridViewMap">
+            <summary>
+            此Class 是針對 GridView 來做運算 取得設定的參數值
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Attribute.VisibleAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.VisibleAttribute.PageStates">
+            <summary>
+            頁面狀態
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.VisibleAttribute.ControlType">
+            <summary>
+            UI 控制項
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.VisibleAttribute.ToolTip">
+            <summary>
+            ToolTip
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.VisibleAttribute.IsInCludeSubClass">
+            <summary>
+            是否有必須要Binding其它資料
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Interface.ITeamMember">
+            <summary>
+            開發相關人員介面
+            這是指的是
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.ITeamMember.Id">
+            <summary>
+            代號
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.ITeamMember.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.ITeamMember.Description">
+            <summary>
+            說明
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.ITeamMember.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.ITeamMember.PhoneNo">
+            <summary>
+            電話或分機
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Utility.HtmlParser.HtmlElement">
+            <summary>
+            The HtmlElement object represents any HTML element. An element has a name
+            and zero or more attributes.
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlElement.#ctor(System.String)">
+            <summary>
+            This constructs a new HTML element with the specified tag name.
+            </summary>
+            <param name="name">The name of this element</param>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlElement.ToString">
+            <summary>
+            This will return the HTML representation of this element.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlElement.Name">
+            <summary>
+            This is the tag name of the element. e.g. BR, BODY, TABLE etc.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlElement.Nodes">
+            <summary>
+            This is the collection of all child nodes of this one. If this node is actually
+            a text node, this will throw an InvalidOperationException exception.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlElement.Attributes">
+            <summary>
+            This is the collection of attributes associated with this element.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlElement.IsTerminated">
+            <summary>
+            This flag indicates that the element is explicitly closed using the "<name/>" method.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:AsusLibrary.Utility.HtmlParser.HtmlElement.IsExplicitlyTerminated" -->
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlElement.HTML">
+            <summary>
+            This will return the HTML for this element and all subnodes.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlElement.XHTML">
+            <summary>
+            This will return the XHTML for this element and all subnodes.
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.FieldColumnUtil.GetVisibleUIFields(System.Type)">
+            <summary>
+            取得所有可顯示的清單
+            </summary>
+            <param name="objType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.FieldColumnUtil.GetUIValidatorFields(System.Type,Asus.EnumPageMode)">
+            <summary>
+            取回來需要驗證
+            </summary>
+            <param name="objType"></param>
+            <param name="pageState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.FieldColumnUtil.GetValidatorUIControlMap(System.Type,Asus.EnumPageMode)">
+            <summary>
+            取得各個欄位的驗證欄位對照
+            </summary>
+            <param name="objType"></param>
+            <param name="pageMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.FieldColumnUtil.GetUITargetMapList">
+            <summary>
+            取得此UIControl的相關資料
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Rule.ValidRule.ComapareEqual(Asus.EnumValidator,System.Object,System.Object)">
+            <summary>
+            判斷是否相同
+            </summary>
+            <param name="validator"></param>
+            <param name="initData"></param>
+            <param name="comData"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Bussiness.Map.VisibleMap.PageModes">
+            <summary>
+            目前頁面狀態總和
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.VisibleMap.IsIncludeSubClass">
+            <summary>
+            是否有加入其它運算值
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.VisibleMap.SubMap">
+            <summary>
+            如果有底下的SubClass計算
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Map.ParameterMap">
+            <summary>
+            此Class 是對應ParameterAttribute 
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Attribute.ScheduleSetAttribute">
+            <summary>
+            設定Schedule Type資料
+            </summary>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.DataDescriptionAttribute.#ctor(System.Int32,System.Int32,Asus.EnumUIControl,System.String,System.String,System.String,System.String)">
+            <summary>
+            針對按鈕及產生動作的物件所設計
+            </summary>
+            <param name="pos"></param>
+            <param name="model"></param>
+            <param name="uiControl"></param>
+            <param name="field"></param>
+            <param name="fieldName"></param>
+            <param name="?"></param>
+            <param name="remark"></param>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.DataDescriptionAttribute.#ctor(System.Int32,System.Int32,System.String,System.String,Asus.EnumUIControl,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            For Entity Design
+            </summary>
+            <param name="pos"></param>
+            <param name="model"></param>
+            <param name="dbDataType"></param>
+            <param name="len"></param>
+            <param name="uiControl"></param>
+            <param name="field"></param>
+            <param name="fieldName"></param>
+            <param name="fieldTag"></param>
+            <param name="fieldTip"></param>
+            <param name="table"></param>
+            <param name="column"></param>
+            <param name="description"></param>
+            <param name="remark"></param>
+        </member>
+        <member name="T:Asus.Bussiness.Attribute.CustomTableAttribute">
+            <summary>
+            Runtime Table 資料屬性
+            此物件是要來產生自定的Table
+            </summary>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.CustomTableAttribute.#ctor(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            主要的Table設定
+            </summary>
+            <param name="tableId"></param>
+            <param name="tableRow"></param>
+            <param name="tableColumn"></param>
+            <param name="order"></param>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.CustomTableAttribute.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            次要的Table設定
+            </summary>
+            <param name="tableId"></param>
+            <param name="tableRow"></param>
+            <param name="tableColumn"></param>
+            <param name="order"></param>
+            <param name="type"></param>
+            <param name="parentId"></param>
+            <param name="parentRow"></param>
+            <param name="parentCell"></param>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.CustomTableAttribute.TableId">
+            <summary>
+            TableID 必須要唯一
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.CustomTableAttribute.TableRow">
+            <summary>
+            需要產生的Table Row 數目
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.CustomTableAttribute.TableColumn">
+            <summary>
+            需要產生的 Table Cell數目
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.CustomTableAttribute.Order">
+            <summary>
+            Table的排列順序
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.CustomTableAttribute.TableType">
+            <summary>
+            是主要Table 還是次要的Table
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.CustomTableAttribute.ParentTableId">
+            <summary>
+            上層TableId
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.CustomTableAttribute.ParentRowNumber">
+            <summary>
+            上層Row 數字
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.CustomTableAttribute.ParentColumnNumber">
+            <summary>
+            上層 Cell數字
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Interface.IUseCase">
+            <summary>
+            Use Case Interface
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IUseCase.ID">
+            <summary>
+            ID代號
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IUseCase.Name">
+            <summary>
+            名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IUseCase.Context">
+            <summary>
+            大致內容
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IUseCase.Actors">
+            <summary>
+            Actors
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IUseCase.Package">
+            <summary>
+            Belong Package
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IUseCase.ReqList">
+            <summary>
+             屬於那一種的需求
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IUseCase.EssenceDescription">
+            <summary>
+            必要文字說明
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IUseCase.EssenceAlternative1">
+            <summary>
+            選擇性第一段文件說明
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IUseCase.EssenceAlternative2">
+            <summary>
+            選擇性第二段文件說明
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IUseCase.EssenceAlternative3">
+            <summary>
+            選擇性第三段文件說明
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IUseCase.EssenceAlternative4">
+            <summary>
+            選擇性第四段文件說明
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IUseCase.EssenceAlternative5">
+            <summary>
+            選擇性第五段文件說明
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IUseCase.EssenceAlternative6">
+            <summary>
+            選擇性第六段文件說明
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IUseCase.OpenPointDescription">
+            <summary>
+            選擇點說明
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.XMLUtil.XMLToClass``1(System.String)">
+            <summary>
+            由XML File 轉Class
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="xmlFileName">C:/xml/aa.xml</param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.XMLUtil.ClassToXmlFile``1(``0,System.String)">
+            <summary>
+            由Class轉XML檔案
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="xmlFilePath"></param>
+        </member>
+        <member name="M:AsusLibrary.Utility.XMLUtil.ClassToXmlDocument``1(``0)">
+            <summary>
+            由Class 轉成 XML Document
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+        </member>
+        <member name="T:AsusLibrary.Utility.HtmlParser.HtmlText">
+            <summary>
+            The HtmlText node represents a simple piece of text from the document.
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlText.#ctor(System.String)">
+            <summary>
+            This constructs a new node with the given text content.
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlText.ToString">
+            <summary>
+            This will return the text for outputting inside an HTML document.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlText.Text">
+            <summary>
+            This is the text associated with this node.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlText.HTML">
+            <summary>
+            This will return the HTML to represent this text object.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlText.XHTML">
+            <summary>
+            This will return the XHTML to represent this text object.
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Utility.HtmlParser.HtmlDocument">
+            <summary>
+            This is the basic HTML document object used to represent a sequence of HTML.
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlDocument.#ctor(System.String,System.Boolean)">
+            <summary>
+            This will create a new document object by parsing the HTML specified.
+            </summary>
+            <param name="html">The HTML to parse.</param>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlDocument.Create(System.String)">
+            <summary>
+            This will create a new document object by parsing the HTML specified.
+            </summary>
+            <param name="html">The HTML to parse.</param>
+            <returns>An instance of the newly created object.</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlDocument.Create(System.String,System.Boolean)">
+            <summary>
+            This will create a new document object by parsing the HTML specified.
+            </summary>
+            <param name="html">The HTML to parse.</param>
+            <param name="wantSpaces">Set this to true if you want to preserve all whitespace from the input HTML</param>
+            <returns>An instance of the newly created object.</returns>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlDocument.Nodes">
+            <summary>
+            This is the collection of nodes used to represent this document.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlDocument.HTML">
+            <summary>
+            This will return the HTML used to represent this document.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlDocument.XHTML">
+            <summary>
+            This will return the XHTML document used to represent this document.
+            </summary>
+        </member>
+        <member name="P:Asus.Flow.Map.FlowMap.FlowTemplate">
+            <summary>
+            針對流程範本必須設定不同的群組，以公司表示。
+            </summary>
+        </member>
+        <member name="P:Asus.Flow.Map.FlowMap.RoleList">
+            <summary>
+            角色列表
+            </summary>
+        </member>
+        <member name="P:Asus.Flow.Map.FlowMap.ProcList">
+            <summary>
+            回覆列表
+            </summary>
+        </member>
+        <member name="P:Asus.Flow.Map.FlowMap.ActionList">
+            <summary>
+            所有的動作列表
+            </summary>
+        </member>
+        <member name="T:Asus.Flow.Attribute.FlowProcAttribute">
+            <summary>
+            流程回覆狀態
+            </summary>
+        </member>
+        <member name="P:Asus.Flow.Attribute.FlowProcAttribute.FlowProc">
+            <summary>
+            Flow 狀態
+            </summary>
+        </member>
+        <member name="P:Asus.Flow.Attribute.FlowProcAttribute.Seq">
+            <summary>
+            排列序號
+            </summary>
+        </member>
+        <member name="M:Asus.Entity.EntityLogic.GetEntityList(System.Type,Asus.EnumState)">
+            <summary>
+            Get Entity Data Information
+            </summary>
+            <param name="objType">object Type</param>
+            <param name="pageMode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Asus.Bussiness.Map.ViewRowType">
+            <summary>
+            For GridView Type
+            </summary>
+        </member>
+        <member name="F:Asus.Bussiness.Map.ViewRowType.HTMLBoundField">
+            <summary>
+            支援斷行符號
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Interface.IPackage">
+            <summary>
+            這是將來做為需求分類之用
+            也會用於系統中
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IPackage.Key">
+            <summary>
+            Key 值
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IPackage.Name">
+            <summary>
+            名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IPackage.Remark">
+            <summary>
+            補充說明
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.NumberUtil.NewNumber(System.String)">
+            <summary>
+            取回一個新的代號
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AsusLibrary.Utility.HtmlParser.HtmlAttribute">
+            <summary>
+            The HtmlAttribute object represents a named value associated with an HtmlElement.
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlAttribute.#ctor(System.String,System.String)">
+            <summary>
+            This constructs an HtmlAttribute object with the given name and value. For wierd
+            HTML attributes that don't have a value (e.g. "NOWRAP"), specify null as the value.
+            </summary>
+            <param name="name">The name of the attribute</param>
+            <param name="value">The value of the attribute</param>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlAttribute.ToString">
+            <summary>
+            This will return an HTML-formatted version of this attribute. NB. This is
+            not SGML or XHTML safe, as it caters for null-value attributes such as "NOWRAP".
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlAttribute.Name">
+            <summary>
+            The name of the attribute. e.g. WIDTH
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlAttribute.Value">
+            <summary>
+            The value of the attribute. e.g. 100%
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Utility.HtmlParser.HtmlAttributeCollection">
+            <summary>
+            This is a collection of attributes. Typically, this is associated with a particular
+            element. This collection is searchable by both the index and the name of the attribute.
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlAttributeCollection.#ctor(AsusLibrary.Utility.HtmlParser.HtmlElement)">
+            <summary>
+            This will create an empty collection of attributes.
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlAttributeCollection.Add(AsusLibrary.Utility.HtmlParser.HtmlAttribute)">
+            <summary>
+            This will add an element to the collection.
+            </summary>
+            <param name="attribute">The attribute to add.</param>
+            <returns>The index at which it was added.</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlAttributeCollection.FindByName(System.String)">
+            <summary>
+            This will search the collection for the named attribute. If it is not found, this
+            will return null.
+            </summary>
+            <param name="name">The name of the attribute to find.</param>
+            <returns>The attribute, or null if it wasn't found.</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlAttributeCollection.IndexOf(System.String)">
+            <summary>
+            This will return the index of the attribute with the specified name. If it is
+            not found, this method will return -1.
+            </summary>
+            <param name="name">The name of the attribute to find.</param>
+            <returns>The zero-based index, or -1.</returns>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlAttributeCollection.Item(System.Int32)">
+            <summary>
+            This provides direct access to an attribute in the collection by its index.
+            </summary>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlAttributeCollection.Item(System.String)">
+            <summary>
+            This overload allows you to have direct access to an attribute by providing
+            its name. If the attribute does not exist, null is returned.
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.BatchDataHelper.ConvertBatchList``1(System.Data.DataTable)">
+            <summary>
+            取回List資料
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.BatchDataHelper.InsertBatchDBData``1(``0,System.String)">
+            <summary>
+            Insert 資料，採用資料庫選擇
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="t"></param>
+            <param name="db"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Asus.Data.DatabaseType">
+            <summary>
+            連結資料庫格式
+            <example>
+                OleDb 連結OleDB 像Oracle DB2
+                MsSql 連當 Microsoft Sql Sever Use Sql Client
+                MsAccess 可以連結Excle Access
+            </example>
+            </summary>
+        </member>
+        <member name="F:Asus.Data.DatabaseType.OleDb">
+            <summary>
+            連結Oracle DB
+            </summary>
+        </member>
+        <member name="F:Asus.Data.DatabaseType.MSSql">
+            <summary>
+            連結Microsoft SQL Server
+            </summary>
+        </member>
+        <member name="F:Asus.Data.DatabaseType.MSAccess">
+            <summary>
+            連結MSAccess EXCEL
+            </summary>
+        </member>
+        <member name="F:Asus.Data.DatabaseType.ODBC">
+            <summary>
+            連結Informix/ODBC
+            </summary>
+        </member>
+        <member name="T:Asus.Data.DataType">
+            <summary>
+            資料庫資料型態
+            System.Net 已經與資料格式做過整合
+            </summary>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.InsertColumnAttribute.#ctor(System.String,System.String,Asus.Data.DataType,Asus.EnumColumnIdentity,System.String,System.Type)">
+            <summary>
+            這一個是給直接給號的系統
+            </summary>
+            <param name="tableName"></param>
+            <param name="columnName"></param>
+            <param name="dataType"></param>
+            <param name="identity"></param>
+            <param name="identityKey"></param>
+            <param name="identitType"></param>
+        </member>
+        <member name="T:Asus.Bussiness.Attribute.EventAttribute">
+            <summary>
+            新增事件驅動
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.EventAttribute.Control">
+            <summary>
+            UI Control
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Attribute.CustomCellsAttribute">
+            <summary>
+            設定自定的Table Cell欄位說明
+            目的：在取得
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.CustomCellsAttribute.TableId">
+            <summary>
+            此給元件使用，可以設定本身的資料使用
+            </summary>
+            <param name="tableId"></param>
+            <param name="row"></param>
+            <param name="column"></param>
+            <param name="isShowTitle"></param>
+            <param name="order"></param>
+        </member>
+        <member name="T:Asus.Analysis.Attribute.PlaceAttribute">
+            <summary>
+            Place mark 
+            放置Place的Class地點
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.MediaWiki.ImageFormat">
+            <summary>
+            本元件廢除不用 2008/10/01
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.ImageFormat.GetHtmlControl">
+            <summary>
+            產生需要被置換的HTML Generic Control
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Wiki.MediaWiki.ImageFormat.RegexString">
+            <summary>
+            需要被驗證的字串Regular Expressions Pattern
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.MediaWiki.BulletFormat">
+            <summary>
+            本元件廢除不用 2008/10/01
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.BulletFormat.GetHtmlControl">
+            <summary>
+            產生需要被置換的HTML Generic Control
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Wiki.MediaWiki.BulletFormat.RegexString">
+            <summary>
+            需要被驗證的字串Regular Expressions Pattern
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.Factory">
+            <summary>
+            本元件 已廢除不用 2008/10/01
+            這是實作Formatter的工廠，所有的方法都是由此開始展開
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.Factory.Replace(System.String)">
+            <summary>
+            將資料做Parser以及置換的工作
+            這裡是針對所有的需要做Parser的物件做設計
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Wiki.Factory.Replace``1(System.String)">
+            <summary>
+            針對一個Class做Parser的動作
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Wiki.Factory.WikiEngine">
+            <summary>
+            Wiki引擎
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Utility.MailUtil">
+            <summary>
+            Summary description for MailUtil
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.MailUtil.ScreenScrapeHtml(System.String)">
+            <summary>
+            �N�ǤJurl���ഫ��string
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Asus.Theme.DefaultFormViewTheme" -->
+        <member name="T:Asus.Flow.FlowHelper">
+            <summary>
+            根據 Flow Farm 所產生的Flow資料
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Attribute.StyleLayoutAttribute">
+            <summary>
+            這是專門來設定Layout的Type
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.StyleLayoutAttribute.GroupId">
+            <summary>
+            群組ID
+            針對Table 而言，會有Title及Body兩部份，為了要確定分離原則可以適用此部份 
+            故需要有設定的地方，原則上一組為Title+Body
+            </summary>
+        </member>
+        <member name="T:Asus.Bussiness.Attribute.EditModeAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Logic.SysMLLogic">
+            <summary>
+            這個是實作SysML的所有的語法
+            將來所有的資料都是由此進入
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Interface.IVersionHistory">
+            <summary>
+            版本歷程
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IVersionHistory.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IVersionHistory.VersionDate">
+            <summary>
+            版本日期
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.UICustomTableUtil.GetCustomTableList(System.Type)">
+            <summary>
+            取得設定CustomTable的資料
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.UICustomTableUtil.GetCustomUITable(System.Type)">
+            <summary>
+            取得所有設定的Table資料
+            這會用x
+            </summary>
+            <param name="objType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Asus.Analysis.Attribute.TaskLogAttribute">
+            <summary>
+            TaskLog For Attribute Special
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.MediaWiki.Table.RowFormat">
+            <summary>
+            本元件廢除不用 2008/10/01
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.Table.RowFormat.GetHtmlControl">
+            <summary>
+            產生需要被置換的HTML Generic Control
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Asus.Wiki.MediaWiki.Table.RowFormat.Match(System.Text.RegularExpressions.MatchCollection,System.String)">
+            <summary>
+            Match 資料
+            </summary>
+            <param name="m"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Asus.Wiki.MediaWiki.Table.RowFormat.RegexString">
+            <summary>
+            需要被驗證的字串Regular Expressions Pattern
+            </summary>
+        </member>
+        <member name="F:Asus.Bussiness.Map.CaptureFlowMap._EntityList">
+            <summary>
+            Entity Attribute
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.CaptureFlowMap.DescriptionList">
+            <summary>
+            流程說明
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.CaptureFlowMap.EntityList">
+            <summary>
+            取回此頁面的Entity
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Map.SysMLDoc">
+            <summary>
+            這是SysML的文件資料
+            1.會議內容
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Interface.IMeeting">
+            <summary>
+            會議內容介面
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IMeeting.Title">
+            <summary>
+            會議抬頭
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IMeeting.Description">
+            <summary>
+            會議說明
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IMeeting.MeetingStartDate">
+            <summary>
+            會議開始時間
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IMeeting.MeetingEndDate">
+            <summary>
+            會議結束時間
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IMeeting.Place">
+            <summary>
+            會議地點
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IMeeting.Participants">
+            <summary>
+            會議人員
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IMeeting.ProjectContext">
+            <summary>
+            會議內容(尚不支援Wiki)語法
+            分段說明
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IMeeting.RequireMents">
+            <summary>
+            結論(初步需求)-Key在定義時能希能以I開頭表示
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IMeeting.ToDoList">
+            <summary>
+            預計要做事項
+            </summary>
+        </member>
+        <member name="P:Asus.Analysis.Interface.IMeeting.NextMeeting">
+            <summary>
+            下次開會時間
+            </summary>
+        </member>
+        <member name="T:Asus.Wiki.WikiTranslator">
+            <summary>
+            本內容只是從內容中找得字串
+            </summary>
+        </member>
+        <member name="M:Asus.Wiki.WikiTranslator.Translate(System.String)">
+            <summary>
+            Executes the translation.
+            </summary>
+            <param name="input">The input content.</param>
+            <returns>The WikiMarkup.</returns>
+        </member>
+        <member name="T:AsusLibrary.Utility.HtmlParser.HtmlParser">
+            <summary>
+            This is the main HTML parser class. I recommend you don't play around too much in here
+            as it's a little fiddly.
+            
+            Bascially, this class will build a tree containing HtmlNode elements.
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlParser.#ctor">
+            <summary>
+            This constructs a new parser. Even though this object is currently stateless,
+            in the future, parameters coping for tollerance and SGML (etc.) will be passed.
+            </summary>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlParser.Parse(System.String)">
+            <summary>
+            This will parse a string containing HTML and will produce a domain tree.
+            </summary>
+            <param name="html">The HTML to be parsed</param>
+            <returns>A tree representing the elements</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlParser.MoveNodesDown(AsusLibrary.Utility.HtmlParser.HtmlNodeCollection@,System.Int32,AsusLibrary.Utility.HtmlParser.HtmlElement)">
+            <summary>
+            This will move all the nodes from the specified index to the new parent.
+            </summary>
+            <param name="nodes">The collection of nodes</param>
+            <param name="node_index">The index of the first node (in the above collection) to move</param>
+            <param name="new_parent">The node which will become the parent of the moved nodes</param>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlParser.FindTagOpenNodeIndex(AsusLibrary.Utility.HtmlParser.HtmlNodeCollection,System.String)">
+            <summary>
+            This will find the corresponding opening tag for the named one. This is identified as
+            the most recently read node with the same name, but with no child nodes.
+            </summary>
+            <param name="nodes">The collection of nodes</param>
+            <param name="name">The name of the tag</param>
+            <returns>The index of the opening tag, or -1 if it was not found</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlParser.RemoveWhitespace(System.String)">
+            <summary>
+            This will remove redundant whitespace from the string
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlParser.RemoveComments(System.String)">
+            <summary>
+            This will remove all HTML comments from the input string. This will
+            not remove comment markers from inside tag attribute values.
+            </summary>
+            <param name="input">Input HTML containing comments</param>
+            <returns>HTML containing no comments</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlParser.RemoveSGMLComments(System.String)">
+            <summary>
+            This will remove all HTML comments from the input string. This will
+            not remove comment markers from inside tag attribute values.
+            </summary>
+            <param name="input">Input HTML containing comments</param>
+            <returns>HTML containing no comments</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlParser.PreprocessScript(System.String,System.String)">
+            <summary>
+            This will encode the scripts within the page so they get passed through the
+            parser properly. This is due to some people using comments protect the script
+            and others who don't. It also takes care of issues where the script itself has
+            HTML comments in (in strings, for example).
+            </summary>
+            <param name="input">The HTML to examine</param>
+            <returns>The HTML with the scripts marked up differently</returns>
+        </member>
+        <member name="M:AsusLibrary.Utility.HtmlParser.HtmlParser.GetTokens(System.String)">
+            <summary>
+            This will tokenise the HTML input string.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="P:AsusLibrary.Utility.HtmlParser.HtmlParser.RemoveEmptyElementText">
+            <summary>
+            The default mechanism will extract a pure DOM tree, which will contain many text
+            nodes containing just whitespace (carriage returns etc.) However, with normal
+            parsing, these are useless and only serve to complicate matters. Therefore, this
+            option exists to automatically remove those empty text nodes.
+            </summary>
+        </member>
+        <member name="T:AsusLibrary.Utility.HtmlParser.HtmlParser.ParseStatus">
+            <summary>
+            Internal FSM to represent the state of the parser
+            </summary>
+        </member>
+        <member name="M:Asus.Helper.InvokerHelper.#ctor(System.Type,System.String)">
+            <summary>
+            Constructor 
+            產生此Method Type
+            以及Method
+            </summary>
+            <param name="objType"></param>
+            <param name="method"></param>
+        </member>
+        <member name="T:Asus.Flow.Attribute.FlowActionAttribute">
+            <summary>
+            流程狀態
+            </summary>
+        </member>
+        <member name="P:Asus.Flow.Attribute.FlowActionAttribute.Action">
+            <summary>
+            動作
+            </summary>
+        </member>
+        <member name="P:Asus.Flow.Attribute.FlowActionAttribute.NextRole">
+            <summary>
+            下一個角色
+            </summary>
+        </member>
+        <member name="P:Asus.Flow.Attribute.FlowActionAttribute.NextFlow">
+            <summary>
+            下一關
+            </summary>
+        </member>
+        <member name="T:Asus.EnumState">
+            <summary>
+            網頁狀態(大部份是維護程式需要一些狀態)
+            </summary>
+            <remarks>
+            包括有 Query=查詢,
+                   Create=新增,
+                   Modify=修改
+            </remarks> 
+        </member>
+        <member name="F:Asus.EnumState.Query">
+            <summary>
+            查詢模式=Query
+            </summary>
+        </member>
+        <member name="F:Asus.EnumState.Create">
+            <summary>
+            新增模式
+            </summary>
+        </member>
+        <member name="F:Asus.EnumState.Modify">
+            <summary>
+            修改模式
+            </summary>
+        </member>
+        <member name="F:Asus.EnumState.None">
+            <summary>
+            什麼都不是
+            </summary>
+        </member>
+        <member name="T:Asus.EnumStyleLayout">
+            <summary>
+            此Style所用的Layout
+            
+            </summary>
+        </member>
+        <member name="F:Asus.EnumStyleLayout.Table">
+            <summary>
+            Table 就是使用Table來包裝欄位
+            </summary>
+        </member>
+        <member name="F:Asus.EnumStyleLayout.FormView">
+            <summary>
+            利用Div來表示
+            </summary>
+        </member>
+        <member name="T:Asus.EnumLayoutRole">
+            <summary>
+            所伴演的角色
+            </summary>
+        </member>
+        <member name="F:Asus.EnumLayoutRole.MainContainer">
+            <summary>
+            主要的Container
+            </summary>
+        </member>
+        <member name="F:Asus.EnumLayoutRole.Header">
+            <summary>
+            頁首
+            </summary>
+        </member>
+        <member name="F:Asus.EnumLayoutRole.RowContainer">
+            <summary>
+            Row 
+            </summary>
+        </member>
+        <member name="F:Asus.EnumLayoutRole.Title">
+            <summary>
+            標題欄
+            </summary>
+        </member>
+        <member name="F:Asus.EnumLayoutRole.Body">
+            <summary>
+            Body
+            </summary>
+        </member>
+        <member name="F:Asus.EnumLayoutRole.Foter">
+            <summary>
+            頁尾
+            </summary>
+        </member>
+        <member name="F:Asus.EnumLayoutRole.Div">
+            <summary>
+            放置div的地方
+            </summary>
+        </member>
+        <member name="F:Asus.EnumLayoutRole.DivHolder">
+            <summary>
+            放置PlaceHolder的地方
+            </summary>
+        </member>
+        <member name="T:Asus.EnumStyleRepeat">
+            <summary>
+            資料是否重覆
+            此設定最玊要是用來設定欄位是否用來重覆或者是用來客製化
+            </summary>
+        </member>
+        <member name="F:Asus.EnumStyleRepeat.Repeat">
+            <summary>
+            重覆
+            </summary>
+        </member>
+        <member name="F:Asus.EnumStyleRepeat.Custom">
+            <summary>
+            自定
+            </summary>
+        </member>
+        <member name="F:Asus.EnumJobDuration.SelfStart">
+            <summary>
+             執行啟動
+             如果是自行啟動，時間設定在手動，只執行一次。
+            </summary>
+        </member>
+        <member name="F:Asus.EnumJobDuration.Period">
+            <summary>
+            週期啟動
+            </summary>
+        </member>
+        <member name="T:Asus.EnumUIControl">
+            <summary>
+            針對UI頁面所需要的實作部份
+            </summary>
+        </member>
+        <member name="F:Asus.EnumUIControl.CheckBoxList">
+            <summary>
+            CheckBoxList
+            Abbr. cbl
+            </summary>
+        </member>
+        <member name="F:Asus.EnumUIControl.DropDownList">
+            <summary>
+            DropDownList
+            下拉式選單
+            </summary>
+        </member>
+        <member name="F:Asus.EnumUIControl.Label">
+            <summary>
+            Label
+            </summary>
+        </member>
+        <member name="F:Asus.EnumUIControl.ListBox">
+            <summary>
+            ListBox
+            li
+            </summary>
+        </member>
+        <member name="F:Asus.EnumUIControl.LinkButton">
+            <summary>
+            LinkButton
+            lnb
+            </summary>
+        </member>
+        <member name="F:Asus.EnumUIControl.Repeater">
+            <summary>
+            重覆模組事件
+            </summary>
+        </member>
+        <member name="F:Asus.EnumUIControl.DataList">
+            <summary>
+            DataList
+            </summary>
+        </member>
+        <member name="F:Asus.EnumUIControl.ImageButton">
+            <summary>
+            Image Button
+            </summary>
+        </member>
+        <member name="F:Asus.EnumUIControl.Calendar">
+            <summary>
+            月曆模組(只針對ProtoType使用)
+            目前尚無計畫將其實作化
+            實作成TextBox+Button
+            </summary>
+        </member>
+        <member name="F:Asus.EnumUIControl.Upload">
+            <summary>
+            上傳元件
+            </summary>
+        </member>
+        <member name="F:Asus.EnumUIControl.PlaceHodler">
+            <summary>
+            此模組最主要的目的是放置其它的控制項
+            </summary>
+        </member>
+        <member name="F:Asus.EnumUIControl.Table">
+            <summary>
+            FOR UI Layout
+            </summary>
+        </member>
+        <member name="F:Asus.EnumUIControl.Tree">
+            <summary>
+            Tree 模組
+            </summary>
+        </member>
+        <member name="T:Asus.EnumValidator">
+            <summary>
+            驗證類型Enum
+            </summary>
+        </member>
+        <member name="F:Asus.EnumValidator.Number">
+            <summary>
+            數字驗證
+            </summary>
+        </member>
+        <member name="F:Asus.EnumValidator.String">
+            <summary>
+            長度驗證
+            </summary>
+        </member>
+        <member name="T:Asus.EnumValidRule">
+            <summary>
+            驗證法則
+            </summary>
+        </member>
+        <member name="F:Asus.EnumValidRule.EqualTo">
+            <summary>
+            等於
+            </summary>
+        </member>
+        <member name="F:Asus.EnumValidRule.NotEqualTo">
+            <summary>
+            不等於
+            </summary>
+        </member>
+        <member name="T:Asus.EnumColumnIdentity">
+            <summary>
+            欄位是否為自動取號
+            </summary>
+        </member>
+        <member name="F:Asus.EnumColumnIdentity.Standard">
+            <summary>
+            標準
+            </summary>
+        </member>
+        <member name="F:Asus.EnumColumnIdentity.Identity">
+            <summary>
+            自動取號
+            </summary>
+        </member>
+        <member name="T:Asus.EnumPageMode">
+            <summary>
+            Web 瀏覽模式狀況
+            </summary>
+        </member>
+        <member name="F:Asus.EnumPageMode.Create">
+            <summary>
+            新增
+            </summary>
+        </member>
+        <member name="F:Asus.EnumPageMode.Modify">
+            <summary>
+            修改
+            </summary>
+        </member>
+        <member name="F:Asus.EnumPageMode.Query">
+            <summary>
+            瀏覽
+            </summary>
+        </member>
+        <member name="F:Asus.EnumPageMode.None">
+            <summary>
+            無
+            </summary>
+        </member>
+        <member name="T:Asus.EnumPosition">
+            <summary>
+            放置位置
+            </summary>
+        </member>
+        <member name="F:Asus.EnumPosition.Left">
+            <summary>
+            靠左
+            </summary>
+        </member>
+        <member name="F:Asus.EnumPosition.Right">
+            <summary>
+            靠右
+            </summary>
+        </member>
+        <member name="T:Asus.EnumColumnType">
+            <summary>
+            此Enum最主要的目的是在建立詳細資料的UI
+            如果是一欄的話，與先前的一樣
+            如果是二欄的話，由左至右、由上到下
+            </summary>
+        </member>
+        <member name="F:Asus.EnumColumnType.OneColumn">
+            <summary>
+            一欄
+            </summary>
+        </member>
+        <member name="F:Asus.EnumColumnType.TwoColumn">
+            <summary>
+            二欄
+            </summary>
+        </member>
+        <member name="F:Asus.EnumColumnType.Template">
+            <summary>
+            範本
+            </summary>
+        </member>
+        <member name="F:Asus.EnumTemplate.Normal">
+            <summary>
+            標準
+            </summary>
+        </member>
+        <member name="F:Asus.EnumTemplate.Custom">
+            <summary>
+            自行定義
+            </summary>
+        </member>
+        <member name="T:Asus.EnumCustomTableType">
+            <summary>
+            分辦此Table 是主要的Table還是次要的
+            </summary>
+        </member>
+        <member name="F:Asus.EnumCustomTableType.Main">
+            <summary>
+            主要的Table
+            </summary>
+        </member>
+        <member name="F:Asus.EnumCustomTableType.Sub">
+            <summary>
+            次要的Table，附屬於主Table
+            </summary>
+        </member>
+        <member name="T:Asus.EnumHistoryType">
+            <summary>
+            記錄的型態
+            </summary>
+        </member>
+        <member name="F:Asus.EnumHistoryType.Create">
+            <summary>
+            當Method或所有的動作成立，新增使用 
+            </summary>
+        </member>
+        <member name="F:Asus.EnumHistoryType.Fix">
+            <summary>
+            當程式只是Bug時修訂時請用此項
+            </summary>
+        </member>
+        <member name="F:Asus.EnumHistoryType.Modify">
+            <summary>
+            當與原始程式不符時需要做調整的時候使用
+            </summary>
+        </member>
+        <member name="F:Asus.EnumHistoryType.Remark">
+            <summary>
+            純粹是用來記錄，說明自已到一覽
+            </summary>
+        </member>
+        <member name="F:Asus.EnumTemplateType.Table">
+            <summary>
+            範本程式-Table
+            HTML Table
+            </summary>
+        </member>
+        <member name="F:Asus.EnumTemplateType.TableRow">
+            <summary>
+            範本-Table Row
+            Table Row
+            </summary>
+        </member>
+        <member name="F:Asus.EnumTemplateType.TableCell">
+            <summary>
+            範本-Table Cell
+            Table Cell
+            </summary>
+        </member>
+        <member name="T:Asus.EnumWiki">
+            <summary>
+            Wiki Format Type
+            這是針對Wiki所做的引擎所做的種類規範
+            提供給IWiki繼承使用。
+            </summary>
+        </member>
+        <member name="T:Asus.EnumLayout">
+            <summary>
+            Style Setup Type
+            1.Layer
+            2.Layout
+            3.Table
+            </summary>
+        </member>
+        <member name="F:Asus.EnumLayout.LayerContainer">
+            <summary>
+            Outer Layout 
+            </summary>
+        </member>
+        <member name="F:Asus.EnumLayout.LayoutContainer">
+            <summary>
+            Inner Layout With Entity
+            </summary>
+        </member>
+        <member name="F:Asus.EnumLayout.TableContainer">
+            <summary> 
+            Inner Layout And Rows Ref
+            It Can Set One Column Two Column Three Column
+            </summary>
+        </member>
+        <member name="T:Asus.EnumTableColumn">
+            <summary>
+            Table Repeat Column Type
+            1.One Column
+            2.Two Column
+            3.Three Column
+            4.Four Column
+            </summary>
+        </member>
+        <member name="F:Asus.EnumTableColumn.OneColumn">
+            <summary>
+            一欄
+            </summary>
+        </member>
+        <member name="F:Asus.EnumTableColumn.TwoColumn">
+            <summary>
+            二欄
+            </summary>
+        </member>
+        <member name="F:Asus.EnumTableColumn.ThreeColumn">
+            <summary>
+            三欄
+            </summary>
+        </member>
+        <member name="F:Asus.EnumTableColumn.FourColumn">
+            <summary>
+            四欄
+            </summary>
+        </member>
+        <member name="T:Asus.EnumFlowGroupRule">
+            <summary>
+            流程規則
+            Member=個人/Group=群組
+            </summary>
+        </member>
+        <member name="F:Asus.EnumFlowGroupRule.Member">
+            <summary>
+            個人
+            </summary>
+        </member>
+        <member name="F:Asus.EnumFlowGroupRule.Group">
+            <summary>
+            群組
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.LayoutRowMap.RowContainer">
+            <summary>
+            Row Container
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.LayoutRowMap.GroupCell">
+            <summary>
+            Cell=Title+Body
+            很多組
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.ContentDescriptionMap.ObjType">
+            <summary>
+            物件的Type
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.ContentDescriptionMap.Method">
+            <summary>
+            Method的名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.ContentDescriptionMap.ObjParameters">
+            <summary>
+            參數，如果沒有就必須設定為null
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Map.ContentDescriptionMap.Content">
+            <summary>
+            取得內容
+            </summary>
+        </member>
+        <member name="M:Asus.Bussiness.Attribute.ContentDescriptionAttribute.#ctor(System.Type,System.String,System.Object[])">
+            <summary>
+            取得說明文字，所以回傳的一定是文字
+            </summary>
+            <param name="obj">Type 物件的Type</param>
+            <param name="method">想取得的文字說明的Method</param>
+            <param name="parameters">Method的參數，如無，設定為Null</param>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.ContentDescriptionAttribute.ObjType">
+            <summary>
+            物件的Type
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.ContentDescriptionAttribute.Method">
+            <summary>
+            Method的名稱
+            </summary>
+        </member>
+        <member name="P:Asus.Bussiness.Attribute.ContentDescriptionAttribute.ObjParameters">
+            <summary>
+            參數，如果沒有就必須設定為null
+            </summary>
+        </member>
+        <member name="T:Asus.Analysis.Attribute.RefDocTypeAttribute">
+            <summary>
+            相關系統文件類別
+            當此項目取得。
+            </summary>
+        </member>
+    </members>
+</doc>

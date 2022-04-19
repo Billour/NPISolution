@@ -1,0 +1,37 @@
+2008-12-22 10:55:30,351 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL ERROR 
+2008-12-22 10:55:30,367 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - ConnName=NPIDBProvider=OraOLEDB.Oracle;Data Source=TP-WMDB-T01;User ID=shinewave;Password=shinewave 
+2008-12-22 10:59:28,682 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 10:59:31,370 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL ERROR 
+2008-12-22 10:59:31,385 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - ConnName=NPIDBProvider=OraOLEDB.Oracle;Data Source=TP-WMDB-T01;User ID=shinewave;Password=shinewave 
+2008-12-22 11:01:04,933 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:01:07,183 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL ERROR 
+2008-12-22 11:01:07,183 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - ConnName=NPIDBProvider=OraOLEDB.Oracle;Data Source=TP-WMDB-T01;User ID=shinewave;Password=shinewave 
+2008-12-22 11:03:45,717 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL ERROR 
+2008-12-22 11:03:45,732 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - ConnName=NPIDBProvider=OraOLEDB.Oracle;Data Source=TP-WMDB-T01;User ID=shinewave;Password=shinewave 
+2008-12-22 11:25:53,607 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:25:54,294 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:25:55,685 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:25:56,216 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:25:57,091 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:25:57,482 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:25:57,966 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:25:58,294 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:26:00,950 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:26:04,279 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:26:04,685 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:26:07,966 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:26:11,341 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:26:14,576 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:26:14,904 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:26:15,185 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:26:15,576 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:26:15,966 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:26:19,107 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:26:19,669 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:26:20,122 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 11:26:20,529 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 13:40:05,183 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 13:40:13,293 [8] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 13:40:16,183 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 13:40:19,074 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-22 13:40:22,011 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 

@@ -1,0 +1,12 @@
+D:\SolutionList\NPISolution\Office.Core\bin\Debug\Office.Core.dll
+D:\SolutionList\NPISolution\Office.Core\bin\Debug\Office.Core.pdb
+D:\SolutionList\NPISolution\Office.Core\bin\Debug\Interop.Excel.dll
+D:\SolutionList\NPISolution\Office.Core\obj\Debug\ResolveAssemblyReference.cache
+D:\SolutionList\NPISolution\Office.Core\obj\Debug\Interop.Excel.dll
+D:\SolutionList\NPISolution\Office.Core\obj\Debug\Office.Core.csproj.ResolveComReference.cache
+D:\SolutionList\NPISolution\Office.Core\obj\Debug\Office.Core.dll
+D:\SolutionList\NPISolution\Office.Core\obj\Debug\Office.Core.pdb
+D:\SolutionList\NPISolution\Office.Core\bin\Debug\Interop.VBIDE.dll
+D:\SolutionList\NPISolution\Office.Core\bin\Debug\Interop.Word.dll
+D:\SolutionList\NPISolution\Office.Core\obj\Debug\Interop.VBIDE.dll
+D:\SolutionList\NPISolution\Office.Core\obj\Debug\Interop.Word.dll

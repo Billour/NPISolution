@@ -1,0 +1,67 @@
+批次程式開始:展開BOM資料 現在開始時間：2009/1/5 上午 10:05:28
+Load Assembly
+Load Assembly:BatchLibrary.dll
+Load Assembly:GetType
+Load Assembly:取得所有的各別的Type=BatchLibrary.App.BaseApp
+Load Assembly:取得所有的各別的Type=BatchLibrary.App.BaseApp+EnumStatus
+Load Assembly:取得所有的各別的Type=BatchLibrary.AlertManagerBatch
+Load Assembly:取得所有的各別的Type=BatchLibrary.App.LoginInfo
+Load Assembly:取得所有的各別的Type=BatchLibrary.GenerateBOM
+Load Assembly:GetClass=BatchLibrary.GenerateBOM
+開始要載入此Class=BatchLibrary.GenerateBOM
+新增資料庫列表
+新增1
+新增2
+加入1
+Load Assembly:CreateInstance
+Load Assembly:Invoke Method
+Length=2
+Job Start
+取回等待的BOM List 開始
+取回等待的BOM List 結束，總共是20筆
+Bom Generate List=20
+Step A Generate Bom Begin
+0.70-MIB7R0-A01(M4N78 SE <GA>                 )
+開始展BOM=70-MIB7R0-A01資料
+DB ConnectionString=Data Source=TPEBIZ01;User ID=srm;Password=srmadmin#
+ERP ConnectionString=DSN=ds1;UID=pepo1;PWD=kosu!957;DATABASE=mis1
+開始展BOM資料
+WorkNo=20090105100530
+完成展BOM資訊
+0.workNo=20090105100530
+0-End
+1.70-MIB7Q0-A01(M4A78-VM <GA>                 )
+開始展BOM=70-MIB7Q0-A01資料
+DB ConnectionString=Data Source=TPEBIZ01;User ID=srm;Password=srmadmin#
+ERP ConnectionString=DSN=ds1;UID=pepo1;PWD=kosu!957;DATABASE=mis1
+開始展BOM資料
+WorkNo=20090105100543
+完成展BOM資訊
+1.workNo=20090105100543
+1-End
+2.70-MIB7S0-A01(M4N78 <GA>                    )
+開始展BOM=70-MIB7S0-A01資料
+DB ConnectionString=Data Source=TPEBIZ01;User ID=srm;Password=srmadmin#
+ERP ConnectionString=DSN=ds1;UID=pepo1;PWD=kosu!957;DATABASE=mis1
+開始展BOM資料
+WorkNo=20090105100559
+完成展BOM資訊
+2.workNo=20090105100559
+2-End
+3.70-MBB72F-A01  (P5KPL/EPU <GA>                )
+開始展BOM=70-MBB72F-A01  資料
+DB ConnectionString=Data Source=TPEBIZ01;User ID=srm;Password=srmadmin#
+ERP ConnectionString=DSN=ds1;UID=pepo1;PWD=kosu!957;DATABASE=mis1
+開始展BOM資料
+WorkNo=
+完成展BOM資訊
+3.workNo=
+程式發現不可預期之錯誤：
+Exception=2009/01/05
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BatchLibrary.GenerateBOM.DoJob(String batchName) in d:\SolutionList\NPISolution\NPIBatchLibrary\GenerateBOM.cs:line 195Exception has been thrown by the target of an invocation.   at System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   at System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BatchConsole.Program.Main(String[] args) in d:\SolutionList\NPISolution\BatchConsoleApp\Program.cs:line 68

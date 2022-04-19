@@ -1,0 +1,67 @@
+2009-01-05 10:05:28,655  INFO  BatchConsole.Program  - 批次程式開始:展開BOM資料 現在開始時間：2009/1/5 上午 10:05:28
+2009-01-05 10:05:28,717  INFO  BatchConsole.Program  - Load Assembly
+2009-01-05 10:05:28,749  INFO  BatchConsole.Program  - Load Assembly:BatchLibrary.dll
+2009-01-05 10:05:28,749  INFO  BatchConsole.Program  - Load Assembly:GetType
+2009-01-05 10:05:28,749  INFO  BatchConsole.Program  - Load Assembly:取得所有的各別的Type=BatchLibrary.App.BaseApp
+2009-01-05 10:05:28,749  INFO  BatchConsole.Program  - Load Assembly:取得所有的各別的Type=BatchLibrary.App.BaseApp+EnumStatus
+2009-01-05 10:05:28,749  INFO  BatchConsole.Program  - Load Assembly:取得所有的各別的Type=BatchLibrary.AlertManagerBatch
+2009-01-05 10:05:28,749  INFO  BatchConsole.Program  - Load Assembly:取得所有的各別的Type=BatchLibrary.App.LoginInfo
+2009-01-05 10:05:28,749  INFO  BatchConsole.Program  - Load Assembly:取得所有的各別的Type=BatchLibrary.GenerateBOM
+2009-01-05 10:05:28,749  INFO  BatchConsole.Program  - Load Assembly:GetClass=BatchLibrary.GenerateBOM
+2009-01-05 10:05:28,749  INFO  BatchConsole.Program  - 開始要載入此Class=BatchLibrary.GenerateBOM
+2009-01-05 10:05:28,967  INFO  BatchLibrary.App.LoginInfo  - 新增資料庫列表
+2009-01-05 10:05:28,967  INFO  BatchLibrary.App.LoginInfo  - 新增1
+2009-01-05 10:05:28,999  INFO  BatchLibrary.App.LoginInfo  - 新增2
+2009-01-05 10:05:29,014  INFO  BatchLibrary.App.LoginInfo  - 加入1
+2009-01-05 10:05:29,030  INFO  BatchConsole.Program  - Load Assembly:CreateInstance
+2009-01-05 10:05:29,030  INFO  BatchConsole.Program  - Load Assembly:Invoke Method
+2009-01-05 10:05:29,030  INFO  BatchConsole.Program  - Length=2
+2009-01-05 10:05:29,092  INFO  BatchLibrary.App.BaseApp  - Job Start
+2009-01-05 10:05:29,092  INFO  BatchLibrary.App.BaseApp  - 取回等待的BOM List 開始
+2009-01-05 10:05:29,999  INFO  BatchLibrary.App.BaseApp  - 取回等待的BOM List 結束，總共是20筆
+2009-01-05 10:05:30,014  INFO  BatchLibrary.App.BaseApp  - Bom Generate List=20
+2009-01-05 10:05:30,014  INFO  BatchLibrary.App.BaseApp  - Step A Generate Bom Begin
+2009-01-05 10:05:30,014  INFO  BatchLibrary.App.BaseApp  - 0.70-MIB7R0-A01(M4N78 SE <GA>                 )
+2009-01-05 10:05:30,030  INFO  BatchLibrary.App.BaseApp  - 開始展BOM=70-MIB7R0-A01資料
+2009-01-05 10:05:30,186  INFO  BatchLibrary.App.BaseApp  - DB ConnectionString=Data Source=TPEBIZ01;User ID=srm;Password=srmadmin#
+2009-01-05 10:05:30,592  INFO  BatchLibrary.App.BaseApp  - ERP ConnectionString=DSN=ds1;UID=pepo1;PWD=kosu!957;DATABASE=mis1
+2009-01-05 10:05:30,592  INFO  BatchLibrary.App.BaseApp  - 開始展BOM資料
+2009-01-05 10:05:43,515  INFO  BatchLibrary.App.BaseApp  - WorkNo=20090105100530
+2009-01-05 10:05:43,530  INFO  BatchLibrary.App.BaseApp  - 完成展BOM資訊
+2009-01-05 10:05:43,530  INFO  BatchLibrary.App.BaseApp  - 0.workNo=20090105100530
+2009-01-05 10:05:43,530  INFO  BatchLibrary.App.BaseApp  - 0-End
+2009-01-05 10:05:43,530  INFO  BatchLibrary.App.BaseApp  - 1.70-MIB7Q0-A01(M4A78-VM <GA>                 )
+2009-01-05 10:05:43,530  INFO  BatchLibrary.App.BaseApp  - 開始展BOM=70-MIB7Q0-A01資料
+2009-01-05 10:05:43,530  INFO  BatchLibrary.App.BaseApp  - DB ConnectionString=Data Source=TPEBIZ01;User ID=srm;Password=srmadmin#
+2009-01-05 10:05:43,608  INFO  BatchLibrary.App.BaseApp  - ERP ConnectionString=DSN=ds1;UID=pepo1;PWD=kosu!957;DATABASE=mis1
+2009-01-05 10:05:43,608  INFO  BatchLibrary.App.BaseApp  - 開始展BOM資料
+2009-01-05 10:05:59,953  INFO  BatchLibrary.App.BaseApp  - WorkNo=20090105100543
+2009-01-05 10:05:59,953  INFO  BatchLibrary.App.BaseApp  - 完成展BOM資訊
+2009-01-05 10:05:59,968  INFO  BatchLibrary.App.BaseApp  - 1.workNo=20090105100543
+2009-01-05 10:05:59,968  INFO  BatchLibrary.App.BaseApp  - 1-End
+2009-01-05 10:05:59,968  INFO  BatchLibrary.App.BaseApp  - 2.70-MIB7S0-A01(M4N78 <GA>                    )
+2009-01-05 10:05:59,968  INFO  BatchLibrary.App.BaseApp  - 開始展BOM=70-MIB7S0-A01資料
+2009-01-05 10:05:59,968  INFO  BatchLibrary.App.BaseApp  - DB ConnectionString=Data Source=TPEBIZ01;User ID=srm;Password=srmadmin#
+2009-01-05 10:06:00,015  INFO  BatchLibrary.App.BaseApp  - ERP ConnectionString=DSN=ds1;UID=pepo1;PWD=kosu!957;DATABASE=mis1
+2009-01-05 10:06:00,015  INFO  BatchLibrary.App.BaseApp  - 開始展BOM資料
+2009-01-05 10:06:11,703  INFO  BatchLibrary.App.BaseApp  - WorkNo=20090105100559
+2009-01-05 10:06:11,703  INFO  BatchLibrary.App.BaseApp  - 完成展BOM資訊
+2009-01-05 10:06:11,703  INFO  BatchLibrary.App.BaseApp  - 2.workNo=20090105100559
+2009-01-05 10:06:11,703  INFO  BatchLibrary.App.BaseApp  - 2-End
+2009-01-05 10:06:11,703  INFO  BatchLibrary.App.BaseApp  - 3.70-MBB72F-A01  (P5KPL/EPU <GA>                )
+2009-01-05 10:06:11,703  INFO  BatchLibrary.App.BaseApp  - 開始展BOM=70-MBB72F-A01  資料
+2009-01-05 10:06:11,703  INFO  BatchLibrary.App.BaseApp  - DB ConnectionString=Data Source=TPEBIZ01;User ID=srm;Password=srmadmin#
+2009-01-05 10:06:11,781  INFO  BatchLibrary.App.BaseApp  - ERP ConnectionString=DSN=ds1;UID=pepo1;PWD=kosu!957;DATABASE=mis1
+2009-01-05 10:06:11,781  INFO  BatchLibrary.App.BaseApp  - 開始展BOM資料
+2009-01-05 10:06:20,641  INFO  BatchLibrary.App.BaseApp  - WorkNo=
+2009-01-05 10:06:20,656  INFO  BatchLibrary.App.BaseApp  - 完成展BOM資訊
+2009-01-05 10:06:20,656  INFO  BatchLibrary.App.BaseApp  - 3.workNo=
+2009-01-05 10:06:20,656  INFO  BatchConsole.Program  - 程式發現不可預期之錯誤：
+2009-01-05 10:06:20,672  INFO  BatchConsole.Program  - Exception=2009/01/05
+2009-01-05 10:06:20,766  INFO  BatchConsole.Program  - System.NullReferenceException: Object reference not set to an instance of an object.
+   at BatchLibrary.GenerateBOM.DoJob(String batchName) in d:\SolutionList\NPISolution\NPIBatchLibrary\GenerateBOM.cs:line 195Exception has been thrown by the target of an invocation.   at System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   at System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BatchConsole.Program.Main(String[] args) in d:\SolutionList\NPISolution\BatchConsoleApp\Program.cs:line 68

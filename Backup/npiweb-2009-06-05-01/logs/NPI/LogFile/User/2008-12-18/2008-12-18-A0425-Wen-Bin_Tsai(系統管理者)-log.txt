@@ -1,0 +1,141 @@
+2008-12-18 09:59:01,481 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 09:59:02,559 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 09:59:02,716 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='A0425' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 09:59:05,356 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 09:59:05,388 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:06:04,164 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:06:04,712 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:06:04,837 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='A0425' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 11:06:07,152 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:06:07,184 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:06:50,563 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:06:50,595 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:06:52,425 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:06:52,456 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:07:03,673 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:07:03,704 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:09:24,229 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------Error 產生--------------- 
+2008-12-18 11:09:24,542 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------錯誤訊息如下----------------- 
+2008-12-18 11:09:24,823 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   於 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   於 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   於 Spring.Objects.ObjectUtils.InvokeMethod(MethodInfo method, Object instance, Object[] arguments)
+   於 Spring.Aop.Framework.ReflectiveMethodInvocation.InvokeJoinpoint()
+   於 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   於 Spring.Aop.Framework.Adapter.ThrowsAdviceInterceptor.Invoke(IMethodInvocation invocation) 
+2008-12-18 11:09:25,136 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - -----------Error 結束------------------ 
+2008-12-18 11:09:27,278 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - User Host Information 
+2008-12-18 11:09:27,746 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - 127.0.0.1127.0.0.1Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727) 
+2008-12-18 11:09:36,156 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:09:36,188 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:13:55,372 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------Error 產生--------------- 
+2008-12-18 11:13:55,387 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------錯誤訊息如下----------------- 
+2008-12-18 11:13:55,403 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   於 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   於 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   於 Spring.Objects.ObjectUtils.InvokeMethod(MethodInfo method, Object instance, Object[] arguments)
+   於 Spring.Aop.Framework.ReflectiveMethodInvocation.InvokeJoinpoint()
+   於 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   於 Spring.Aop.Framework.Adapter.ThrowsAdviceInterceptor.Invoke(IMethodInvocation invocation) 
+2008-12-18 11:13:55,419 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - -----------Error 結束------------------ 
+2008-12-18 11:13:55,419 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - User Host Information 
+2008-12-18 11:13:55,434 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - 127.0.0.1127.0.0.1Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727) 
+2008-12-18 11:14:45,161 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:14:45,208 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:14:46,677 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:14:46,739 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:14:53,178 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:14:53,209 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:14:55,819 [8] INFO  [Asus.Data.OleDataAccess] [DoCommand] [ASUS\Wen-Bin_Tsaiser] - ConnName=NPIDBProvider=OraOLEDB.Oracle;Data Source=TP-WMDB-T01;User ID=shinewave;Password=shinewave,SQL=Insert Into NPI_BOM(USER_ID,COMPANY_ID,BOM_ID,BOM_NAME,BOM_STATUS,BOM_DESC,BOM_REVISION,RD_EMP_ID,RD_EMP_NAME,RD_EMP_PHONENO,PVT_TIME,PVT_QTY,PVT_LOCATION,MP_TIME,MP_Q1_QTY,MP_Q2_QTY,IS_ENABLE,CREATE_USER,CREATE_DATE,UPDATE_USER,UPDATE_DATE)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) 
+2008-12-18 11:14:55,850 [8] INFO  [Asus.Data.OleDataAccess] [DoCommand] [ASUS\Wen-Bin_Tsaiser] - ConnName=NPIDBProvider=OraOLEDB.Oracle;Data Source=TP-WMDB-T01;User ID=shinewave;Password=shinewave,SQL=Insert Into NPI_BOOKING(WORK_STATUS,BOOKING_DATE,CREATE_USER,CREATE_DATE,UPDATE_USER,UPDATE_DATE,USER_ID,COMPANY_ID,BOM_ID)values(?,?,?,?,?,?,?,?,?) 
+2008-12-18 11:14:55,865 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='A0425' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 11:15:01,382 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:15:01,429 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:15:01,460 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t, npi_booking c,npi_ems s where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='A0425' and t.bom_id='70-MIB6W0-A01' and t.company_id='13006' 
+2008-12-18 11:20:36,884 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:20:37,213 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:20:37,353 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='A0425' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 11:20:40,150 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:20:40,213 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:31:48,812 [8] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------Error 產生--------------- 
+2008-12-18 11:31:48,827 [8] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------錯誤訊息如下----------------- 
+2008-12-18 11:31:48,843 [8] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   於 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   於 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   於 Spring.Objects.ObjectUtils.InvokeMethod(MethodInfo method, Object instance, Object[] arguments)
+   於 Spring.Aop.Framework.ReflectiveMethodInvocation.InvokeJoinpoint()
+   於 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   於 Spring.Aop.Framework.Adapter.ThrowsAdviceInterceptor.Invoke(IMethodInvocation invocation) 
+2008-12-18 11:31:48,858 [8] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - -----------Error 結束------------------ 
+2008-12-18 11:31:48,858 [8] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - User Host Information 
+2008-12-18 11:31:48,905 [8] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - 127.0.0.1127.0.0.1Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727) 
+2008-12-18 11:31:51,233 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:31:51,265 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:32:00,171 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------Error 產生--------------- 
+2008-12-18 11:32:00,187 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------錯誤訊息如下----------------- 
+2008-12-18 11:32:00,187 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   於 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   於 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   於 Spring.Objects.ObjectUtils.InvokeMethod(MethodInfo method, Object instance, Object[] arguments)
+   於 Spring.Aop.Framework.ReflectiveMethodInvocation.InvokeJoinpoint()
+   於 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   於 Spring.Aop.Framework.Adapter.ThrowsAdviceInterceptor.Invoke(IMethodInvocation invocation) 
+2008-12-18 11:32:00,202 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - -----------Error 結束------------------ 
+2008-12-18 11:32:00,218 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - User Host Information 
+2008-12-18 11:32:00,233 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - 127.0.0.1127.0.0.1Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727) 
+2008-12-18 11:40:28,501 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:40:28,813 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:40:28,954 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='A0425' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 11:40:31,064 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:40:31,079 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:40:53,487 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:40:53,518 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:40:54,643 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:40:54,675 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:41:03,863 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:41:03,894 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:41:07,926 [4] INFO  [Asus.Data.OleDataAccess] [DoCommand] [ASUS\Wen-Bin_Tsaiser] - ConnName=NPIDBProvider=OraOLEDB.Oracle;Data Source=TP-WMDB-T01;User ID=shinewave;Password=shinewave,SQL=Insert Into NPI_BOM(USER_ID,COMPANY_ID,BOM_ID,BOM_NAME,BOM_STATUS,BOM_DESC,BOM_REVISION,RD_EMP_ID,RD_EMP_NAME,RD_EMP_PHONENO,PVT_TIME,PVT_QTY,PVT_LOCATION,MP_TIME,MP_Q1_QTY,MP_Q2_QTY,IS_ENABLE,CREATE_USER,CREATE_DATE,UPDATE_USER,UPDATE_DATE)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) 
+2008-12-18 11:41:07,957 [4] INFO  [Asus.Data.OleDataAccess] [DoCommand] [ASUS\Wen-Bin_Tsaiser] - ConnName=NPIDBProvider=OraOLEDB.Oracle;Data Source=TP-WMDB-T01;User ID=shinewave;Password=shinewave,SQL=Insert Into NPI_BOOKING(WORK_STATUS,BOOKING_DATE,CREATE_USER,CREATE_DATE,UPDATE_USER,UPDATE_DATE,USER_ID,COMPANY_ID,BOM_ID)values(?,?,?,?,?,?,?,?,?) 
+2008-12-18 11:41:07,972 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='A0425' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 11:48:48,940 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:48:49,253 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 11:48:49,394 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='A0425' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 
+2008-12-18 14:17:52,852 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.bom_id=c.bom_id and c.work_status='10' 
+2008-12-18 14:20:55,010 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select t.*, '' as FORM_ID
+                        c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME 
+                        
+                        from npi_bom t,npi_booking c,npi_ems s 
+      
+                        where t.pvt_location=s.ems_code and t.bom_id=c.bom_id and c.work_status='10'  
+2008-12-18 14:20:55,198 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL ERROR 
+2008-12-18 14:20:55,214 [9] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - ConnName=NPIDBProvider=OraOLEDB.Oracle;Data Source=TP-WMDB-T01;User ID=shinewave;Password=shinewave 
+2008-12-18 14:24:05,466 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select t.*, '' as FORM_ID,
+                        c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME 
+                        
+                        from npi_bom t,npi_booking c,npi_ems s 
+      
+                        where t.pvt_location=s.ems_code and t.bom_id=c.bom_id and c.work_status='10'  
+2008-12-18 16:05:16,359 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:05:16,703 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_ems t 
+2008-12-18 16:05:16,874 [5] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL= select t.*,c.form_id,c.work_status,c.booking_date,s.ems_name as PVT_LOCATION_NAME from npi_bom t,npi_booking c,npi_form_main m,npi_ems s 
+                                    where t.pvt_location=s.ems_code and t.user_id=c.user_id and t.bom_id=c.bom_id and t.user_id='A0425' and t.company_id='13006' and t.is_enable='Y' and c.form_id=m.form_id(+) and (m.form_status='N' or m.form_status is null) 

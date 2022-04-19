@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+	<!--所有的網頁都需要註冊，且路徑要對相對路徑，請參考一下範例 -->
+	<!--<object type="Default.aspx" abstract="false"/>-->
+
+
+	<!--<object type="Default.aspx" abstract="false"/>-->
+
+  <object type="Config.aspx" abstract="false"/>
+
+  <object type="SourcerGroup.aspx" abstract="false"/>
+
+  <object type="BomBooking.aspx" abstract="false"/>
+
+  <object type="BomResponse.aspx" abstract="false"/>
+
+  <object type="BomProc.aspx" abstract="false"/>
+  
+  <object type="NPIClosePage.aspx" abstract="false"/>
+
+
+
+
+  <!-- 以上為 AOP 專區，請不要隨意動它 -->	
+  <object id="throwsAdvice" type="AsusWeb.Page.Handler.ThrowHanler,NPIWeb" abstract="false" />
+
+  <object id="ProxyCreator" type="Spring.Aop.Framework.AutoProxy.DefaultAdvisorAutoProxyCreator, Spring.Aop"/>
+
+  <object id="AdoAdvisor" type="Spring.Aop.Support.RegularExpressionMethodPointcutAdvisor, Spring.Aop">
+
+    <property name="advice" ref="throwsAdvice"/>
+    <property name="patterns">
+      <list>
+        <value>.*.*</value>
+      </list>
+    </property>
+
+  </object>
+
+</objects>

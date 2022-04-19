@@ -1,0 +1,5 @@
+D:\SolutionList\NPISolution\NPIDocument\bin\NPIDocument.dll
+D:\SolutionList\NPISolution\NPIDocument\bin\NPIDocument.pdb
+D:\SolutionList\NPISolution\NPIDocument\obj\Debug\ResolveAssemblyReference.cache
+D:\SolutionList\NPISolution\NPIDocument\obj\Debug\NPIDocument.dll
+D:\SolutionList\NPISolution\NPIDocument\obj\Debug\NPIDocument.pdb

@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[TestConsoleApplication.csproj]
+SCC_Aux_Path = "\\Tp-srm-01\SourceSafe\C#.NET_ASP"
+SCC_Project_Name = "$/NPI/NPISolution.root/NPISolution/NPISolution/TestConsoleApplication", QRMDAAAA

@@ -1,0 +1,33 @@
+2008-12-17 09:45:32,723 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-17 09:45:33,160 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL ERROR 
+2008-12-17 09:45:33,176 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - ConnName=UserDBProvider=OraOLEDB.Oracle;Data Source=ETEAMQC1;User ID=Scm;Password=scmd 
+2008-12-17 09:46:38,869 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-17 09:46:38,869 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL ERROR 
+2008-12-17 09:46:38,884 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - ConnName=UserDBProvider=OraOLEDB.Oracle;Data Source=ETEAMQC1;User ID=Scm;Password=scmd 
+2008-12-17 09:48:23,158 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-17 09:48:59,550 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL ERROR 
+2008-12-17 09:48:59,550 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - ConnName=UserDBProvider=OraOLEDB.Oracle;Data Source=ETEAMQC1;User ID=Scm;Password=scmd 
+2008-12-17 09:54:42,450 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-17 09:54:43,309 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL ERROR 
+2008-12-17 09:54:43,325 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - ConnName=UserDBProvider=OraOLEDB.Oracle;Data Source=ETEAMQC1;User ID=Scm;Password=scmd 
+2008-12-17 09:55:21,936 [10] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-17 09:55:38,530 [10] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL ERROR 
+2008-12-17 09:55:38,530 [10] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - ConnName=UserDBProvider=OraOLEDB.Oracle;Data Source=ETEAMQC1;User ID=Scm;Password=scmd 
+2008-12-17 09:58:33,866 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-17 09:59:20,259 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL ERROR 
+2008-12-17 09:59:20,259 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - ConnName=UserDBProvider=OraOLEDB.Oracle;Data Source=ETEAMQC1;User ID=scm;Password=scmd 
+2008-12-17 09:59:52,494 [8] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-17 09:59:53,463 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL ERROR 
+2008-12-17 09:59:53,463 [8] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - ConnName=UserDBProvider=OraOLEDB.Oracle;Data Source=ETEAMQC1;User ID=scm;Password=scmd 
+2008-12-17 10:13:38,640 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-17 10:13:46,390 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL ERROR 
+2008-12-17 10:13:46,390 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - ConnName=UserDBProvider=OraOLEDB.Oracle;Data Source=ETEAMQC1;User ID=scm;Password=scmd 
+2008-12-17 10:31:16,404 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-17 10:31:17,716 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from srm_user where company_id='13006' and lower(domain_id)=lower('Sam_Chen') and work_status='Y' 
+2008-12-17 10:31:20,388 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_privilege t where 1=1  and t.user_id='AA0800226' and t.company_id='13006'  and t.is_enable='Y'  
+2008-12-17 10:33:07,865 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-17 10:33:10,913 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from srm_user where company_id='13006' and lower(domain_id)=lower('Sam_Chen') and work_status='Y' 
+2008-12-17 10:33:13,335 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_privilege t where 1=1  and t.user_id='AA0800226' and t.company_id='13006'  and t.is_enable='Y'  
+2008-12-17 11:12:26,484 [4] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Wen-Bin_Tsaiser] - 取得此人的帳號ASUS-Wen-Bin_Tsai 
+2008-12-17 11:12:26,937 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from srm_user where company_id='13006' and lower(domain_id)=lower('Sam_Chen') and work_status='Y' 
+2008-12-17 11:12:29,718 [4] INFO  [Asus.Data.OleDataAccess] [DoSelect] [ASUS\Wen-Bin_Tsaiser] - SQL=select * from npi_privilege t where 1=1  and t.user_id='AA0800226' and t.company_id='13006'  and t.is_enable='Y'  

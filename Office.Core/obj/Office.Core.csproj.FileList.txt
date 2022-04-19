@@ -1,0 +1,8 @@
+bin\Debug\Office.Core.dll
+bin\Debug\Office.Core.pdb
+bin\Debug\Interop.Excel.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Interop.Excel.dll
+obj\Debug\Office.Core.csproj.ResolveComReference.cache
+obj\Debug\Office.Core.dll
+obj\Debug\Office.Core.pdb

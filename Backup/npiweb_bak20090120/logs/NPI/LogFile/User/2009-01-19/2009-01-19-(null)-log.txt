@@ -1,0 +1,1 @@
+2009-01-19 14:54:43,540 [1] INFO  [AsusWeb.Global] [SetUserSessionToSystem] [ASUS\Elva_Hsuser] - 取得此人的帳號ASUS-Elva_Hsu 

@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReleaseLog", "ReleaseLog", "{FE676780-B03C-4667-89E2-C032A2FE2F80}"
+	ProjectSection(SolutionItems) = preProject
+		DeployNPIBatch.bat = DeployNPIBatch.bat
+		DeployNPIWeb.bat = DeployNPIWeb.bat
+		DeployToTestBatch.bat = DeployToTestBatch.bat
+		DeployToTestWeb.bat = DeployToTestWeb.bat
+		NPIMsdnDocument.shfbproj = NPIMsdnDocument.shfbproj
+		Publish.bat = Publish.bat
+		publishbatch.bat = publishbatch.bat
+		PublishDoc.bat = PublishDoc.bat
+		PublishWeb.bat = PublishWeb.bat
+		Release.txt = Release.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPIBatchLibrary", "NPIBatchLibrary\NPIBatchLibrary.csproj", "{963F2B22-0F4A-435D-BFCA-28C5527CEEA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Office.Core", "Office.Core\Office.Core.csproj", "{F16C51D7-2A5F-436E-BB26-E73F4B234E9B}"
+EndProject
+Project("{2CFEAB61-6A3B-4EB8-B523-560B4BEEF521}") = "NPIWeb.csproj_deploy", "NPIWeb.csproj_deploy\NPIWeb.csproj_deploy.wdproj", "{1904BC19-6B40-4B34-ADD8-9EB5847C6834}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPIWeb", "NPIWeb\NPIWeb.csproj", "{84DDD07C-B9E7-4693-9E80-E430ABE46809}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPILibrary", "NPILibrary\NPILibrary.csproj", "{F6D07C88-DFC6-4039-8DC4-23E5B28CF9DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatchConsoleApp", "BatchConsoleApp\BatchConsoleApp.csproj", "{AC984DDB-9A83-4D1C-B3E5-67B1B836D0F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asus.Core", "..\Asus.Core\Asus.Core.csproj", "{C9BA385B-BF7A-4ED3-8448-2EA61BF6809A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebApplication", "TestWebApplication\TestWebApplication.csproj", "{B6D98D52-E33D-47F7-ACEA-4A195F23DAC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPIDocument", "NPIDocument\NPIDocument.csproj", "{63C77AB1-FE64-4B39-975C-B0B200EE02C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsoleApplication", "TestConsoleApplication\TestConsoleApplication.csproj", "{E279494A-5F9C-4A0B-B495-9BC681326564}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{963F2B22-0F4A-435D-BFCA-28C5527CEEA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{963F2B22-0F4A-435D-BFCA-28C5527CEEA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{963F2B22-0F4A-435D-BFCA-28C5527CEEA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{963F2B22-0F4A-435D-BFCA-28C5527CEEA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F16C51D7-2A5F-436E-BB26-E73F4B234E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F16C51D7-2A5F-436E-BB26-E73F4B234E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F16C51D7-2A5F-436E-BB26-E73F4B234E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F16C51D7-2A5F-436E-BB26-E73F4B234E9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1904BC19-6B40-4B34-ADD8-9EB5847C6834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1904BC19-6B40-4B34-ADD8-9EB5847C6834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1904BC19-6B40-4B34-ADD8-9EB5847C6834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1904BC19-6B40-4B34-ADD8-9EB5847C6834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84DDD07C-B9E7-4693-9E80-E430ABE46809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84DDD07C-B9E7-4693-9E80-E430ABE46809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84DDD07C-B9E7-4693-9E80-E430ABE46809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84DDD07C-B9E7-4693-9E80-E430ABE46809}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6D07C88-DFC6-4039-8DC4-23E5B28CF9DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6D07C88-DFC6-4039-8DC4-23E5B28CF9DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6D07C88-DFC6-4039-8DC4-23E5B28CF9DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6D07C88-DFC6-4039-8DC4-23E5B28CF9DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC984DDB-9A83-4D1C-B3E5-67B1B836D0F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC984DDB-9A83-4D1C-B3E5-67B1B836D0F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC984DDB-9A83-4D1C-B3E5-67B1B836D0F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC984DDB-9A83-4D1C-B3E5-67B1B836D0F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9BA385B-BF7A-4ED3-8448-2EA61BF6809A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9BA385B-BF7A-4ED3-8448-2EA61BF6809A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9BA385B-BF7A-4ED3-8448-2EA61BF6809A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9BA385B-BF7A-4ED3-8448-2EA61BF6809A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6D98D52-E33D-47F7-ACEA-4A195F23DAC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6D98D52-E33D-47F7-ACEA-4A195F23DAC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6D98D52-E33D-47F7-ACEA-4A195F23DAC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6D98D52-E33D-47F7-ACEA-4A195F23DAC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63C77AB1-FE64-4B39-975C-B0B200EE02C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C77AB1-FE64-4B39-975C-B0B200EE02C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C77AB1-FE64-4B39-975C-B0B200EE02C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C77AB1-FE64-4B39-975C-B0B200EE02C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E279494A-5F9C-4A0B-B495-9BC681326564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E279494A-5F9C-4A0B-B495-9BC681326564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E279494A-5F9C-4A0B-B495-9BC681326564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E279494A-5F9C-4A0B-B495-9BC681326564}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

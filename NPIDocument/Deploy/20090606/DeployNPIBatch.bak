@@ -1,0 +1,26 @@
+REM ************************************************
+REM
+REM 程式名稱：Deploy NPI Batch
+REM 將原先的資料備份
+REM
+REM ************************************************  
+
+Set NPIDeployVersion=01
+
+REM -------------------------------------------------
+REM  程式 如下
+REM -------------------------------------------------
+
+For /f "tokens=1 delims= " %%G in ('date /t') do set dt=%%G
+For /f "tokens=1,2,3 delims=/ " %%G in ("%dt%") do Set TodayDate=%%G-%%H-%%I
+
+rename \\tp-sso-03\d$\SCM\npi\batch batch-%TodayDate%-%NPIDeployVersion%
+
+md \\tp-sso-03\d$\SCM\npi\batch
+
+xcopy /h /r /k /x /y /S /E \\tp-srm-04\d$\job\NPI\batch \\tp-sso-03\d$\SCM\npi\batch
+
+copy \\tp-sso-03\d$\SCM\npi\batch-%TodayDate%-%NPIDeployVersion%\BatchConsoleApp.exe.config  \\tp-sso-03\d$\SCM\npi\batch\BatchConsoleApp.exe.config
+
+
+pause;

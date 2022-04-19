@@ -1,0 +1,96 @@
+2008-12-25 10:52:09,732 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------Error 產生--------------- 
+2008-12-25 10:52:09,732 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------錯誤訊息如下----------------- 
+2008-12-25 10:52:09,763 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - System.Web.HttpUnhandledException: 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.Exception: 無法取得採購人員工號資料
+   於 AsusWeb.UserControl.UploadExcelUserControl.get_SourcerUserId() 於 D:\SolutionList\NPISolution\NPIWeb\UserControl\UploadExcelUserControl.ascx.cs: 行 75
+   於 AsusWeb.UserControl.UploadExcelUserControl.UploadExcelFile() 於 D:\SolutionList\NPISolution\NPIWeb\UserControl\UploadExcelUserControl.ascx.cs: 行 179
+   於 AsusWeb.UserControl.UploadExcelUserControl.DoUploadExcelFile() 於 D:\SolutionList\NPISolution\NPIWeb\UserControl\UploadExcelUserControl.ascx.cs: 行 137
+   於 AsusWeb.UserControl.UploadExcelUserControl.btnUpload_Click(Object sender, EventArgs e) 於 D:\SolutionList\NPISolution\NPIWeb\UserControl\UploadExcelUserControl.ascx.cs: 行 128
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.bombooking_aspx.ProcessRequest(HttpContext context) 於 c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\8dcf6fd0\a8165e78\App_Web_ekjx2udn.5.cs: 行 0
+   於 Spring.Objects.ObjectUtils.InvokeMethod(MethodInfo method, Object instance, Object[] arguments)
+   於 Spring.Aop.Framework.ReflectiveMethodInvocation.InvokeJoinpoint()
+   於 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   於 Spring.Aop.Framework.Adapter.ThrowsAdviceInterceptor.Invoke(IMethodInvocation invocation) 
+2008-12-25 10:52:09,763 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - -----------Error 結束------------------ 
+2008-12-25 10:52:09,763 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - User Host Information 
+2008-12-25 10:52:09,763 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - 127.0.0.1127.0.0.1Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727) 
+2008-12-25 10:57:38,707 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------Error 產生--------------- 
+2008-12-25 10:57:38,707 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------錯誤訊息如下----------------- 
+2008-12-25 10:57:38,707 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - System.Web.HttpUnhandledException: 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.Runtime.InteropServices.COMException (0x8002000B): 無效的索引。 (發生例外狀況於 HRESULT: 0x8002000B (DISP_E_BADINDEX))
+   於 Excel.Sheets.get_Item(Object Index)
+   於 AsusLibrary.Logic.ExcelLogic.GetBOMExcelDataList() 於 D:\SolutionList\NPISolution\NPILibrary\Logic\ExcelLogic.cs: 行 583
+   於 AsusLibrary.Logic.ExcelLogic.GetBOMResponseDataList() 於 D:\SolutionList\NPISolution\NPILibrary\Logic\ExcelLogic.cs: 行 154
+   於 AsusWeb.UserControl.UploadExcelUserControl.ShowBOMxcelData() 於 D:\SolutionList\NPISolution\NPIWeb\UserControl\UploadExcelUserControl.ascx.cs: 行 281
+   於 AsusWeb.UserControl.UploadExcelUserControl.DoUploadExcelFile() 於 D:\SolutionList\NPISolution\NPIWeb\UserControl\UploadExcelUserControl.ascx.cs: 行 157
+   於 AsusWeb.UserControl.UploadExcelUserControl.btnUpload_Click(Object sender, EventArgs e) 於 D:\SolutionList\NPISolution\NPIWeb\UserControl\UploadExcelUserControl.ascx.cs: 行 128
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.bombooking_aspx.ProcessRequest(HttpContext context) 於 c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\8dcf6fd0\a8165e78\App_Web_hydsy-os.9.cs: 行 0
+   於 Spring.Objects.ObjectUtils.InvokeMethod(MethodInfo method, Object instance, Object[] arguments)
+   於 Spring.Aop.Framework.ReflectiveMethodInvocation.InvokeJoinpoint()
+   於 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   於 Spring.Aop.Framework.Adapter.ThrowsAdviceInterceptor.Invoke(IMethodInvocation invocation) 
+2008-12-25 10:57:38,723 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - -----------Error 結束------------------ 
+2008-12-25 10:57:38,723 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - User Host Information 
+2008-12-25 10:57:38,723 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - 127.0.0.1127.0.0.1Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727) 
+2008-12-25 11:35:05,916 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------Error 產生--------------- 
+2008-12-25 11:35:05,916 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------錯誤訊息如下----------------- 
+2008-12-25 11:35:05,948 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - System.Web.HttpUnhandledException: 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.Exception: Current Command:Insert Into NPI_BOM(USER_ID,COMPANY_ID,BOM_ID,BOM_NAME,BOM_STATUS,BOM_DESC,BOM_REVISION,RD_EMP_ID,RD_EMP_NAME,RD_EMP_PHONENO,PVT_TIME,PVT_QTY,PVT_LOCATION,MP_TIME,MP_Q1_QTY,MP_Q2_QTY,IS_ENABLE,CREATE_USER,CREATE_DATE,UPDATE_USER,UPDATE_DATE)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);Error:ORA-00001: unique constraint (SHINEWAVE.PK_BOM) violated ---> System.Data.OleDb.OleDbException: ORA-00001: unique constraint (SHINEWAVE.PK_BOM) violated
+   於 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   於 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForMultpleResults(tagDBPARAMS dbParams, Object& executeResult)
+   於 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   於 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   於 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   於 System.Data.OleDb.OleDbCommand.ExecuteNonQuery()
+   於 Asus.Data.OleDataAccess.DoCommand(IEnumerable SqlCommands, IConnection conn) 於 D:\SolutionList\Asus.Core\DataAccess\OleDataAccess.cs: 行 225
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 Asus.Data.OleDataAccess.DoCommand(IEnumerable SqlCommands, IConnection conn) 於 D:\SolutionList\Asus.Core\DataAccess\OleDataAccess.cs: 行 239
+   於 Asus.Data.DataFarm.DoCommand(IEnumerable SqlCommands, String ConnectionName) 於 D:\SolutionList\Asus.Core\DataAccess\DataFarm.cs: 行 293
+   於 Asus.Data.DbAssistant.DoCommand(IEnumerable sqlCommands, String connectionName) 於 D:\SolutionList\Asus.Core\DataAccess\DbAssistant.cs: 行 54
+   於 AsusLibrary.Logic.BOMLogic.InserBatchBomData(List`1 list) 於 D:\SolutionList\NPISolution\NPILibrary\Logic\BOMLogic.cs: 行 251
+   於 AsusWeb.UserControl.UploadExcelUserControl.SaveBOMData() 於 D:\SolutionList\NPISolution\NPIWeb\UserControl\UploadExcelUserControl.ascx.cs: 行 439
+   於 AsusWeb.UserControl.UploadExcelUserControl.lnkSave_Click(Object sender, EventArgs e) 於 D:\SolutionList\NPISolution\NPIWeb\UserControl\UploadExcelUserControl.ascx.cs: 行 367
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.bombooking_aspx.ProcessRequest(HttpContext context) 於 c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\8dcf6fd0\a8165e78\App_Web_x8xj-pxl.9.cs: 行 0
+   於 Spring.Objects.ObjectUtils.InvokeMethod(MethodInfo method, Object instance, Object[] arguments)
+   於 Spring.Aop.Framework.ReflectiveMethodInvocation.InvokeJoinpoint()
+   於 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   於 Spring.Aop.Framework.Adapter.ThrowsAdviceInterceptor.Invoke(IMethodInvocation invocation) 
+2008-12-25 11:35:05,948 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - -----------Error 結束------------------ 
+2008-12-25 11:35:05,948 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - User Host Information 
+2008-12-25 11:35:05,948 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - 127.0.0.1127.0.0.1Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727) 

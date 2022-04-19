@@ -1,0 +1,9 @@
+D:\SolutionList\NPISolution\NPIDoc\bin\NPIDoc.dll
+D:\SolutionList\NPISolution\NPIDoc\bin\NPIDoc.pdb
+D:\SolutionList\NPISolution\NPIDoc\bin\Intelligencia.UrlRewriter.dll
+D:\SolutionList\NPISolution\NPIDoc\bin\Interop.Excel.dll
+D:\SolutionList\NPISolution\NPIDoc\obj\Debug\ResolveAssemblyReference.cache
+D:\SolutionList\NPISolution\NPIDoc\obj\Debug\Interop.Excel.dll
+D:\SolutionList\NPISolution\NPIDoc\obj\Debug\NPIDoc.csproj.ResolveComReference.cache
+D:\SolutionList\NPISolution\NPIDoc\obj\Debug\NPIDoc.dll
+D:\SolutionList\NPISolution\NPIDoc\obj\Debug\NPIDoc.pdb

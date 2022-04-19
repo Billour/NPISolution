@@ -1,0 +1,107 @@
+2009-01-12 15:09:28,803 [4] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - 開始展開PN 
+2009-01-12 15:09:29,007 [4] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - 開始展開PN-完成 
+2009-01-12 15:09:29,007 [4] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - DataBind-完成 
+2009-01-12 15:09:35,491 [9] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - 開始展開PN 
+2009-01-12 15:09:35,632 [9] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - 開始展開PN-完成 
+2009-01-12 15:09:35,632 [9] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - DataBind-完成 
+2009-01-12 15:09:40,288 [4] INFO  [ASP.usercontrol_ucresponse_ascx] [DownLoadExcel] [ASUS\Wen-Bin_Tsaiser] - 下載Excel 
+2009-01-12 15:09:40,304 [4] INFO  [ASP.usercontrol_ucresponse_ascx] [DownLoadExcel] [ASUS\Wen-Bin_Tsaiser] - 設定下載檔案 
+2009-01-12 15:10:13,257 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------Error 產生--------------- 
+2009-01-12 15:10:13,257 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------錯誤訊息如下----------------- 
+2009-01-12 15:10:13,288 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - System.Web.HttpUnhandledException: 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.Runtime.InteropServices.COMException (0x800A03EC): 檔案無法存取。請確定下列幾件事是否正確:
+
+‧確定所指定的檔案夾是否存在。 
+‧確定檔案夾不是唯讀。
+‧確定檔案名稱不包含下列字元:  <  >  ?  [  ]  :  或  *。
+‧確定檔案及路徑名稱不超過 218 個位元組。
+   於 Excel.WorkbookClass.SaveAs(Object Filename, Object FileFormat, Object Password, Object WriteResPassword, Object ReadOnlyRecommended, Object CreateBackup, XlSaveAsAccessMode AccessMode, Object ConflictResolution, Object AddToMru, Object TextCodepage, Object TextVisualLayout, Object Local)
+   於 Asus.Office.ExcelCore.ExcelCore.Save() 於 d:\SolutionList\NPISolution\Office.Core\ExcelCore\ExcelCore.cs: 行 95
+   於 AsusLibrary.Logic.ExcelLogic.GenerateBomFile(FormResponseEntity entity) 於 D:\SolutionList\NPISolution\NPILibrary\Logic\ExcelLogic.cs: 行 35
+   於 AsusWeb.UserControl.UCResponse.DownLoadExcel() 於 D:\SolutionList\NPISolution\NPIWeb\UserControl\UCResponse.ascx.cs: 行 604
+   於 AsusWeb.BomResponse.lnkPrint_Click(Object sender, EventArgs e) 於 D:\SolutionList\NPISolution\NPIWeb\BomResponse.aspx.cs: 行 324
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.bomresponse_aspx.ProcessRequest(HttpContext context) 於 c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\8dcf6fd0\a8165e78\App_Web_mgnupzv9.5.cs: 行 0
+   於 Spring.Objects.ObjectUtils.InvokeMethod(MethodInfo method, Object instance, Object[] arguments)
+   於 Spring.Aop.Framework.ReflectiveMethodInvocation.InvokeJoinpoint()
+   於 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   於 Spring.Aop.Framework.Adapter.ThrowsAdviceInterceptor.Invoke(IMethodInvocation invocation) 
+2009-01-12 15:10:13,288 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - -----------Error 結束------------------ 
+2009-01-12 15:10:13,288 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - User Host Information 
+2009-01-12 15:10:13,288 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - 127.0.0.1127.0.0.1Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; MS-RTC LM 8) 
+2009-01-12 15:12:07,540 [8] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - 開始展開PN 
+2009-01-12 15:12:07,665 [8] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - 開始展開PN-完成 
+2009-01-12 15:12:07,665 [8] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - DataBind-完成 
+2009-01-12 15:12:10,259 [8] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - 開始展開PN 
+2009-01-12 15:12:10,368 [8] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - 開始展開PN-完成 
+2009-01-12 15:12:10,368 [8] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - DataBind-完成 
+2009-01-12 15:12:12,931 [4] INFO  [ASP.usercontrol_ucresponse_ascx] [DownLoadExcel] [ASUS\Wen-Bin_Tsaiser] - 下載Excel 
+2009-01-12 15:12:12,931 [4] INFO  [ASP.usercontrol_ucresponse_ascx] [DownLoadExcel] [ASUS\Wen-Bin_Tsaiser] - 設定下載檔案 
+2009-01-12 15:12:38,290 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------Error 產生--------------- 
+2009-01-12 15:12:38,290 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------錯誤訊息如下----------------- 
+2009-01-12 15:12:38,306 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - System.Web.HttpUnhandledException: 已發生類型 'System.Web.HttpUnhandledException' 的例外狀況。 ---> System.Runtime.InteropServices.COMException (0x800A03EC): 檔案無法存取。請確定下列幾件事是否正確:
+
+‧確定所指定的檔案夾是否存在。 
+‧確定檔案夾不是唯讀。
+‧確定檔案名稱不包含下列字元:  <  >  ?  [  ]  :  或  *。
+‧確定檔案及路徑名稱不超過 218 個位元組。
+   於 Excel.WorkbookClass.SaveAs(Object Filename, Object FileFormat, Object Password, Object WriteResPassword, Object ReadOnlyRecommended, Object CreateBackup, XlSaveAsAccessMode AccessMode, Object ConflictResolution, Object AddToMru, Object TextCodepage, Object TextVisualLayout, Object Local)
+   於 Asus.Office.ExcelCore.ExcelCore.Save() 於 d:\SolutionList\NPISolution\Office.Core\ExcelCore\ExcelCore.cs: 行 95
+   於 AsusLibrary.Logic.ExcelLogic.GenerateBomFile(FormResponseEntity entity) 於 D:\SolutionList\NPISolution\NPILibrary\Logic\ExcelLogic.cs: 行 35
+   於 AsusWeb.UserControl.UCResponse.DownLoadExcel() 於 D:\SolutionList\NPISolution\NPIWeb\UserControl\UCResponse.ascx.cs: 行 604
+   於 AsusWeb.BomResponse.lnkPrint_Click(Object sender, EventArgs e) 於 D:\SolutionList\NPISolution\NPIWeb\BomResponse.aspx.cs: 行 324
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Web.UI.Page.HandleError(Exception e)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   於 System.Web.UI.Page.ProcessRequest()
+   於 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   於 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   於 ASP.bomresponse_aspx.ProcessRequest(HttpContext context) 於 c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\8dcf6fd0\a8165e78\App_Web_als4chey.9.cs: 行 0
+   於 Spring.Objects.ObjectUtils.InvokeMethod(MethodInfo method, Object instance, Object[] arguments)
+   於 Spring.Aop.Framework.ReflectiveMethodInvocation.InvokeJoinpoint()
+   於 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   於 Spring.Aop.Framework.Adapter.ThrowsAdviceInterceptor.Invoke(IMethodInvocation invocation) 
+2009-01-12 15:12:38,321 [4] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - -----------Error 結束------------------ 
+2009-01-12 15:12:38,321 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - User Host Information 
+2009-01-12 15:12:38,321 [4] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - 127.0.0.1127.0.0.1Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; MS-RTC LM 8) 
+2009-01-12 15:14:02,671 [4] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - 開始展開PN 
+2009-01-12 15:14:02,780 [4] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - 開始展開PN-完成 
+2009-01-12 15:14:02,796 [4] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - DataBind-完成 
+2009-01-12 15:14:04,311 [9] INFO  [ASP.usercontrol_ucresponse_ascx] [DownLoadExcel] [ASUS\Wen-Bin_Tsaiser] - 下載Excel 
+2009-01-12 15:14:04,327 [9] INFO  [ASP.usercontrol_ucresponse_ascx] [DownLoadExcel] [ASUS\Wen-Bin_Tsaiser] - 設定下載檔案 
+2009-01-12 15:14:08,452 [9] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------Error 產生--------------- 
+2009-01-12 15:14:08,468 [9] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - ------------錯誤訊息如下----------------- 
+2009-01-12 15:14:08,484 [9] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - System.Threading.ThreadAbortException: 執行緒已經中止。
+   於 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   於 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   於 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   於 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   於 Spring.Objects.ObjectUtils.InvokeMethod(MethodInfo method, Object instance, Object[] arguments)
+   於 Spring.Aop.Framework.ReflectiveMethodInvocation.InvokeJoinpoint()
+   於 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   於 Spring.Aop.Framework.Adapter.ThrowsAdviceInterceptor.Invoke(IMethodInvocation invocation) 
+2009-01-12 15:14:08,499 [9] ERROR [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - -----------Error 結束------------------ 
+2009-01-12 15:14:08,499 [9] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - User Host Information 
+2009-01-12 15:14:08,515 [9] INFO  [AsusWeb.Page.Handler.ThrowHanler] [AfterThrowing] [ASUS\Wen-Bin_Tsaiser] - 127.0.0.1127.0.0.1Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; MS-RTC LM 8) 
+2009-01-12 15:14:46,706 [4] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - 開始展開PN 
+2009-01-12 15:14:46,815 [4] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - 開始展開PN-完成 
+2009-01-12 15:14:46,815 [4] INFO  [ASP.usercontrol_ucresponse_ascx] [QueryData] [ASUS\Wen-Bin_Tsaiser] - DataBind-完成 

@@ -1,0 +1,15 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\NPILibrary.dll
+bin\Debug\NPILibrary.pdb
+bin\Debug\Asus.Core.dll
+bin\Debug\log4net.dll
+bin\Debug\Asus.Core.pdb
+obj\Debug\NPILibrary.dll
+obj\Debug\NPILibrary.pdb
+bin\Debug\Office.Core.dll
+bin\Debug\Interop.Excel.dll
+bin\Debug\Office.Core.pdb
+obj\Debug\Interop.Excel.dll
+obj\Debug\NPILibrary.csproj.ResolveComReference.cache
+bin\Debug\Office.Core.xml
+bin\Debug\Asus.Core.xml

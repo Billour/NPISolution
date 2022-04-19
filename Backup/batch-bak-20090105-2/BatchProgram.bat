@@ -1,0 +1,1 @@
+BatchConsoleApp.exe %Program% %NameSpace.ClassName%

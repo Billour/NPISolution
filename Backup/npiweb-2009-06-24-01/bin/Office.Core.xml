@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Office.Core</name>
+    </assembly>
+    <members>
+        <member name="M:Asus.Office.ExcelCore.ExcelCore.#ctor(System.String,System.String)">
+            <summary>
+            輸入templateFile Path Ful Name Like c:\\temp\ee.xls 
+            
+            </summary>
+            <param name="tempalteFile">c:\\temp\ee.xls</param>
+            <param name="saveFile">c:\\temp\ee.xls</param>
+        </member>
+        <member name="M:Asus.Office.ExcelCore.ExcelCore.Open">
+            <summary>
+            開Excel檔
+            </summary>
+        </member>
+        <member name="F:Asus.Office.WordCore.WordDoc.sFile">
+            <summary>
+            欲存檔之Word檔案名稱，需要完整目錄
+            </summary>
+        </member>
+        <member name="F:Asus.Office.WordCore.WordDoc.sTemplate">
+            <summary>
+            開啟之Word範本，最好是要有，
+            可以減少很多程式實作的時間
+            </summary>
+        </member>
+        <member name="M:Asus.Office.WordCore.WordDoc.#ctor(System.String,System.String)">
+            <summary>
+            Constructor 顯示Word檔案
+            </summary>
+            <param name="tempalteFile"></param>
+            <param name="saveFile"></param>
+        </member>
+        <member name="M:Asus.Office.WordCore.WordDoc.#ctor(System.String)">
+            <summary>
+            開啟一個Word檔案
+            </summary>
+            <param name="openFile"></param>
+        </member>
+        <member name="M:Asus.Office.WordCore.WordDoc.Open">
+            <summary>
+            開啟檔案
+            </summary>
+            <param name="FileName"></param>
+        </member>
+    </members>
+</doc>

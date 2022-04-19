@@ -1,0 +1,708 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NPIWeb</name>
+    </assembly>
+    <members>
+        <member name="F:AsusWeb.BomBooking.programId">
+            <summary>
+            這裡寫程式代號，做為將來權限使用
+            </summary>
+        </member>
+        <member name="M:AsusWeb.BomBooking.SetCreateMode(System.Boolean)">
+            <summary>
+            設定新增模式
+            </summary>
+            <param name="isNew"></param>
+        </member>
+        <member name="M:AsusWeb.BomBooking.SetEditMode(System.Boolean)">
+            <summary>
+            設定修改模式
+            </summary>
+            <param name="isEdit"></param>
+        </member>
+        <member name="M:AsusWeb.BomBooking.SetBrowerMode(System.Boolean)">
+            <summary>
+            設定瀏覽模式
+            </summary>
+            <param name="isBrower"></param>
+        </member>
+        <!-- 忽略成員 "M:AsusWeb.BomBooking.SetUserCtrlSetting" 中格式錯誤的 XML 註解 -->
+        <member name="M:AsusWeb.BomBooking.lnkSubmit_Click(System.Object,System.EventArgs)">
+            <summary>
+            新增按鈕
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.BomBooking.lnkBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            回上一頁
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.BomBooking.lnkSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            存檔資料
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.BomBooking.lnkCreateSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            資料新增
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.BomBooking.lnkCreateBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            新增按鈕回上一頁
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.BomBooking.Result_Click(System.Object,System.Object[])">
+            <summary>
+            GridView Event List 
+            </summary>
+            <param name="sender"></param>
+            <param name="returnArgs"></param>
+        </member>
+        <member name="M:AsusWeb.BomBooking.lnkDownlaodBomTemplate_Click(System.Object,System.EventArgs)">
+            <summary>
+            下載BOM範本
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.BomProc.SetCreateMode(System.Boolean)">
+            <summary>
+            設定新增模式
+            </summary>
+            <param name="isNew"></param>
+        </member>
+        <member name="M:AsusWeb.BomProc.SetEditMode(System.Boolean)">
+            <summary>
+            設定修改模式
+            </summary>
+            <param name="isEdit"></param>
+        </member>
+        <member name="M:AsusWeb.BomProc.SetBrowerMode(System.Boolean)">
+            <summary>
+            設定瀏覽模式
+            </summary>
+            <param name="isBrower"></param>
+        </member>
+        <!-- 忽略成員 "M:AsusWeb.BomProc.SetUserCtrlSetting" 中格式錯誤的 XML 註解 -->
+        <member name="M:AsusWeb.BomProc.lnkBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            回上一頁
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.BomResponse.SetCreateMode(System.Boolean)">
+            <summary>
+            設定新增模式
+            </summary>
+            <param name="isNew"></param>
+        </member>
+        <member name="M:AsusWeb.BomResponse.SetEditMode(System.Boolean)">
+            <summary>
+            設定修改模式
+            </summary>
+            <param name="isEdit"></param>
+        </member>
+        <member name="M:AsusWeb.BomResponse.SetBrowerMode(System.Boolean)">
+            <summary>
+            設定瀏覽模式
+            </summary>
+            <param name="isBrower"></param>
+        </member>
+        <!-- 忽略成員 "M:AsusWeb.BomResponse.SetUserCtrlSetting(System.Boolean)" 中格式錯誤的 XML 註解 -->
+        <member name="M:AsusWeb.BomResponse.lnkBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            回上一頁
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.BomResponse.lnkPrint_Click(System.Object,System.EventArgs)">
+            <summary>
+            下載Excel檔案
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.BomResponse.lnkUploadExcel_Click(System.Object,System.EventArgs)">
+            <summary>
+            上傳Excel資料
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.BomResponse.lnkBack2_Click(System.Object,System.EventArgs)">
+            <summary>
+            回到第二頁
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.BomResponse.lnkViewBom_Click(System.Object,System.EventArgs)">
+            <summary>
+            細看BOM資訊
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:AsusWeb.BomResponse.FormId">
+            <summary>
+            表單代號
+            </summary>
+        </member>
+        <member name="T:AsusWeb.Config">
+            <summary>
+            使用者設定程式
+            </summary>
+        </member>
+        <member name="F:AsusWeb.Config.programId">
+            <summary>
+            這裡寫程式代號，做為將來權限使用
+            </summary>
+        </member>
+        <member name="M:AsusWeb.Config.InitPage(System.Boolean)">
+            <summary>
+            <code>
+                private void InitPage(bool isInit)
+                {
+               PageState = EnumState.Query;
+               SetCtrlSetting();
+               SetUserCtrlSetting();
+               }
+            </code>
+            </summary>
+            <param name="isInit"></param>
+        </member>
+        <member name="M:AsusWeb.Config.SetCreateMode(System.Boolean)">
+            <summary>
+            設定新增模式
+            </summary>
+            <param name="isNew"></param>
+        </member>
+        <member name="M:AsusWeb.Config.SetEditMode(System.Boolean)">
+            <summary>
+            設定修改模式
+            </summary>
+            <param name="isEdit"></param>
+        </member>
+        <member name="M:AsusWeb.Config.SetBrowerMode(System.Boolean)">
+            <summary>
+            設定瀏覽模式
+            </summary>
+            <param name="isBrower"></param>
+        </member>
+        <!-- 忽略成員 "M:AsusWeb.Config.SetUserCtrlSetting" 中格式錯誤的 XML 註解 -->
+        <member name="M:AsusWeb.Config.lnkSubmit_Click(System.Object,System.EventArgs)">
+            <summary>
+            新增按鈕
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.Config.lnkBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            回上一頁
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.Config.lnkSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            更新存檔
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.Config.lnkCreateSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            新增按鈕
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.Config.lnkCreateBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            新增按鈕回上一頁
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.NPIClosePage.SetCreateMode(System.Boolean)">
+            <summary>
+            設定新增模式
+            </summary>
+            <param name="isNew"></param>
+        </member>
+        <member name="M:AsusWeb.NPIClosePage.SetEditMode(System.Boolean)">
+            <summary>
+            設定修改模式
+            </summary>
+            <param name="isEdit"></param>
+        </member>
+        <member name="M:AsusWeb.NPIClosePage.SetBrowerMode(System.Boolean)">
+            <summary>
+            設定瀏覽模式
+            </summary>
+            <param name="isBrower"></param>
+        </member>
+        <!-- 忽略成員 "M:AsusWeb.NPIClosePage.SetUserCtrlSetting(System.Boolean)" 中格式錯誤的 XML 註解 -->
+        <member name="M:AsusWeb.NPIClosePage.lnkBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            回上一頁
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:AsusWeb.Page.LoginInfo">
+            <summary>
+            設定資料庫連線部份
+            </summary>
+        </member>
+        <member name="P:AsusWeb.Page.LoginInfo.Company">
+            <summary>
+            取得執行公司人員設定
+            此參數是針對執行人員的公司設定
+            最主要的是關使用人員資料的資料取得，必須要知道是那裡的公司在使用
+            </summary>
+        </member>
+        <member name="P:AsusWeb.Page.LoginInfo.IsDebug">
+            <summary>
+            是否在Debug模式，如果是DeBug模式，會以一位模擬人員
+            </summary>
+        </member>
+        <member name="P:AsusWeb.Page.LoginInfo.DeBugUserLoginId">
+            <summary>
+            模擬人員帳號
+            </summary>
+        </member>
+        <member name="P:AsusWeb.Page.LoginInfo.AdminUserLoginId">
+            <summary>
+            Admin User
+            </summary>
+        </member>
+        <member name="P:AsusWeb.Page.LoginInfo.ExcelFileUpload">
+            <summary>
+            取得Excel檔案放置目錄
+            </summary>
+        </member>
+        <member name="P:AsusWeb.Page.LoginInfo.DBConnectStringList">
+            <summary>
+            取得所有的資料庫連線
+            </summary>
+        </member>
+        <member name="P:AsusWeb.Page.LoginInfo.DBTypeList">
+            <summary>
+            取得所有的資料庫資料
+            </summary>
+        </member>
+        <member name="T:AsusWeb.Query">
+            <summary>
+            查詢功能
+            
+            </summary>
+        </member>
+        <member name="M:AsusWeb.Query.btnUserQuery_Click(System.Object,System.EventArgs)">
+            <summary>
+            使用者帳號資料
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.Query.btnDownloadLogs_Click(System.Object,System.EventArgs)">
+            <summary>
+            Download Logs
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.Query.btnQueryBOMSite_Click(System.Object,System.EventArgs)">
+            <summary>
+            查詢生產地及Buying Mode
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.Query.Button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            等待展BOM資料
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:AsusWeb.QueryPN">
+            <summary>
+            Sourcer 查詢報價
+            最主要部份是給Sourcer使用
+            提供查詢物料的價格
+            每一個Sourcer只能查詢的自已的資料
+            </summary>
+        </member>
+        <member name="F:AsusWeb.QueryPN.programId">
+            <summary>
+            程式名稱
+            </summary>
+        </member>
+        <member name="M:AsusWeb.QueryPN.Page_Load(System.Object,System.EventArgs)">
+            <summary>
+            Page Load
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.QueryPN.SetCreateMode(System.Boolean)">
+            <summary>
+            設定新增模式
+            </summary>
+            <param name="isNew"></param>
+        </member>
+        <member name="M:AsusWeb.QueryPN.SetEditMode(System.Boolean)">
+            <summary>
+            設定修改模式
+            </summary>
+            <param name="isEdit"></param>
+        </member>
+        <member name="M:AsusWeb.QueryPN.SetBrowerMode(System.Boolean)">
+            <summary>
+            設定瀏覽模式
+            </summary>
+            <param name="isBrower"></param>
+        </member>
+        <!-- 忽略成員 "M:AsusWeb.QueryPN.SetUserCtrlSetting" 中格式錯誤的 XML 註解 -->
+        <member name="T:AsusWeb.SendOverDaysMail">
+            <summary>
+            寄給主管的信
+            </summary>
+        </member>
+        <member name="M:AsusWeb.SendOverDaysMail.InitPage">
+            <summary>
+            初始值
+            </summary>
+        </member>
+        <member name="T:AsusWeb.SourcerGroup">
+            <summary>
+            採購人員設定檔
+            </summary>
+        </member>
+        <member name="F:AsusWeb.SourcerGroup.programId">
+            <summary>
+            這裡寫程式代號，做為將來權限使用
+            </summary>
+        </member>
+        <member name="M:AsusWeb.SourcerGroup.SetCreateMode(System.Boolean)">
+            <summary>
+            設定新增模式
+            </summary>
+            <param name="isNew"></param>
+        </member>
+        <member name="M:AsusWeb.SourcerGroup.SetEditMode(System.Boolean)">
+            <summary>
+            設定修改模式
+            </summary>
+            <param name="isEdit"></param>
+        </member>
+        <member name="M:AsusWeb.SourcerGroup.SetBrowerMode(System.Boolean)">
+            <summary>
+            設定瀏覽模式
+            </summary>
+            <param name="isBrower"></param>
+        </member>
+        <!-- 忽略成員 "M:AsusWeb.SourcerGroup.SetUserCtrlSetting" 中格式錯誤的 XML 註解 -->
+        <member name="M:AsusWeb.SourcerGroup.lnkSubmit_Click(System.Object,System.EventArgs)">
+            <summary>
+            新增按鈕
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.SourcerGroup.lnkBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            回上一頁
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.SourcerGroup.lnkCreateBack_Click(System.Object,System.EventArgs)">
+            <summary>
+            新增按鈕回上一頁
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.UserControl.BOMListUserControl.Show">
+            <summary>
+            顯示內容
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.BOMListUserControl.QueryData">
+            <summary>
+            查詢資料
+            </summary>
+        </member>
+        <member name="P:AsusWeb.UserControl.BOMListUserControl.FormNo">
+            <summary>
+            表單資料
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.QueryPNPriceListUserControl.Show">
+            <summary>
+            顯示內容
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.QueryPNPriceListUserControl.QueryData">
+            <summary>
+            查詢資料
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.QueryPNPriceListUserControl.btnQuery_Click(System.Object,System.EventArgs)">
+            <summary>
+            查詢料號
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.UserControl.SendMailPNListUserControl.QueryData">
+            <summary>
+            查詢資料
+            </summary>
+        </member>
+        <member name="P:AsusWeb.UserControl.SendMailPNListUserControl.AccountNo">
+            <summary>
+            PM 員工帳號
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCBOM.Show">
+            <summary>
+            顯示資料
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCBOM.Valid">
+            <summary>
+            驗證是否正確
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCBOM.Save">
+            <summary>
+            存檔
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCBOM.CheckBOM(System.String)">
+            <summary>
+            Check BOM 資料正確
+            
+            </summary>
+            <param name="?"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCBOM.DownLoadExcel">
+            <summary>
+            DownLoadExcel
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AsusWeb.UserControl.UCBOM.BomNo">
+            <summary>
+            BOM N0
+            </summary>
+        </member>
+        <member name="P:AsusWeb.UserControl.UCBOM.PMAccountNo">
+            <summary>
+            PM 員工帳號
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCBOMList.Show">
+            <summary>
+            顯示內容
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCBOMList.QueryData">
+            <summary>
+            查詢資料
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCBOMList.GridView1_RowCommand(System.Object,System.Web.UI.WebControls.GridViewCommandEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCBOMList.ddlEnable_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            DropDownList 資料
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:AsusWeb.UserControl.UCBOMList.PMAccountNo">
+            <summary>
+            PM 員工帳號
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCResponse.Show">
+            <summary>
+            User Control Entry
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCResponse.BindBomCount(AsusLibrary.EnumRole)">
+            <summary>
+            計算BOM的計算數值
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCResponse.GenerateColumn">
+            <summary>
+            產生GridView欄位
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCResponse.GetFormData(AsusLibrary.EnumRole)">
+            <summary>
+            取得整個Form資訊
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCResponse.GetBookingBomList(AsusLibrary.EnumRole)">
+            <summary>
+            取得BOM資料
+            Sourcer 不同作業
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCResponse.Save">
+            <summary>
+            存檔程式
+            Fix:2008/11/06 Bin 修改只有點選上傳的資料才能上傳
+            </summary>
+            <returns>是否存檔成功true=成功 false=不成功</returns>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCResponse.GridView1_RowCreated(System.Object,System.Web.UI.WebControls.GridViewRowEventArgs)">
+            <summary>
+            產生Header Tilte
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCResponse.DownLoadExcel">
+            <summary>
+            DownLoad Excel
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AsusWeb.UserControl.UCResponse.FormId">
+            <summary>
+            表單代號
+            </summary>
+        </member>
+        <member name="P:AsusWeb.UserControl.UCResponse.SourcerUserId">
+            <summary>
+            採購人員
+            </summary>
+        </member>
+        <member name="P:AsusWeb.UserControl.UCResponse.SourcerUserCompanyId">
+            <summary>
+            採購人員公司
+            </summary>
+        </member>
+        <member name="P:AsusWeb.UserControl.UCResponse.PMUserId">
+            <summary>
+            進入的PM使用者工號
+            </summary>
+        </member>
+        <member name="P:AsusWeb.UserControl.UCResponse.BomCount">
+            <summary>
+            計算欄位大小
+            </summary>
+        </member>
+        <member name="P:AsusWeb.UserControl.UCResponse.UseRole">
+            <summary>
+            使用此表角色，分成三種
+            第一種Sourcer
+            第二種為PM
+            第三種為管理者
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCSourcerEdit.Show">
+            <summary>
+            顯示資料
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCSourcerEdit.Save">
+            <summary>
+            存檔
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AsusWeb.UserControl.UCSourcerEdit.AccountNo">
+            <summary>
+            員工工號資料
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCUserEdit.Save">
+            <summary>
+            存檔
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AsusWeb.UserControl.UCUserEdit.AccountNo">
+            <summary>
+            工號資料
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.UCUserList.ddlEnable_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Auto Post Back Query Data
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:AsusWeb.UserControl.UploadExcelUserControl">
+            <summary>
+            上傳Excel
+            </summary>
+        </member>
+        <member name="M:AsusWeb.UserControl.UploadExcelUserControl.btnUpload_Click(System.Object,System.EventArgs)">
+            <summary>
+            上傳檔案
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AsusWeb.UserControl.UploadExcelUserControl.DoUploadExcelFile">
+            <summary>
+            Upload Excel File
+            </summary>
+        </member>
+        <member name="P:AsusWeb.UserControl.UploadExcelUserControl.FormId">
+            <summary>
+            表單代號
+            </summary>
+        </member>
+        <member name="P:AsusWeb.UserControl.UploadExcelUserControl.SourcerUserId">
+            <summary>
+            採購人員
+            </summary>
+        </member>
+        <member name="P:AsusWeb.UserControl.UploadExcelUserControl.UPloadFileName">
+            <summary>
+            上傳檔案
+            </summary>
+        </member>
+        <member name="P:AsusWeb.UserControl.WaitingConfirmSourcerListUserControl.AccountNo">
+            <summary>
+            管理者帳號
+            </summary>
+        </member>
+    </members>
+</doc>

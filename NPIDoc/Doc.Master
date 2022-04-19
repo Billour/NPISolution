@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Codebehind="Doc.master.cs" Inherits="AsusDoc.Doc" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Document Site</title>
+</head>
+<body class="sidebars">
+    <form id="form1" runat="server">
+      
+      <div id="header-region" class="clear-block">
+      </div>
+      
+      <div id="wrapper">
+        
+           <div id="container"  class="clear-block">
+            
+            <div id="center">
+                    <div id="squeeze">
+                        <div class="right-corner">
+                            <div class="left-corner">
+                                
+                               <div class="breadcrumb">
+                                    <a href="/">Home</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+           </div>
+     </div>
+      
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

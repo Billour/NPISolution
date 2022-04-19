@@ -1,0 +1,82 @@
+
+2009/05/07
+1.修改通知信內容，預計於星期一寄發
+2.新增一個Job 將結果資料送至各RD PM
+
+2008/8/4 Create Solution
+
+2008/09/17
+Fix：1. GridView Add Sorting
+     2. Add Ajax 
+     
+2008/11/19
+
+NPI 上線的資料庫具備三個
+
+正式機：
+
+
+ 
+
+對外網址：https://scm.asus.com/npi/Index.aspx
+
+ 
+
+ 建立在兩個站台，http://srm以及 http://tp-srm-03底下
+
+ 其位置 \\tp-srm-03\d$\SCM\npi ,\\srm\d$\SCM\npi
+
+ 
+
+測試機：
+
+ http://tp-srm-04:9876
+
+ 其位置：D:\WebDB\NpiWeb
+ 
+ 
+ Site List
+ 
+ EMS-Q     
+ Quanta 松江(C+A)
+ 
+PEGA PEGA虛擬for 10月調整
+ 
+PGSHNJ Pegatron 上海 NJ
+ 
+PGSHPB  Pegatron 上海 PB
+ 
+PGSHPV  Pegatron 上海 PV
+ 
+PGSZB1  Pegatron 蘇州 B1
+ 
+PGSZB2  Pegatron 蘇州 B2
+ 
+PGSZB3  Pegatron 蘇州 B3
+ 
+PGSZB5  Pegatron 蘇州 B5    
+ 
+PGSZR1  Pegatron 蘇州 R1
+ 
+PGSZR3  Pegatron 蘇州 R3
+ 
+PGSZS1  Pegatron 蘇州 S1
+ 
+PGSZZ   Pegatron 蘇州 Z
+ 
+PGSZZ2  Pegatron 蘇州 Z2
+ 
+PGSZZ3  Pegatron 蘇州 Z3
+ 
+PGTW    Pegatron 龜山
+ 
+V03CNSJ Quanta 松江
+ 
+V05CNLH FIH 深圳
+
+
+ 
+
+
+
+

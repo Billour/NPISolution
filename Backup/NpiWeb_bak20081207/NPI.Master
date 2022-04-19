@@ -1,0 +1,105 @@
+<%@ Master Language="C#" AutoEventWireup="true" Codebehind="NPI.master.cs" Inherits="AsusWeb.NPI" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>NPI Portal</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+     
+     <atlas:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true"
+            EnableScriptLocalization="true" EnableViewState="true" EnableScriptGlobalization="True" />
+            
+      <atlas:UpdateProgress ID="UpdateProgress1" runat="server">
+            <ProgressTemplate>
+                <div style="padding: 1px; background-color: #CC4444; position: absolute; right: 15px; top: 1px; color: #FFF">
+                    正在處理你的需求...</div>
+            </ProgressTemplate>
+        </atlas:UpdateProgress>
+        
+        <%--<table width="100%" cellspacing="0" cellpadding="0" border="0" class="header">
+            <tr>
+                <td class="logo">
+                    <asp:Image ID="Image1" runat="server" SkinID="logo" /></td>
+                <td class="title">
+                    NPI System
+                </td>
+            </tr>
+        </table>--%>
+        <table width="100%" style="height:100%"  cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td colspan=2 style="background-color:#41519A" style="height:20">
+                    <asp:Menu ID="Menu1"   runat="server"   Orientation="Horizontal"   StaticEnableDefaultPopOutImage="False" >
+                       
+                        <StaticMenuItemStyle CssClass="menuDiv"/>
+                        <StaticHoverStyle CssClass="menuDivHover" />
+                        <StaticSelectedStyle CssClass="menuDivSelected" />
+                        <%--<Items>
+                            <asp:MenuItem  Text="使用者管理" NavigateUrl="~/Config.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Sourcer設定" NavigateUrl="~/SourcerGroup.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="BOM資料維護" NavigateUrl="~/BomBooking.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="回覆處理" NavigateUrl="~/BomResponse.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="下載Excel" NavigateUrl="~/BomProc.aspx"></asp:MenuItem>
+                        </Items>--%>
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" class="headerbar">
+                    
+                </td>
+                <td colspan="1" class="headerbar">
+                    登入人員：<asp:Label ID="lbLoginUser" runat="server"></asp:Label> 登入時間：<asp:Label ID="lbLoginTime" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td id="leftSide"  valign="top" align="center">
+                    <!--權限設定區塊 專門給使用者使用 -->
+                    <%--<asp:Panel ID="pn1Config" runat="Server" CssClass="tableMenu" Width="160">
+                        <br />
+                        <asp:Table ID="tblConfig" runat="server" Width="100%" >
+                            <asp:TableHeaderRow>
+                                <asp:TableHeaderCell>系統選單</asp:TableHeaderCell>
+                            </asp:TableHeaderRow>
+                            <asp:TableRow>
+                                <asp:TableCell HorizontalAlign="Left">
+                                <ul class="menutextindent">
+                                    <li><a href="Config.aspx">使用者管理</a></li>
+                                    <li><a href=BomBooking.aspx>BOM資料維護</a></li>
+                                    <li><a href=BomResponse.aspx>Sourcer回覆</a></li>
+                                    <li><a href=BomProc.aspx>下載Excel</a></li>
+                                    <li><a href=Query.aspx>查詢</a></li>
+                                </ul> 
+                                </asp:TableCell>
+                            </asp:TableRow>
+                        </asp:Table>
+                    </asp:Panel>--%>
+                </td>
+                <td valign="top">
+                    <div >
+                    
+                         <%--<atlas:UpdatePanel runat="server" ID="UpdatePanel1">
+                            <ContentTemplate>--%>
+                       
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                       
+                       <%--</ContentTemplate>
+                </atlas:UpdatePanel>--%>
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+        <table width=100% >
+            <tr id="footerSide">
+                <td class="footer">
+                    <blockquote>
+                        All contents are Copyright c 1992-2008 AsusTek Computer Inc. All rights reserved
+                    </blockquote>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
